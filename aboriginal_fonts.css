@@ -1,0 +1,14 @@
+
+/* https://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/ */
+@font-face {
+  font-family:'Aboriginal Serif';
+  src: url('Aboriginal_Serif_REGULAR_939.eot?') format('eot'), url('Aboriginal_Serif_REGULAR_939.woff') format('woff'), url('Aboriginal_Serif_REGULAR_939.ttf') format('truetype'), url('Aboriginal_Serif_REGULAR_939.svg#AboriginalSerif') format('svg');
+  font-weight:normal;
+  font-style:normal;
+}
+
+.on {font-family:'Aboriginal Serif';}
+
+article {font-family:'Aboriginal Serif' !important;}
+.heading_font {font-family:'Aboriginal Serif' !important;}
+.cke_dark_background {font-family:'Aboriginal Serif' !important;}
