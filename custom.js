@@ -84,8 +84,7 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 		'dcterms:format',
 		'dcterms:coverage',
 		'dcterms:spatial',
-		'dcterms:identifier',
-		'art:sourceLocation'
+		'dcterms:identifier'
 	];
 	var obj = $.extend({}, node.current.auxProperties, {
 		'dcterms:title':[node.getDisplayTitle()],
@@ -102,7 +101,6 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 	var $table = $('<table></table>').appendTo(element);
 	
 	for (var j = 0; j < propOrder.length; j++) {
-		if (propOrder[j] == 'art:sourceLocation') break;
 		if ('undefined'==typeof(obj[propOrder[j]])) continue;
 		var values = obj[propOrder[j]];
 		for (var k = 0; k < values.length; k++) {
@@ -113,18 +111,19 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 	};
 	$table.append('<tr><td>Scalar URL</td><td><a href="'+node.url+'">'+node.url+'</a> (version '+node.current.number+')</td></tr>');
 	
-	var can_show_source_url = true;
-	if ('undefined'!=typeof(node.current.sourceFile) && -1!=node.current.sourceFile.indexOf('rrncommunity.org')) can_show_source_url = false;  // RRN
+	var can_show_source_url = false;
 	if (can_show_source_url) {
 		$table.append('<tr><td>Source URL</td><td><a href="'+node.current.sourceFile+'" target="_blank">'+node.current.sourceFile+'</a> ('+node.current.mediaSource.contentType+'/'+node.current.mediaSource.name+')</td></tr>');
-		for (var k = j; k < propOrder.length; k++) {
-			if ('undefined'==typeof(obj[propOrder[k]])) continue;
-			var values = obj[propOrder[k]];
-			for (var m = 0; m < values.length; m++) {
-				var value = (null==values[m]) ? '' : values[m];
-				if (!value.length) continue;
-				$table.append( '<tr><td>' + propOrder[k] + '</td><td>' + linkify(value) + '</td></tr>');
-			};
+	};
+	
+	if ('undefined'!=typeof(obj['art:sourceLocation']) && null!=obj['art:sourceLocation']) {
+		var values = obj['art:sourceLocation'];
+		for (var k = 0; k < values.length; k++) {
+			var value = (null==values[k]) ? '' : values[k];
+			if (!value.length) continue;
+			var can_show_sourcelocation = true;
+			if (-1!=value.indexOf('206.12.100.68')) can_show_sourcelocation = false;
+			if (can_show_sourcelocation) $table.append( '<tr><td>art:sourceLocation</td><td>' + linkify(value) + '</td></tr>');
 		};
 	};
 
