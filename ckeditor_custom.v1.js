@@ -29,46 +29,8 @@ $(document).on('paste', 'textarea', function (e, c) {  // Text is cut-and-paste 
 
 // Editor config
 CKEDITOR.editorConfig = function( config ) {
-
-    config.plugins = 
-            'dialogui,'+
-            'dialog,'+
-            'a11yhelp,'+
-            'basicstyles,'+
-            'blockquote,'+
-            'clipboard,'+
-            'panel,'+
-            'floatpanel,'+
-            'panelbutton,'+
-            'listblock,'+
-            'richcombo,'+
-            'format,'+
-            'menu,'+
-            'button,'+
-            'toolbar,'+
-            'elementspath,'+
-            'enterkey,'+
-            'entities,'+
-            'wysiwygarea,'+
-            'indent,'+
-            'indentlist,'+
-            'list,'+
-            'maximize,'+
-            'pastetext,'+
-            'pastefromword,'+
-            'removeformat,'+
-            'sourcearea,'+
-            'specialchar,'+
-            'menubutton,'+
-            'undo,'+
-            'colorbutton,'+
-            'colordialog,'+
-            'codeTag,'+
-            'fakeobjects,'+
-            'iframe,'+
-            'codemirror,'+
-            'scalar,'+
-            'floatingspace';
+	
+	config.plugins = 'dialogui,dialog,a11yhelp,basicstyles,blockquote,clipboard,panel,floatpanel,panelbutton,listblock,richcombo,format,menu,button,toolbar,elementspath,enterkey,entities,wysiwygarea,indent,indentlist,list,maximize,pastetext,pastefromword,removeformat,sourcearea,specialchar,menubutton,undo,colorbutton,colordialog,codeTag,fakeobjects,iframe,codemirror,scalar';
 	config.skin = 'bootstrapck';
 	config.allowedContent = true;
 	config.extraAllowedContent = 'code pre a[*]';
@@ -89,23 +51,10 @@ CKEDITOR.editorConfig = function( config ) {
 	config.toolbar_Scalar =
 	[
 		{ name: 'document', items : [ 'Source' ] },
-		/* { name: 'size', items : [ 'Maximize' ] }, */
 		{ name: 'clipboard', items : [ 'PasteText','PasteFromWord','Undo','Redo' ] },
 		{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','TextColor', 'BGColor' ] },
-		{ name: 'formatting', items : [ 'Format','NumberedList','BulletedList','Blockquote','-','Code','Iframe' ] },
-		{ name: 'advanced', items : [ 'ScalarKeyboard','-','Scalar1', 'Scalar2', 'Scalar5', 'Scalar8', 'Scalar9','-', 'Scalar6', 'Scalar7' ] },
-		{ name: 'clear', items : [ 'RemoveFormat' ] },
-		{ name: 'editorial', items:['editorialTools']}
-	];
-	config.toolbar_ScalarInline =
-	[
-		{ name: 'document', items : [ 'Source' ] },
-		/* { name: 'size', items : [ 'Maximize' ] }, */
-		{ name: 'clipboard', items : [ 'PasteText','PasteFromWord','Undo','Redo' ] },
-		{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','TextColor', 'BGColor' ] },
-		{ name: 'formatting', items : [ 'Format','NumberedList','BulletedList','Blockquote','-','Code','Iframe' ] },
-		'/',
-		{ name: 'advanced', items : [ 'ScalarKeyboard','-','Scalar1', 'Scalar2', 'Scalar5', 'Scalar8', 'Scalar9','-', 'Scalar6', 'Scalar7' ] },
+		{ name: 'formatting', items : [ 'Format','NumberedList','BulletedList','Blockquote','-','Code','Iframe' ] },		
+		{ name: 'advanced', items : [ 'ScalarKeyboard','-','Scalar1', 'Scalar2', 'Scalar5', 'Scalar8', 'Scalar9', '-', 'Scalar6', 'Scalar7' ] },
 		{ name: 'clear', items : [ 'RemoveFormat' ] }
 	];
 
@@ -164,5 +113,3 @@ CKEDITOR.editorConfig = function( config ) {
 		};
 
 };
-CKEDITOR.dtd.$removeEmpty['a'] = false;
-CKEDITOR.dtd.$removeEmpty['i'] = false;
