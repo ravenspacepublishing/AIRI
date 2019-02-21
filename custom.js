@@ -70,61 +70,78 @@ scalarMediaDetailsSourceFileLink = false;
 customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 	
 	var propOrder = [
-		'dcterms:title',
-		'dcterms:description',
-		'dcterms:creator',
-		'dcterms:date',
-		'dcterms:temporal',
-		'dcterms:source',
-		'dcterms:rights',
-		'dcterms:provenance',
-		'vra:culturalContext',
-		'dcterms:language',
-		'dcterms:type',
-		'dcterms:format',
-		'dcterms:coverage',
-		'dcterms:spatial',
-		'dcterms:identifier'
-	];
+		['dcterms:title','Title'],
+		['dcterms:description','Description'],
+		['dcterms:creator','Creator'],
+		['dcterms:date','Creation date'],
+		['dcterms:temporal','Timeline date'],
+		['dcterms:source','Source'],
+		['tk:hasLabel','TK Labels'],
+		['dcterms:rights','Rights'],
+		['dcterms:provenance','Provenance'],
+		['vra:culturalContext','Culture/community'],
+		['dcterms:language','Language'],
+		['dcterms:type','Type'],
+		['dcterms:format','Material'],
+		['dcterms:coverage','Location'],
+		['dcterms:spatial','Coordinates'],
+		['dcterms:identifier','RavenSpace identifier']
+	];	
+	
 	var obj = $.extend({}, node.current.auxProperties, {
 		'dcterms:title':[node.getDisplayTitle()],
 		'dcterms:description':[node.current.description],
 		'dcterms:source':[node.current.source],
-		'art:sourceLocation':[node.current.sourceLocation],
+		'art:sourceLocation':[node.current.sourceLocation]
 	});
-	if ('undefined'==typeof(linkify)) {
+	
+	if ('undefined' == typeof(linkify)) {
 		var linkify = function(str) {
 			return str;
 		};
 	};
 	
 	var $table = $('<table></table>').appendTo(element);
-	
 	for (var j = 0; j < propOrder.length; j++) {
-		if ('undefined'==typeof(obj[propOrder[j]])) continue;
-		var values = obj[propOrder[j]];
+		if ('tk:hasLabel' == propOrder[j][0]) $table.append('<tr class="tk-label-row" style="display:none;"><td>'+propOrder[j][1]+'</td><td></td></tr>');
+		if ('undefined' == typeof(obj[propOrder[j][0]])) continue;
+		var values = obj[propOrder[j][0]];
 		for (var k = 0; k < values.length; k++) {
-			var value = (null==values[k]) ? '' : values[k];
+			var value = (null == values[k]) ? '' : values[k];
 			if (!value.length) continue;
-			$table.append( '<tr><td>' + propOrder[j] + '</td><td>' + linkify(value) + '</td></tr>');
+			$table.append( '<tr><td><span title="'+propOrder[j][0]+'">' + propOrder[j][1] + '</span></td><td>' + linkify(value) + '</td></tr>');
 		};
 	};
 	$table.append('<tr><td>Scalar URL</td><td><a href="'+node.url+'">'+node.url+'</a> (version '+node.current.number+')</td></tr>');
+	//$table.append('<tr><td>Source URL</td><td><a href="'+node.current.sourceFile+'" target="_blank">'+node.current.sourceFile+'</a> ('+node.current.mediaSource.contentType+'/'+node.current.mediaSource.name+')</td></tr>');
 	
-	var can_show_source_url = false;
-	if (can_show_source_url) {
-		$table.append('<tr><td>Source URL</td><td><a href="'+node.current.sourceFile+'" target="_blank">'+node.current.sourceFile+'</a> ('+node.current.mediaSource.contentType+'/'+node.current.mediaSource.name+')</td></tr>');
-	};
-	
-	if ('undefined'!=typeof(obj['art:sourceLocation']) && null!=obj['art:sourceLocation']) {
+	/*
+	if ('undefined' != typeof(obj['art:sourceLocation']) && null != obj['art:sourceLocation']) {
 		var values = obj['art:sourceLocation'];
 		for (var k = 0; k < values.length; k++) {
-			var value = (null==values[k]) ? '' : values[k];
+			var value = (null == values[k]) ? '' : values[k];
 			if (!value.length) continue;
-			var can_show_sourcelocation = true;
-			if (-1!=value.indexOf('206.12.100.68')) can_show_sourcelocation = false;
-			if (can_show_sourcelocation) $table.append( '<tr><td>art:sourceLocation</td><td>' + linkify(value) + '</td></tr>');
+			$table.append( '<tr><td>art:sourceLocation</td><td>' + linkify(value) + '</td></tr>');
 		};
+	};
+	*/
+	
+	if ('undefined' != typeof(node.current.properties['http://localcontexts.org/tk/hasLabel']) && node.current.properties['http://localcontexts.org/tk/hasLabel'].length) {
+		var $labelRow = $table.find('.tk-label-row').show();
+		var popoverTemplate = '<div class="popover tk-help caption_font" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>';
+		var labels = node.current.properties['http://localcontexts.org/tk/hasLabel'];
+		for (var j = 0; j < labels.length; j++) {
+			var labelNode = scalarapi.model.nodesByURL[labels[j].value];
+    		url = labelNode.properties['http://simile.mit.edu/2003/10/ontologies/artstor#url'][0].value;
+    		labelDescription = labelNode.properties['http://purl.org/dc/terms/description'][0].value;
+    		$label = $('<span resource="'+labels[j].value+'" typeof="tk:TKLabel" style="display:inline-block;"><img rel="art:url" src="'+url+'" data-toggle="popover" data-placement="top" /></span>').appendTo($labelRow.find('td:last'));
+            $label.children('img').popover({ 
+                trigger: "click", 
+                html: true, 
+                template: popoverTemplate,
+                content: '<img src="'+url+'" /><p class="supertitle">Traditional Knowledge</p><h3 class="heading_weight">'+labelNode.title+'</h3><p>'+labelDescription+'</p><p><a href="http://localcontexts.org/tk-labels/" target="_blank">More about Traditional Knowledge labels</a></p>'
+            });
+		}
 	};
 
 };
