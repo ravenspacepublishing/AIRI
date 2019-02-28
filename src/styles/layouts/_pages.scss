@@ -1,0 +1,104 @@
+
+
+.paragraph_wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+}
+
+span[property="sioc:content"] {
+	display: block;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.body_copy {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+
+	// h1, h2, h3, h4, h5, p, blockquote {
+	// 	max-width: 900px;
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// }
+
+	.slot {
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p.p--feature {
+    max-width: 100%;
+    font-size: 3rem;
+    margin-bottom: 8rem;
+    text-align: center;
+	}
+
+	h2.h2--feature {
+		text-align: center;
+    font-size: 6rem;
+	}
+
+	// &.mediainfo {
+	// 	max-width: 900px;
+	// }
+}
+
+.relationships {
+	padding-top: 2.4rem;
+	max-width: 900px;
+	margin: 0 auto;
+	clear:both;
+
+	p {
+	// padding-left: 7.2rem;
+	// padding-right: 7.2rem;
+	}
+
+	ol, ul {
+	// padding-left: 5.2rem;
+	// padding-right: 7.2rem;
+	}
+
+	h1 {
+	font-size: 2.1rem;
+	line-height: 2.4rem;
+	margin-bottom: 1.2rem;
+	margin-top: 0;
+	}
+}
+
+.widgetContainer .mediaElementFooter p {
+	font-size: 1.4rem;
+}
+
+.widget_slot .widgetContainer {
+	margin-bottom: 3rem;
+}
+
+#incoming_comments {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#footer {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	margin-top: 2rem;
+	padding-top: 6rem;
+	padding-bottom: 2rem;
+
+	p {
+		font-size: 1.6rem;
+	}
+
+	#colophon {
+		font-family: 'Aboriginal Serif', serif;
+	}
+}
