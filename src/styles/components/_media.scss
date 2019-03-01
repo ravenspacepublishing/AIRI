@@ -1,0 +1,33 @@
+// .mediaelement {
+//   width: 100% !important;
+// }
+
+.jp-audio {
+  width: 100% !important;
+}
+
+.jp-progress {
+  width: calc(100% - 156px) !important;
+}
+
+div.jp-interface {
+  background-color: white;
+}
+
+div.jp-audio {
+  border: 2px solid #ccc;
+}
+
+
+.mediaObject {
+  img {
+    // width: 100% !important;
+    // height: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.widgetContainer {
+  width: 100% !important;
+}
