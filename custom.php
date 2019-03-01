@@ -2,6 +2,14 @@
 function add_wayhut() {
 	
 	$ci =& get_instance();
+
+	$ignore_pages = array('.edit', '.annotation_editor');
+	foreach ($ignore_pages as $ignore) {
+		if ($ignore == substr($ci->uri->uri_string, strlen($ignore)*-1)) return;
+	}
+
+	if ('system' == $ci->router->fetch_class()) return;
+
 	$ci->template->add_js('system/application/hooks/wayhut/custom.js');
 
 	$ci->template->add_css('system/application/views/melons/cantaloupe/css/reset.css');
