@@ -15,6 +15,7 @@ $(document).ready(function() {
 	});
 	$('body').on('pageLoadComplete', function() {
 		$('#ScalarHeaderMenuSearchForm, .search').keyboard({blur_hide_icon:false});  // Header
+		setReplacementTexts();
 	});
 });
 
@@ -62,6 +63,31 @@ $.fn.keyboard = function(options) {
 	});
 	
 };
+
+setReplacementTexts = function() {
+	
+	if (!$('link#book_id').length) return;
+	var book_id = parseInt($('link#book_id').attr('href'));
+	$('.has_tags').prev().text('See also:');
+	$('.tag_of').prev().text('Related pages:');
+	$('.nav_btn:contains("Visit a random tagged page")').hide();
+	if ($('.path_of').length && $('.relationships').length > 1) $('.path_of').closest('.relationships').insertBefore('.relationships:first');
+	if ($('.continue_btn').length && $('.relationships').length > 1) $('.continue_btn').closest('.relationships').insertBefore('.relationships:first');
+	var $is_note_in = $('h1:contains("This page is a note in:")');
+	if ($is_note_in.length) {
+		var is_plural = ($is_note_in.next().children('li').length > 1) ? true : false;
+		$is_note_in.text('This page is a note. View the source page'+((is_plural)?'s':'')+':');
+	};
+	$('#indexLink a').click(function() {
+		$('.modal').each(function() {
+			var $this = $(this);
+			var $title = $this.find('.modal-title');
+			if (!$title.length) return;
+			if ('Index' == $title.text()) $title.text('Explore by content type');
+		});
+	}).contents().last()[0].textContent='Explore by content type';
+	
+}
 
 scalarMediaHideSourceFileTab = false;
 
@@ -112,7 +138,7 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 			$table.append( '<tr><td><span title="'+propOrder[j][0]+'">' + propOrder[j][1] + '</span></td><td>' + linkify(value) + '</td></tr>');
 		};
 	};
-	$table.append('<tr><td>Scalar URL</td><td><a href="'+node.url+'">'+node.url+'</a> (version '+node.current.number+')</td></tr>');
+	$table.append('<tr><td>RavenSpace URL</td><td><a href="'+node.url+'">'+node.url+'</a> (version '+node.current.number+')</td></tr>');
 	//$table.append('<tr><td>Source URL</td><td><a href="'+node.current.sourceFile+'" target="_blank">'+node.current.sourceFile+'</a> ('+node.current.mediaSource.contentType+'/'+node.current.mediaSource.name+')</td></tr>');
 	
 	/*
