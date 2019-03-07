@@ -15,10 +15,6 @@
   overflow: hidden;
 }
 .home__hero__video {
-	// display: block;
-	// width: 100%;
-	// height: calc(100vh - 50px);
-  /* Make video to at least 100% wide and tall */
   min-width: 100%; 
   min-height: 100%; 
   
@@ -68,6 +64,27 @@
 .home__hero__author {
 	font-size: 6rem;
 	line-height: 1;
+}
+
+.home__hero__scroll {
+	color: white;
+	display: block;
+	text-shadow: 1px 1px #444;
+	font-size: 2rem;
+	margin-top: 4rem;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	width: 130px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image:url(../images/icons/down_4.png);
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: white;
+	}
 }
 
 .home__hero__hr {
@@ -126,7 +143,6 @@
 
 .home__feature--1 {
 	background-color: #b9301e;
-
 	background-image:url(../images/meet-elsie.jpg);
 	background-size: cover;
 	margin-bottom: 10rem;
@@ -267,3 +283,54 @@
 .home__video {
 	text-align: center;
 }
+
+.h2--toc {
+    text-align: center;
+    color: #969696;
+}
+
+.table-contents {
+    display: flex;
+}
+
+.table-contents__side {
+    background-color: #38475a;
+    color: white;
+    width: 50px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.table-contents__side p {
+    transform: rotate(270deg);
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    text-align: center;
+    transform-origin: 80px 80px 0;
+}
+
+.teachings {
+    margin-bottom: 0 !important;
+}
+
+.teaching:nth-child(5),
+.teaching:nth-child(6),
+.teaching:nth-child(7) {
+    width: 33.3333333%;
+}
+.teaching__img {
+    width: 100%;
+}
+
+.home__hero__overlay {
+    background-position: bottom center;
+    background-image: url(../images/hero-overlay.png) !important;
+}
+
+
+
+

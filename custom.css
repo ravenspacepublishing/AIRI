@@ -21,14 +21,7 @@
 .body_copy {
 	font-size:17px;
 }
-#footer {
-	font-size:1.3rem;
-	line-height:2.3rem;
-}
-.heading_font {
-	/*font-family:'Aboriginal Sans' !important;*/
-	/*letter-spacing:-.25px;*/
-}
+
 .navbar .title_wrapper {
 	font-size:14px;
 	letter-spacing:-.25px;

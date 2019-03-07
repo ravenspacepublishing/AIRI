@@ -172,4 +172,39 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 
 };
 
+window.customColophon = function() {
+
+	var footer = $('#footer');
+	footer.removeClass('caption_font')
+
+	var footerContent = 
+	'  <div class="footer__content">'+
+	'    <div class="footer__section">'+
+	'      <p class="footer__credit"><strong>© UBC Press 2019</strong>'+
+	'              <br />ISBN 9780774861250<br /></p>'+
+	'        <p><a href="https://www.ubcpress.ca/">Published by UBC Press</a></p>'+
+	''+
+	'        <a class="footer__logo" href="https://ravenspacepublishing.org"><img class="teaching__img" src="media/ravenspace-logo.png" /></a>'+
+	'    </div>'+
+	'    <div class="footer__section">'+
+	'      <p class="footer__heading">Additional Information</p>'+
+	'      <ul class="footer__list"><li><a href="#">Dedication </a></li><li><a href="#">Traditional Knowledge Labels</a></li><li><a href="#">About This Book</a><li><a href="#">Terms of Use</a></li>'+
+	'      </ul>'+
+	'    </div>'+
+	'  </div>';
+	
+	footer.append(footerContent);
+};
+
+
+
+$(document).ready(function() {
+	$(".home__hero__scroll").click(function(event) {
+		event.preventDefault();
+	    $([document.documentElement, document.body]).animate({
+	        scrollTop: $(".home__quote").offset().top
+	    }, 1000);
+	});
+});
+
 };  //if undefined

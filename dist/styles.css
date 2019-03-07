@@ -1115,15 +1115,6 @@ audio::-webkit-media-controls-enclosure {
   max-width: 100%;
   /* removes chrome's max-width on audio players */ }
 
-#footer-right {
-  float: right; }
-
-#colophon {
-  color: #666; }
-
-#colophon img {
-  margin-right: .3rem; }
-
 #publisher-credit {
   margin-bottom: 1.2rem;
   line-height: 110%;
@@ -1851,10 +1842,6 @@ body > .annotorious-popup {
 .caption_font, label, .bootbox .custom_meta, table, .content_selector, .bootbox, #results, textarea {
   font-weight: normal; }
 
-#footer {
-  font-size: 1.3rem;
-  line-height: 2.3rem; }
-
 .menuIcon {
   height: 27px; }
 
@@ -1965,6 +1952,9 @@ body {
 
 .page {
   padding-top: 50px; }
+
+#incoming_comments {
+  display: flow-root; }
 
 p, .p {
   font-size: 2rem;
@@ -2077,19 +2067,6 @@ span[property="sioc:content"] {
   margin-left: auto;
   margin-right: auto; }
 
-#footer {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  clear: both;
-  margin-top: 2rem;
-  padding-top: 6rem;
-  padding-bottom: 2rem; }
-  #footer p, #footer .p {
-    font-size: 1.6rem; }
-  #footer #colophon {
-    font-family: 'Aboriginal Serif', serif; }
-
 header {
   padding-top: 10rem;
   max-width: 900px;
@@ -2122,7 +2099,8 @@ header {
     background-color: #d68353; }
 
 .image_header {
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
 
 .image_header .title_card {
   position: inherit;
@@ -2156,6 +2134,22 @@ header {
 .image_header + header {
   display: none; }
 
+.territory .image_header,
+.parent-territory .image_header {
+  background-image: url(assets/territory.58e46e10af6a7ab4f09f9f05679b597d.jpg) !important; }
+
+.colonialism .image_header,
+.parent-colonialism .image_header {
+  background-image: url(assets/colonialism.24085df6a9d7dbcd3439479da8bbac38.jpg) !important; }
+
+.community .image_header,
+.parent-community .image_header {
+  background-image: url(assets/community.d68c13f7d2d0d6c1e6c8535c133b1969.jpg) !important; }
+
+.healing .image_header,
+.parent-healing .image_header {
+  background-image: url(assets/wellness.26edb0cd951e2e5c9b6e741e05662985.jpg) !important; }
+
 .home__hero {
   position: relative;
   display: block;
@@ -2171,7 +2165,6 @@ header {
   overflow: hidden; }
 
 .home__hero__video {
-  /* Make video to at least 100% wide and tall */
   min-width: 100%;
   min-height: 100%;
   /* Setting width & height to auto prevents the browser from stretching or squishing the video */
@@ -2214,6 +2207,24 @@ header {
 .home__hero__author {
   font-size: 6rem;
   line-height: 1; }
+
+.home__hero__scroll {
+  color: white;
+  display: block;
+  text-shadow: 1px 1px #444;
+  font-size: 2rem;
+  margin-top: 4rem;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 130px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(assets/down_4.917a26470abcd581cf5650f8a08e6140.png); }
+  .home__hero__scroll:hover, .home__hero__scroll:focus {
+    text-decoration: none;
+    color: white; }
 
 .home__hero__hr {
   max-width: 300px;
@@ -2376,6 +2387,90 @@ header {
 
 .home__video {
   text-align: center; }
+
+.h2--toc {
+  text-align: center;
+  color: #969696; }
+
+.table-contents {
+  display: flex; }
+
+.table-contents__side {
+  background-color: #38475a;
+  color: white;
+  width: 50px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.table-contents__side p, .table-contents__side .p {
+  transform: rotate(270deg);
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+  text-align: center;
+  transform-origin: 80px 80px 0; }
+
+.teachings {
+  margin-bottom: 0 !important; }
+
+.teaching:nth-child(5),
+.teaching:nth-child(6),
+.teaching:nth-child(7) {
+  width: 33.3333333%; }
+
+.teaching__img {
+  width: 100%; }
+
+.home__hero__overlay {
+  background-position: bottom center;
+  background-image: url(assets/hero-overlay.701f1fbfce7d257b743add02bf3fe26d.png) !important; }
+
+#footer {
+  clear: both;
+  margin-top: 10rem; }
+
+.footer__content {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  border-top: 2px solid #37475a; }
+
+.footer__section {
+  flex-shrink: 0; }
+  .footer__section:nth-child(1) {
+    width: 65%; }
+  .footer__section:nth-child(2) {
+    width: 35%; }
+
+.footer__credit {
+  margin-bottom: 1.5rem; }
+  .footer__credit strong {
+    font-size: 2.4rem; }
+
+.footer__list {
+  margin-bottom: 4rem;
+  list-style: none; }
+  .footer__list a {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin-bottom: .5rem; }
+
+.footer__logo {
+  margin-top: 2rem;
+  display: inline-block; }
+  .footer__logo img {
+    max-width: 273px; }
+
+.footer__heading {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem; }
 
 .navbar {
   background-color: #39475a;
@@ -2594,7 +2689,7 @@ a.headerIcon {
   background-image: url(assets/pencil.fb0f6d25171572e5473718363661af0c.png); }
 
 .navbar #annotateIcon {
-  background-image: url(assets/clip.e2978bc1130ccd1fe8dbf03cf282aae5.png); }
+  background-image: url(assets/clip.f9c84d6da26f58e6fe19db99321ab423.png); }
 
 .navbar #wayfindingIcon {
   background-image: url(assets/compass_south_west.ba82fc860dcfe62c1c00435fa110ffa1.png); }
@@ -3267,6 +3362,7 @@ i.loader {
     width: 100%; } }
 
 .sp-block {
+  clear: both;
   padding: 2rem;
   position: relative;
   background-size: cover;
