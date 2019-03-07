@@ -2144,11 +2144,11 @@ header {
 
 .community .image_header,
 .parent-community .image_header {
-  background-image: url(assets/community.d68c13f7d2d0d6c1e6c8535c133b1969.jpg) !important; }
+  background-image: url(assets/community.4a360ac059b5b9cb4ef0a6a57f171721.jpg) !important; }
 
 .healing .image_header,
 .parent-healing .image_header {
-  background-image: url(assets/wellness.26edb0cd951e2e5c9b6e741e05662985.jpg) !important; }
+  background-image: url(assets/wellness.36f4a55510aad13d9e46aa01df63abd7.jpg) !important; }
 
 .home__hero {
   position: relative;
@@ -2218,10 +2218,10 @@ header {
   background-repeat: no-repeat;
   background-position: center bottom;
   width: 130px;
-  height: 100px;
+  height: 80px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(assets/down_4.917a26470abcd581cf5650f8a08e6140.png); }
+  background-image: url(assets/down_1.928dea05ccd983ef5e31c0e298c21f02.png); }
   .home__hero__scroll:hover, .home__hero__scroll:focus {
     text-decoration: none;
     color: white; }
