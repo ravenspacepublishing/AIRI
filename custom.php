@@ -12,7 +12,7 @@ function add_wayhut() {
 
 	$ci->template->add_js('system/application/hooks/wayhut/custom.js');
 
-	if ('elsie-test-book-1' != $ci->data['book']->slug) return;
+	if ('as-i-remember-it' != $ci->data['book']->slug) return;
 	
 	$ci->template->add_css('system/application/views/melons/cantaloupe/css/reset.css');
 	$ci->template->add_css('system/application/views/melons/cantaloupe/css/bootstrap.min.css');
