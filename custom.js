@@ -16,6 +16,34 @@ $(document).ready(function() {
 	$('body').on('pageLoadComplete', function() {
 		$('#ScalarHeaderMenuSearchForm, .search').keyboard({blur_hide_icon:false});  // Header
 		setReplacementTexts();
+
+		var body = $('body')
+		if (body.hasClass('page-territory') || body.hasClass('page-territory') || body.hasClass('page-colonialism') || body.hasClass('page-healing')) {
+
+			var title = $('article > header h1[property="dcterms:title"]')[0].innerHTML
+			var breadcrumbs = $('.path-breadcrumb')[0].innerHTML
+			var description = $('article > header [property="dcterms:description"]')[0].innerHTML
+
+			var imageHeader = '<div class="image_header">'+
+			'	<div class="title_card">'+
+			'		<div class="caption_font path-breadcrumb">'+
+						breadcrumbs +
+			'		</div>'+
+			'		<h1 property="dcterms:title" class="image_header__title heading_font heading_weight clearboth">'+
+						title +
+			'		</h1>'+
+			'   <div class="description">' + 
+						description + 
+			'   </div>' + 
+			'	</div>'+
+			'</div>';
+
+			$('.page').prepend(imageHeader);
+		}
+
+		var home = $('#mainMenuInside .home_link > a').eq(0).html('<span class="menuIcon" id="homeIcon"></span>Home: An Invitation to Listen')
+		// var home = 
+		// homeLink.html(homeLink.innerHTML.replace('Home', 'Home: An Invitation to Listen'))
 	});
 });
 
@@ -187,14 +215,16 @@ window.customColophon = function() {
 	'        <a class="footer__logo" href="https://ravenspacepublishing.org"><img class="teaching__img" src="media/ravenspace-logo.png" /></a>'+
 	'    </div>'+
 	'    <div class="footer__section">'+
-	'      <p class="footer__heading">Additional Information</p>'+
-	'      <ul class="footer__list"><li><a href="#">Dedication </a></li><li><a href="#">Traditional Knowledge Labels</a></li><li><a href="#">About This Book</a><li><a href="#">Terms of Use</a></li>'+
+	'      <ul class="footer__list"><li><a href="http://scalar.usc.edu/wayhut/as-i-remember-it/respecting-traditional-knowledge">Respecting Traditional Knowledge</a></li><li><a href="http://scalar.usc.edu/wayhut/as-i-remember-it/about">About This Book</a><li><a href="http://scalar.usc.edu/wayhut/as-i-remember-it/terms-of-use">Terms of Use</a></li>'+
 	'      </ul>'+
+	'      <p class="footer__dedication">In memory of Molly and lasa, Elsie’s grandparents, and all of those other ɬaʔamin, Klahoose, and Homalco Elders and friends whom Elsie remembers so fondly.</p>'+
 	'    </div>'+
 	'  </div>';
 	
 	footer.append(footerContent);
 };
+
+
 
 
 

@@ -496,13 +496,13 @@ span.navbar-text.navbar-left.pull-left.title_wrapper.visible-xs{
 }
 .tocMenu .expandedPage .description{
 	max-height: 6.5rem;
-	color: #ababab;
+	color: white;
 	padding: 0 3rem;
 	font-size: 1.2rem;
 	line-height: 1.3rem;
 }
 .tocMenu .expandedPage .links{
-	margin: 1rem 0 3rem;
+	margin: 1rem 0 0;
 	padding: .5rem 3rem 3rem;
 	border-bottom: 1px solid #444;
 }
@@ -525,7 +525,7 @@ span.navbar-text.navbar-left.pull-left.title_wrapper.visible-xs{
 // 	padding: 0 0 3rem 0;
 // }
 .tocMenu .expandedPage .relationships strong{
-padding-left: 3.5rem;
+padding-left: 2rem;
     font-size: 1.2rem;
     padding-top: 2rem;
     display: block;

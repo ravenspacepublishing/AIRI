@@ -51,7 +51,11 @@ $header-item-height: 4rem;
 	height: $header-item-height;
 	line-height: 2rem;
 	right: 4rem;
-	padding: 1rem 0 1rem 3.6rem;
+	padding: 1rem 1rem 1rem 2rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+
 	margin: 0;
 		&:hover {
 			background-color: $header-primary--light;
@@ -171,8 +175,13 @@ $header-item-height: 4rem;
 		top: 0;
 		padding: 3rem 0 0 0;
 		background-color: $header-primary--dark;
-		border-right: 2px solid $header-highlight--dark;
+		border-left: 10px solid $header-highlight--dark;
 		overflow: auto;
+		background-repeat: no-repeat;
+    background-size: 370px 154px;
+
+		background-image: url(../images/colonialism-sidebar.jpg);
+		border-left: 10px solid #0d5065;    
 	}
 
 	ol > li {
@@ -183,8 +192,14 @@ $header-item-height: 4rem;
 	}
 	ol > li > a:not(.expand) {
 		@extend .header__a;
+		// padding: 1rem 1rem 1rem 2rem;
+		&:before {
+			// content: '\25CF';
+		}
 	}
-
+	.relationships {
+		padding-top: 0;
+	}
 }
 
 
@@ -195,7 +210,7 @@ $header-item-height: 4rem;
 
 
 .tocMenu .expandedPage .relationships ol.tags>li>a:first-child:before {
-  content: '\25CF';
+  // content: none;
   line-height: 2rem;
 	color: #b3b3b3;
 	position: absolute;
@@ -206,8 +221,7 @@ $header-item-height: 4rem;
 }
 
 .navbar li.mainMenu>.mainMenuDropdown>#mainMenuInside>li>ol>li>a:first-child:before, .tocMenu .expandedPage .relationships ol>li>a:first-child:before {
-	content: counter(mainMenu);
-	counter-increment: mainMenu;
+	// content: none;
 	line-height: 2rem;
 	color: #b3b3b3;
 	position: absolute;

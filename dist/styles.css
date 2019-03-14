@@ -2018,6 +2018,12 @@ h5, .h5 {
 .pull-right {
   float: right; }
 
+.feature {
+  margin-bottom: 5rem;
+  margin-left: -5rem;
+  margin-right: -5rem;
+  font-size: 3rem; }
+
 .paragraph_wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -2067,9 +2073,17 @@ span[property="sioc:content"] {
   margin-left: auto;
   margin-right: auto; }
 
+.primary_role_media .page > [property="sioc:content"] {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.path_of {
+  list-style: disc; }
+
 header {
   padding-top: 10rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto; }
   header h1 {
@@ -2089,14 +2103,6 @@ header {
     padding: 8px 7px 5px 7px;
     font-size: 1.4rem;
     background-color: #39475a; }
-  .path-breadcrumb a[href*="/territory"] {
-    background-color: #b73323; }
-  .path-breadcrumb a[href*="/colonialism"] {
-    background-color: #0d5065; }
-  .path-breadcrumb a[href*="/community"] {
-    background-color: #157473; }
-  .path-breadcrumb a[href*="/healing"] {
-    background-color: #d68353; }
 
 .image_header {
   background-size: cover;
@@ -2116,17 +2122,17 @@ header {
   flex-direction: column;
   justify-content: flex-end; }
   .image_header .title_card h1 {
-    width: 900px;
+    width: 1000px;
     margin: 2rem auto 0 auto; }
   .image_header .title_card .path-breadcrumb {
     color: white;
-    width: 900px;
+    width: 1000px;
     margin: 0 auto 0 auto; }
     .image_header .title_card .path-breadcrumb a {
       color: white; }
   .image_header .title_card .description {
     color: white;
-    width: 900px;
+    width: 1000px;
     margin: 0 auto;
     font-size: 20px;
     font-style: italic; }
@@ -2134,21 +2140,50 @@ header {
 .image_header + header {
   display: none; }
 
-.territory .image_header,
+.tklabels span {
+  max-width: 50px;
+  margin-right: 10px; }
+
+.tklabels img {
+  max-width: 100%;
+  height: auto; }
+
+.image_header .tklabels {
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 500px);
+  top: 300px; }
+
+header .tklabels {
+  margin-bottom: 35px; }
+
+.page-territory .image_header,
 .parent-territory .image_header {
   background-image: url(assets/territory.58e46e10af6a7ab4f09f9f05679b597d.jpg) !important; }
+  .page-territory .image_header .path-breadcrumb a,
+  .parent-territory .image_header .path-breadcrumb a {
+    background-color: #b73323; }
 
-.colonialism .image_header,
+.page-colonialism .image_header,
 .parent-colonialism .image_header {
   background-image: url(assets/colonialism.24085df6a9d7dbcd3439479da8bbac38.jpg) !important; }
+  .page-colonialism .image_header .path-breadcrumb a,
+  .parent-colonialism .image_header .path-breadcrumb a {
+    background-color: #0d5065; }
 
-.community .image_header,
+.page-community .image_header,
 .parent-community .image_header {
   background-image: url(assets/community.4a360ac059b5b9cb4ef0a6a57f171721.jpg) !important; }
+  .page-community .image_header .path-breadcrumb a,
+  .parent-community .image_header .path-breadcrumb a {
+    background-color: #157473; }
 
-.healing .image_header,
+.page-healing .image_header,
 .parent-healing .image_header {
   background-image: url(assets/wellness.36f4a55510aad13d9e46aa01df63abd7.jpg) !important; }
+  .page-healing .image_header .path-breadcrumb a,
+  .parent-healing .image_header .path-breadcrumb a {
+    background-color: #d68353; }
 
 .home__hero {
   position: relative;
@@ -2472,6 +2507,10 @@ header {
   font-weight: bold;
   margin-bottom: 1.5rem; }
 
+.footer__dedication {
+  font-size: 1.4rem;
+  margin-bottom: 0; }
+
 .navbar {
   background-color: #39475a;
   border-color: #333; }
@@ -2507,7 +2546,10 @@ header {
   height: 4rem;
   line-height: 2rem;
   right: 4rem;
-  padding: 1rem 0 1rem 3.6rem;
+  padding: 1rem 1rem 1rem 2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   margin: 0; }
   .header__a:hover, .mainMenuDropdown .top a:hover, .mainMenuDropdown .bottom a:hover, .mainMenuDropdown .body a:hover, #mainMenuSubmenus ol > li > a:hover:not(.expand) {
     background-color: #576988; }
@@ -2581,11 +2623,17 @@ header {
   top: 0;
   padding: 3rem 0 0 0;
   background-color: #475873;
-  border-right: 2px solid #3a475a;
-  overflow: auto; }
+  border-left: 10px solid #3a475a;
+  overflow: auto;
+  background-repeat: no-repeat;
+  background-size: 370px 154px;
+  background-image: url(assets/colonialism-sidebar.8ecf59d03a99e74868a33dd52a638c36.jpg);
+  border-left: 10px solid #0d5065; }
+
+#mainMenuSubmenus .relationships {
+  padding-top: 0; }
 
 .tocMenu .expandedPage .relationships ol.tags > li > a:first-child:before {
-  content: '\25CF';
   line-height: 2rem;
   color: #b3b3b3;
   position: absolute;
@@ -2595,8 +2643,6 @@ header {
   width: 2.5rem; }
 
 .navbar li.mainMenu > .mainMenuDropdown > #mainMenuInside > li > ol > li > a:first-child:before, .tocMenu .expandedPage .relationships ol > li > a:first-child:before {
-  content: counter(mainMenu);
-  counter-increment: mainMenu;
   line-height: 2rem;
   color: #b3b3b3;
   position: absolute;
@@ -3060,13 +3106,13 @@ span.navbar-text.navbar-left.pull-left.title_wrapper.visible-xs {
 
 .tocMenu .expandedPage .description {
   max-height: 6.5rem;
-  color: #ababab;
+  color: white;
   padding: 0 3rem;
   font-size: 1.2rem;
   line-height: 1.3rem; }
 
 .tocMenu .expandedPage .links {
-  margin: 1rem 0 3rem;
+  margin: 1rem 0 0;
   padding: .5rem 3rem 3rem;
   border-bottom: 1px solid #444; }
 
@@ -3085,7 +3131,7 @@ span.navbar-text.navbar-left.pull-left.title_wrapper.visible-xs {
   font-size: 1.2rem; }
 
 .tocMenu .expandedPage .relationships strong {
-  padding-left: 3.5rem;
+  padding-left: 2rem;
   font-size: 1.2rem;
   padding-top: 2rem;
   display: block; }

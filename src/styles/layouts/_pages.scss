@@ -83,3 +83,13 @@ span[property="sioc:content"] {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.primary_role_media .page > [property="sioc:content"] {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.path_of {
+	list-style: disc;
+}

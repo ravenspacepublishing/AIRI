@@ -1,6 +1,8 @@
+$header-width: 1000px;
+
 header {
 	padding-top: 10rem;
-	max-width: 900px;
+	max-width: $header-width;
 	margin-left: auto;
 	margin-right: auto;
 
@@ -29,18 +31,6 @@ header {
 		background-color: #39475a;
 	}
 
-	a[href*="/territory"] { 
-		background-color: #b73323;
-	}
-	a[href*="/colonialism"] { 
-		background-color: #0d5065;
-	}
-	a[href*="/community"] { 
-		background-color: #157473;
-	}
-	a[href*="/healing"] { 
-		background-color: #d68353;
-	}
 }
 
 .image_header {
@@ -63,13 +53,13 @@ header {
 	justify-content: flex-end;
 
 	h1 {
-		width: 900px;
+		width: $header-width;
 		margin: 2rem auto 0 auto;
 	}
 
 	.path-breadcrumb {
 		color: white;
-		width: 900px;
+		width: $header-width;
 		margin: 0 auto 0 auto;
 		a {
 			color: white;
@@ -77,7 +67,7 @@ header {
 	}
 	.description { 
 		color: white;
-		width: 900px;
+		width: $header-width;
 		margin: 0 auto;
 		font-size: 20px;
 		font-style: italic;
@@ -88,22 +78,64 @@ header {
 	display: none
 }
 
-.territory .image_header,
+
+.tklabels {
+
+	span {
+		max-width: 50px;
+		margin-right: 10px;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.image_header .tklabels {
+	position: absolute;
+	z-index: 1;
+	left: calc(50% - 500px);
+	top: 300px;
+}
+
+header .tklabels {
+	margin-bottom: 35px;
+}
+
+
+.page-territory .image_header,
 .parent-territory .image_header {
 	background-image: url(../images/page-headers/territory.jpg) !important;	
+
+	.path-breadcrumb a {
+		background-color: #b73323;
+	}
 }
 
-.colonialism .image_header,
+.page-colonialism .image_header,
 .parent-colonialism .image_header {
 	background-image: url(../images/page-headers/colonialism.jpg) !important;	
+
+	.path-breadcrumb a {
+		background-color: #0d5065;
+	}
 }
 
-.community .image_header,
+.page-community .image_header,
 .parent-community .image_header {
 	background-image: url(../images/page-headers/community.jpg) !important;	
+
+	.path-breadcrumb a {
+		background-color: #157473;
+	}
 }
 
-.healing .image_header,
+.page-healing .image_header,
 .parent-healing .image_header {
 	background-image: url(../images/page-headers/wellness.jpg) !important;	
+
+	.path-breadcrumb a {
+		background-color: #d68353;
+	}
 }
