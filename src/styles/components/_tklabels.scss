@@ -1,0 +1,93 @@
+.popover.tk-help .supertitle {
+	font-size: 1rem;
+	text-transform: uppercase;
+	color: #666;
+	padding: 0;
+	margin: 0;
+}
+.popover.tk-help {
+	font-size: 1.2rem;
+	color: #333;
+}
+.popover.tk-help h3 {
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 1.8rem;
+	margin-top: 0;
+	line-height: 2.4rem;
+}
+.popover.tk-help p {
+	font-size: 1.4rem;
+	margin-bottom: 1.2rem;
+}
+.popover.tk-help p:last-child {
+	margin-bottom: 0;
+}
+
+[typeof="tk:TKLabel"] {
+	margin-right:6px;
+}
+
+.tk-help > .popover-content > img {
+	height:3rem;
+	float: left;
+	margin-right: .8rem;
+	margin-top: .3rem;
+}
+[typeof="tk:TKLabel"] > span {
+	display:none;
+}
+#tk-add {
+	display:inline-block;
+	height: 3rem;
+	width:3rem;
+	border-radius:5px;
+	margin-top:2px;
+	cursor:pointer;
+	// background-image:url(../images/edit_icon.png);
+	background-image: url(http://scalar.usc.edu/wayhut/system/application/views/melons/cantaloupe/images/edit_icon.png);
+	background-position:center center;
+	background-size:contain;
+	background-repeat:no-repeat;
+}
+// #tk-add.desciptor::after {
+// 	content: "TK Labels";
+// 	color: #777777;
+// 	font-weight: normal;
+// 	font-size:10px;
+// 	float:right;
+// 	line-height:1.0;
+// 	position:relative;
+// 	left:-4.4rem;
+// 	top: 2px;
+// 	font-family: 'Lato', Arial, sans-serif !important;
+// }
+.tk-labels-media {
+	margin-bottom:.6rem;
+}
+
+.tklabels span {
+	max-width: 50px;
+	margin-right: 10px;
+}
+.tklabels img {
+	max-width: 100%;
+	height: 3rem;
+	cursor: pointer;
+	display: block;
+}
+
+.image_header .tklabels {
+	position: absolute;
+	z-index: 1;
+	left: calc(50% - 500px);
+	top: 300px;
+}
+header .tklabels {
+	margin-bottom: 30px;
+}
+@media only screen and (min-width: 520px) {
+	#tk-add {
+		display:inline-block;
+	}
+}

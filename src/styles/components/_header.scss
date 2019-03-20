@@ -41,6 +41,9 @@ $header-item-height: 4rem;
 	&:first-child {
 		border-top: 1px solid $header-highlight--dark;
 	}
+	&.active a {
+		background-color: $header-primary--light;
+	}
 }
 .header__a {
 	display: block;
@@ -179,9 +182,35 @@ $header-item-height: 4rem;
 		overflow: auto;
 		background-repeat: no-repeat;
     background-size: 370px 154px;
+		border-left: 10px solid #3a475a;
+	}
 
-		background-image: url(../images/colonialism-sidebar.jpg);
-		border-left: 10px solid #0d5065;    
+	&.submenu-territory {
+		.expandedPage {
+			background-image: url(../images/territory-sidebar.jpg);
+			border-color: #b73323; 
+		}
+	}
+
+	&.submenu-colonialism {
+		.expandedPage {
+			background-image: url(../images/colonialism-sidebar.jpg);
+			border-color: #0d5065; 
+		}
+	}
+
+	&.submenu-community {
+		.expandedPage {
+			background-image: url(../images/community-sidebar.jpg);
+			border-color: #157473; 
+		}
+	}
+
+	&.submenu-wellness {
+		.expandedPage {
+			background-image: url(../images/wellness-sidebar.jpg);
+			border-color: #d68353; 
+		}
 	}
 
 	ol > li {
@@ -199,6 +228,7 @@ $header-item-height: 4rem;
 	}
 	.relationships {
 		padding-top: 0;
+		background-color: #475873;
 	}
 }
 

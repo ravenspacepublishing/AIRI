@@ -1,8 +1,9 @@
 $header-width: 1000px;
 
 header {
+	position: relative;
 	padding-top: 10rem;
-	max-width: $header-width;
+	max-width: 900px;
 	margin-left: auto;
 	margin-right: auto;
 
@@ -36,6 +37,7 @@ header {
 .image_header {
 	background-size: cover;
 	background-position: center;
+	position: relative;
 }
 
 .image_header .title_card {
@@ -78,32 +80,6 @@ header {
 	display: none
 }
 
-
-.tklabels {
-
-	span {
-		max-width: 50px;
-		margin-right: 10px;
-	}
-
-	img {
-		max-width: 100%;
-		height: auto;
-	}
-}
-
-.image_header .tklabels {
-	position: absolute;
-	z-index: 1;
-	left: calc(50% - 500px);
-	top: 300px;
-}
-
-header .tklabels {
-	margin-bottom: 35px;
-}
-
-
 .page-territory .image_header,
 .parent-territory .image_header {
 	background-image: url(../images/page-headers/territory.jpg) !important;	
@@ -131,8 +107,8 @@ header .tklabels {
 	}
 }
 
-.page-healing .image_header,
-.parent-healing .image_header {
+.page-wellness .image_header,
+.parent-wellness .image_header {
 	background-image: url(../images/page-headers/wellness.jpg) !important;	
 
 	.path-breadcrumb a {

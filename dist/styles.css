@@ -2082,8 +2082,9 @@ span[property="sioc:content"] {
   list-style: disc; }
 
 header {
+  position: relative;
   padding-top: 10rem;
-  max-width: 1000px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto; }
   header h1 {
@@ -2106,7 +2107,8 @@ header {
 
 .image_header {
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  position: relative; }
 
 .image_header .title_card {
   position: inherit;
@@ -2140,23 +2142,6 @@ header {
 .image_header + header {
   display: none; }
 
-.tklabels span {
-  max-width: 50px;
-  margin-right: 10px; }
-
-.tklabels img {
-  max-width: 100%;
-  height: auto; }
-
-.image_header .tklabels {
-  position: absolute;
-  z-index: 1;
-  left: calc(50% - 500px);
-  top: 300px; }
-
-header .tklabels {
-  margin-bottom: 35px; }
-
 .page-territory .image_header,
 .parent-territory .image_header {
   background-image: url(assets/territory.58e46e10af6a7ab4f09f9f05679b597d.jpg) !important; }
@@ -2178,11 +2163,11 @@ header .tklabels {
   .parent-community .image_header .path-breadcrumb a {
     background-color: #157473; }
 
-.page-healing .image_header,
-.parent-healing .image_header {
+.page-wellness .image_header,
+.parent-wellness .image_header {
   background-image: url(assets/wellness.36f4a55510aad13d9e46aa01df63abd7.jpg) !important; }
-  .page-healing .image_header .path-breadcrumb a,
-  .parent-healing .image_header .path-breadcrumb a {
+  .page-wellness .image_header .path-breadcrumb a,
+  .parent-wellness .image_header .path-breadcrumb a {
     background-color: #d68353; }
 
 .home__hero {
@@ -2536,6 +2521,8 @@ header .tklabels {
   border-bottom: 1px solid #3a475a; }
   .header__li:first-child, .mainMenuDropdown .top:first-child, .mainMenuDropdown .bottom:first-child, .mainMenuDropdown .body li:first-child, #mainMenuSubmenus ol > li:first-child {
     border-top: 1px solid #3a475a; }
+  .header__li.active a, .mainMenuDropdown .active.top a, .mainMenuDropdown .active.bottom a, .mainMenuDropdown .body li.active a, #mainMenuSubmenus ol > li.active a {
+    background-color: #576988; }
 
 .header__a, .mainMenuDropdown .top a, .mainMenuDropdown .bottom a, .mainMenuDropdown .body a, #mainMenuSubmenus ol > li > a:not(.expand) {
   display: block;
@@ -2627,11 +2614,27 @@ header .tklabels {
   overflow: auto;
   background-repeat: no-repeat;
   background-size: 370px 154px;
-  background-image: url(assets/colonialism-sidebar.8ecf59d03a99e74868a33dd52a638c36.jpg);
-  border-left: 10px solid #0d5065; }
+  border-left: 10px solid #3a475a; }
+
+#mainMenuSubmenus.submenu-territory .expandedPage {
+  background-image: url(assets/territory-sidebar.e97d207a15035b9427c37be43bce7d55.jpg);
+  border-color: #b73323; }
+
+#mainMenuSubmenus.submenu-colonialism .expandedPage {
+  background-image: url(assets/colonialism-sidebar.14d441af827be46667cbddfe79a5c62f.jpg);
+  border-color: #0d5065; }
+
+#mainMenuSubmenus.submenu-community .expandedPage {
+  background-image: url(assets/community-sidebar.1f820360826a626cc2b659a3d180f9c5.jpg);
+  border-color: #157473; }
+
+#mainMenuSubmenus.submenu-wellness .expandedPage {
+  background-image: url(assets/wellness-sidebar.8a26b9329d094fa5dc1de2f3d191f2c5.jpg);
+  border-color: #d68353; }
 
 #mainMenuSubmenus .relationships {
-  padding-top: 0; }
+  padding-top: 0;
+  background-color: #475873; }
 
 .tocMenu .expandedPage .relationships ol.tags > li > a:first-child:before {
   line-height: 2rem;
@@ -3117,7 +3120,7 @@ span.navbar-text.navbar-left.pull-left.title_wrapper.visible-xs {
   border-bottom: 1px solid #444; }
 
 .tocMenu .noRelations .links {
-  padding: .5rem 3rem 0;
+  padding: .5rem 3rem 3rem;
   border-bottom: 0; }
 
 .tocMenu .expandedPage .description_more_link {
@@ -3448,12 +3451,30 @@ i.loader {
     background: none !important;
     color: #ffffff00 !important; }
 
-.button {
+.button, .button--secondary, #back-btn, a.nav_btn.primary {
   display: inline-block;
-  color: white;
-  background: #02191f;
-  padding: 10px 20px;
-  font-size: 2rem; }
+  font-size: 2rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  transition: .5s;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  background-color: #475873;
+  color: white; }
+  .button:hover, .button--secondary:hover, #back-btn:hover, a.nav_btn.primary:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #627592 !important; }
+  .button:active, .button--secondary:active, #back-btn:active, a.nav_btn.primary:active, .button:focus, .button--secondary:focus, #back-btn:focus, a.nav_btn.primary:focus {
+    color: white;
+    text-decoration: none;
+    background-color: #39475a !important; }
+
+.button--secondary, #back-btn {
+  background-color: #909090; }
+  .button--secondary:hover, #back-btn:hover {
+    background-color: #b3b3b3 !important; }
+  .button--secondary:active, #back-btn:active, .button--secondary:focus, #back-btn:focus {
+    background-color: #777777 !important; }
 
 /* So the top-most media element aligns with the top of its paragraph */
 .slot {

@@ -18,22 +18,24 @@ $(document).ready(function() {
 		setReplacementTexts();
 
 		var body = $('body')
-		if (body.hasClass('page-territory') || body.hasClass('page-territory') || body.hasClass('page-colonialism') || body.hasClass('page-healing')) {
+		if (body.hasClass('page-territory') || body.hasClass('page-territory') || body.hasClass('page-colonialism') || body.hasClass('page-wellness')) {
 
-			var title = $('article > header h1[property="dcterms:title"]')[0].innerHTML
-			var breadcrumbs = $('.path-breadcrumb')[0].innerHTML
-			var description = $('article > header [property="dcterms:description"]')[0].innerHTML
+			var title = $('article > header h1[property="dcterms:title"]')[0]
+			var breadcrumbs = $('.path-breadcrumb')[0]
+			var description = $('article > header [property="dcterms:description"]')[0]
+			var tklabels = $('.tklabels')[0]
 
 			var imageHeader = '<div class="image_header">'+
+				(tklabels ? tklabels.outerHTML : '') +
 			'	<div class="title_card">'+
 			'		<div class="caption_font path-breadcrumb">'+
-						breadcrumbs +
+						(breadcrumbs ? breadcrumbs.innerHTML : '') +
 			'		</div>'+
 			'		<h1 property="dcterms:title" class="image_header__title heading_font heading_weight clearboth">'+
-						title +
+						(title ? title.innerHTML : '') +
 			'		</h1>'+
 			'   <div class="description">' + 
-						description + 
+						(description ? description.innerHTML : '') + 
 			'   </div>' + 
 			'	</div>'+
 			'</div>';
