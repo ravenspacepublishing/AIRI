@@ -34,7 +34,9 @@
 	// position: absolute;
 	// width: 300px;
 	// top: 0;
-	
+  z-index: 1;
+  position: relative;
+    	
 	img {
     width: 100% !important;
     height: auto !important;
