@@ -3501,15 +3501,16 @@ i.loader {
   clear: left;
   padding-right: 36px; }
 
-.wrapped_slot img {
-  width: 100% !important;
-  height: auto !important; }
-
-.wrapped_slot.left_slot {
-  float: left; }
-
-.wrapped_slot.right_slot {
-  float: right; }
+.wrapped_slot {
+  z-index: 1;
+  position: relative; }
+  .wrapped_slot img {
+    width: 100% !important;
+    height: auto !important; }
+  .wrapped_slot.left_slot {
+    float: left; }
+  .wrapped_slot.right_slot {
+    float: right; }
 
 .mediaContainer {
   background-image: none; }
@@ -3552,7 +3553,4 @@ div.jp-audio {
 .mediaObject img {
   margin: 0 auto;
   display: block; }
-
-.widgetContainer {
-  width: 100% !important; }
 
