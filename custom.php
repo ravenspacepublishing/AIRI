@@ -2,7 +2,11 @@
 function add_wayhut() {
 	
 	$ci =& get_instance();
-
+	
+	$curriculum_explorer= array('name'=>'Curriculum Explorer','description'=>'<b>An advanced display of book content.</b> A JSON file, that is the Media URL for this media-page drives this advanced display.','image'=>'views/melons/cantaloupe/images/view_media.gif');
+	$ci->config->config['media_views']['curriculum_explorer'] = $curriculum_explorer;
+	$ci->data['media_views']['curriculum_explorer'] = $curriculum_explorer;
+	
 	$ignore_pages = array('.edit', '.annotation_editor');
 	foreach ($ignore_pages as $ignore) {
 		if ($ignore == substr($ci->uri->uri_string, strlen($ignore)*-1)) return;
@@ -10,9 +14,9 @@ function add_wayhut() {
 
 	if ('system' == $ci->router->fetch_class()) return;
 
-	$ci->template->add_js('system/application/hooks/wayhut/custom.js');
-
 	if ('as-i-remember-it' != $ci->data['book']->slug) return;
+	
+	$ci->template->add_js('system/application/hooks/wayhut/custom.js');
 	
 	$ci->template->add_css('system/application/views/melons/cantaloupe/css/reset.css');
 	$ci->template->add_css('system/application/views/melons/cantaloupe/css/bootstrap.min.css');
