@@ -1,23 +1,9 @@
-@font-face {
-	font-family:'Aboriginal Serif';
-	src: url('fonts/Aboriginal_Serif_REGULAR_939.eot?') format('eot'), url('fonts/Aboriginal_Serif_REGULAR_939.woff') format('woff'), url('fonts/Aboriginal_Serif_REGULAR_939.ttf') format('truetype'), url('fonts/Aboriginal_Serif_REGULAR_939.svg#AboriginalSerif') format('svg');
-	font-weight:normal;
-	font-style:normal;
-}
-@font-face {
-	font-family:'Aboriginal Sans';
-	src: url('fonts/AboriginalSansREGULAR.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
-}
-.body_font, .body_copy {
-	font-family:'Aboriginal Serif';
-}
 .caption_font, label, .bootbox .custom_meta, table, .content_selector, .bootbox, #results, textarea {
 	font-family:'Aboriginal Sans', sans-serif;
 	font-weight:normal;
 	letter-spacing:-.25px;
 }
+
 .body_copy {
 	font-size:17px;
 }
@@ -36,6 +22,7 @@
 #desktopTitleWrapper {
 	padding-top:3px !important;
 }
+
 article h1 {
 	font-size:5rem;
 }
@@ -104,13 +91,3 @@ a.cke_specialchar {
 .right-inner-addon .keyboard-icon.active {
 	visibility:visible;
 }
-
-/*
-body {
-	background-color: white;
-}
-
-.bg_screen {
-	display: none;
-}
-*/
