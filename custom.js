@@ -101,8 +101,16 @@ setReplacementTexts = function() {
 	$('.has_tags').prev().text('See also:');
 	$('.tag_of').prev().text('Related pages:');
 	$('.nav_btn:contains("Visit a random tagged page")').hide();
-	if ($('.path_of').length && $('.relationships').length > 1) $('.path_of').closest('.relationships').insertBefore('.relationships:first');
-	if ($('.continue_btn').length && $('.relationships').length > 1) $('.continue_btn').closest('.relationships').insertBefore('.relationships:first');
+	if ($('.continue_btn').length && $('.relationships').length > 1) {
+		if (!$('.continue_btn').closest('.relationships').is('.relationships:first')) {
+			$('.continue_btn').closest('.relationships').insertBefore('.relationships:first');
+		};
+	};
+	if ($('.path_of').length && $('.relationships').length > 1) {
+		if (!$('.path_of').closest('.relationships').is('.relationships:first')) {
+			$('.path_of').closest('.relationships').insertBefore('.relationships:first');
+		};
+	};
 	var $is_note_in = $('h1:contains("This page is a note in:")');
 	if ($is_note_in.length) {
 		var is_plural = ($is_note_in.next().children('li').length > 1) ? true : false;
