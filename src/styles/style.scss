@@ -1,32 +1,3 @@
-
-@font-face {
-	font-family:'Aboriginal Serif';
-	src: url('../fonts/Aboriginal_Serif/AboriginalSerifREGULAR.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
-}
-
-@font-face {
-	font-family:'Aboriginal Serif';
-	src: url('../fonts/Aboriginal_Serif/AboriginalSerifBOLD.ttf') format('truetype');
-	font-weight:bold;
-	font-style:normal;
-}
-
-@font-face {
-	font-family:'Aboriginal Serif';
-	src: url('../fonts/Aboriginal_Serif/AboriginalSerifBOLDITALIC.ttf') format('truetype');
-	font-weight:bold;
-	font-style:italic;
-}
-
-@font-face {
-	font-family:'Aboriginal Serif';
-	src: url('../fonts/Aboriginal_Serif/AboriginalSerifITALIC.ttf') format('truetype');
-	font-weight:normal;
-	font-style:italic;
-}
-
 @import "common/common-old";
 @import "common/custom-old";
 
@@ -37,6 +8,7 @@
 @import "layouts/pages-header";
 @import "layouts/home";
 
+@import "components/tklabels";
 @import "components/footer";
 @import "components/header";
 @import "components/header-old";

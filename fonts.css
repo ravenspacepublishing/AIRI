@@ -1,15 +1,31 @@
 @font-face {
 	font-family:'Aboriginal Serif';
-	src: url('fonts/Aboriginal_Serif_REGULAR_939.eot?') format('eot'), url('fonts/Aboriginal_Serif_REGULAR_939.woff') format('woff'), url('fonts/Aboriginal_Serif_REGULAR_939.ttf') format('truetype'), url('fonts/Aboriginal_Serif_REGULAR_939.svg#AboriginalSerif') format('svg');
+	src: url('fonts/AboriginalSerifREGULAR.ttf') format('truetype');
 	font-weight:normal;
 	font-style:normal;
 }
+
 @font-face {
-	font-family:'Aboriginal Sans';
-	src: url('fonts/AboriginalSansREGULAR.ttf') format('truetype');
-	font-weight:normal;
+	font-family:'Aboriginal Serif';
+	src: url('fonts/AboriginalSerifBOLD.ttf') format('truetype');
+	font-weight:bold;
 	font-style:normal;
 }
+
+@font-face {
+	font-family:'Aboriginal Serif';
+	src: url('fonts/AboriginalSerifBOLDITALIC.ttf') format('truetype');
+	font-weight:bold;
+	font-style:italic;
+}
+
+@font-face {
+	font-family:'Aboriginal Serif';
+	src: url('fonts/AboriginalSerifITALIC.ttf') format('truetype');
+	font-weight:normal;
+	font-style:italic;
+}
+
 .body_font, .body_copy {
 	font-family:'Aboriginal Serif';
 }

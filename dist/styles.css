@@ -1,28 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: 'Aboriginal Serif';
-  src: url(assets/AboriginalSerifREGULAR.e9db9bd7ca1bdea7f1f8fc4e39bf9c53.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Aboriginal Serif';
-  src: url(assets/AboriginalSerifBOLD.199d71e3b86592f8dcd5fb388acae855.ttf) format("truetype");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Aboriginal Serif';
-  src: url(assets/AboriginalSerifBOLDITALIC.61f310c34bd05d131bcfa7d705d90f8d.ttf) format("truetype");
-  font-weight: bold;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Aboriginal Serif';
-  src: url(assets/AboriginalSerifITALIC.d237f2eabf2cae31fdb8a3789c06ba73.ttf) format("truetype");
-  font-weight: normal;
-  font-style: italic; }
-
 /* Cantaloupe styles */
 /* Fonts */
 .caption_font b, .caption_font strong {
@@ -2449,6 +2425,84 @@ header {
   background-position: bottom center;
   background-image: url(assets/hero-overlay.701f1fbfce7d257b743add02bf3fe26d.png) !important; }
 
+.page-index .body_copy .slot {
+  max-width: none; }
+
+.popover.tk-help .supertitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #666;
+  padding: 0;
+  margin: 0; }
+
+.popover.tk-help {
+  font-size: 1.2rem;
+  color: #333; }
+
+.popover.tk-help h3, .popover.tk-help .h3 {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 1.8rem;
+  margin-top: 0;
+  line-height: 2.4rem; }
+
+.popover.tk-help p, .popover.tk-help .p {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem; }
+
+.popover.tk-help p:last-child, .popover.tk-help .p:last-child {
+  margin-bottom: 0; }
+
+[typeof="tk:TKLabel"] {
+  margin-right: 6px; }
+
+.tk-help > .popover-content > img {
+  height: 3rem;
+  float: left;
+  margin-right: .8rem;
+  margin-top: .3rem; }
+
+[typeof="tk:TKLabel"] > span {
+  display: none; }
+
+#tk-add {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 5px;
+  margin-top: 2px;
+  cursor: pointer;
+  background-image: url(http://scalar.usc.edu/ravenspace/system/application/views/melons/cantaloupe/images/edit_icon.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.tk-labels-media {
+  margin-bottom: .6rem; }
+
+.tklabels span {
+  max-width: 50px;
+  margin-right: 10px; }
+
+.tklabels img {
+  max-width: 100%;
+  height: 3rem;
+  cursor: pointer;
+  display: block; }
+
+.image_header .tklabels {
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 500px);
+  top: 260px; }
+
+header .tklabels {
+  margin-bottom: 30px; }
+
+@media only screen and (min-width: 520px) {
+  #tk-add {
+    display: inline-block; } }
+
 #footer {
   clear: both;
   margin-top: 10rem; }
@@ -3553,4 +3607,7 @@ div.jp-audio {
 .mediaObject img {
   margin: 0 auto;
   display: block; }
+
+.widget_carousel .widgetContainer {
+  width: 100% !important; }
 
