@@ -100,6 +100,7 @@ setReplacementTexts = function() {
 	var book_id = parseInt($('link#book_id').attr('href'));
 	$('.has_tags').prev().text('See also:');
 	$('.tag_of').prev().text('Related pages:');
+	$('.path_of').prev().text('Path contents:');
 	$('.nav_btn:contains("Visit a random tagged page")').hide();
 	if ($('.continue_btn').length && $('.relationships').length > 1) {
 		if (!$('.continue_btn').closest('.relationships').is('.relationships:first')) {
@@ -130,6 +131,8 @@ setReplacementTexts = function() {
 scalarMediaHideSourceFileTab = false;
 
 scalarMediaDetailsSourceFileLink = false;
+
+scalarMediaDetailsAddDescription = false;
 
 customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 	
