@@ -194,18 +194,13 @@ window.customColophon = function() {
 
 	var footerContent = 
 	'  <div class="footer__content">'+
-	'    <div class="footer__section">'+
-	'      <p class="footer__credit"><strong>© UBC Press 2019</strong>'+
-	'              <br />ISBN 9780774861250<br /></p>'+
-	'        <p><a href="https://www.ubcpress.ca/">Published by UBC Press</a></p>'+
-	''+
-	'        <a class="footer__logo" href="https://ravenspacepublishing.org"><img class="teaching__img" src="media/ravenspace-logo.png" /></a>'+
-	'    </div>'+
-	'    <div class="footer__section">'+
-	'      <ul class="footer__list"><li><a href="http://scalar.usc.edu/wayhut/as-i-remember-it/respecting-traditional-knowledge">Respecting Traditional Knowledge</a></li><li><a href="http://scalar.usc.edu/wayhut/as-i-remember-it/about">About This Book</a><li><a href="http://scalar.usc.edu/wayhut/as-i-remember-it/terms-of-use">Terms of Use</a></li>'+
-	'      </ul>'+
 	'      <p class="footer__dedication">In memory of Molly and lasa, Elsie’s grandparents, and all of those other ɬaʔamin, Klahoose, and Homalco Elders and friends whom Elsie remembers so fondly.</p>'+
-	'    </div>'+
+	'      <ul class="footer__list"><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/respecting-traditional-knowledge">Respecting Traditional Knowledge</a></li><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/about">About This Book</a><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/terms-of-use">Terms of Use</a></li>'+
+	'      </ul>'+
+	'        <a class="footer__logo" href="https://ravenspacepublishing.org"><img class="teaching__img" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/ravenspace-logo.png" /></a>'+
+	'      <p class="footer__credit">© UBC Press 2019'+
+	'              <br />ISBN 9780774861250<br /></p>'+
+	'        <p class="footer_publish"><a href="https://www.ubcpress.ca/">Published by UBC Press</a></p>'+
 	'  </div>';
 	
 	footer.append(footerContent);
