@@ -1994,6 +1994,7 @@ h5, .h5 {
 .pull-right {
   float: right; }
 
+.featured,
 .feature {
   margin-bottom: 5rem;
   margin-left: -5rem;
