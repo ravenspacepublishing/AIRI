@@ -2428,6 +2428,18 @@ header {
 .page-index .body_copy .slot {
   max-width: none; }
 
+.page-index header {
+  display: none; }
+
+.page-index span[property="sioc:content"] {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.protocol__text {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px; }
+
 .popover.tk-help .supertitle {
   font-size: 1rem;
   text-transform: uppercase;
@@ -2472,13 +2484,16 @@ header {
   border-radius: 5px;
   margin-top: 2px;
   cursor: pointer;
-  background-image: url(http://scalar.usc.edu/ravenspace/system/application/views/melons/cantaloupe/images/edit_icon.png);
+  background-image: url(assets/edit_icon.e5f47e37c29177fede28bc7dbe07307f.png);
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat; }
 
 .tk-labels-media {
   margin-bottom: .6rem; }
+
+.tk-labels-media img {
+  max-width: 36px; }
 
 .tklabels span {
   max-width: 50px;
@@ -2686,6 +2701,12 @@ header .tklabels {
   background-image: url(assets/wellness-sidebar.8a26b9329d094fa5dc1de2f3d191f2c5.jpg);
   border-color: #d68353; }
 
+#mainMenuSubmenus ol > li .expand {
+  display: none; }
+
+#mainMenuSubmenus ol > li > a:not(.expand) {
+  right: 0; }
+
 #mainMenuSubmenus .relationships {
   padding-top: 0;
   background-color: #475873; }
@@ -2827,6 +2848,20 @@ a.headerIcon {
 .navbar .dropdown-menu li a:hover {
   background-color: #576988 !important;
   color: #fff; }
+
+.tocMenu .expandedPage.is_current h2.title:after, .tocMenu .expandedPage.is_current .title.h2:after,
+.tocMenu .expandedPage.is_current .title.h2:after {
+  content: 'Current page';
+  background: #34435a;
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0px 4px;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 15px; }
+
+.relationships ul li:nth-child(2) {
+  display: none; }
 
 /*New CSS*/
 body {
@@ -3150,14 +3185,6 @@ span.navbar-text.navbar-left.pull-left.title_wrapper.visible-xs {
   display: none; }
 
 /*Fix for submenus detaching when zooming in past 100%*/
-.tocMenu .expandedPage.is_parent h2.title:after, .tocMenu .expandedPage.is_parent .title.h2:after, .tocMenu .expandedPage.is_current h2.title:after, .tocMenu .expandedPage.is_current .title.h2:after {
-  content: 'Contains the current page';
-  display: block;
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #717171;
-  line-height: 16px; }
-
 .tocMenu .expandedPage.is_current h2.title:after, .tocMenu .expandedPage.is_current .title.h2:after {
   content: 'Current page'; }
 
@@ -3591,6 +3618,15 @@ i.loader {
 .body_copy.media_description {
   max-width: 900px;
   margin: 0 auto 2.4rem auto; }
+
+.widget_slot {
+  z-index: 1;
+  position: relative; }
+
+.widget_carousel {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .jp-audio {
   width: 100% !important; }

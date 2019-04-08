@@ -45,7 +45,7 @@
 	margin-top:2px;
 	cursor:pointer;
 	background-image:url(../images/edit_icon.png);
-	// background-image: url(http://scalar.usc.edu/wayhut/system/application/views/melons/cantaloupe/images/edit_icon.png);
+	// background-image: url(/system/application/views/melons/cantaloupe/images/edit_icon.png);
 	background-position:center center;
 	background-size:contain;
 	background-repeat:no-repeat;
@@ -65,6 +65,9 @@
 .tk-labels-media {
 	margin-bottom:.6rem;
 }
+.tk-labels-media img {
+  max-width: 36px;
+}
 
 .tklabels span {
 	max-width: 50px;
@@ -81,7 +84,7 @@
 	position: absolute;
 	z-index: 1;
 	left: calc(50% - 500px);
-	top: 300px;
+	top: 260px;
 }
 header .tklabels {
 	margin-bottom: 30px;

@@ -3,7 +3,7 @@
 	background-image: url(../images/loading_msg.png);
 	background-position: center center;
 	background-repeat: no-repeat;
-	
+
 }
 
 .slot.top{
@@ -13,8 +13,8 @@
 .slot.right,
 .slot.left {
 	img {
-    width: 100% !important;
-    height: auto !important;
+		width: 100% !important;
+		height: auto !important;
 	}
 }
 .slot.right{
@@ -31,26 +31,26 @@
 
 
 .wrapped_slot {
-	// position: absolute;
-	// width: 300px;
-	// top: 0;
-  z-index: 1;
-  position: relative;
-    	
-	img {
-    width: 100% !important;
-    height: auto !important;
-	}
+// position: absolute;
+// width: 300px;
+// top: 0;
+z-index: 1;
+position: relative;
 
-	&.left_slot {
-		float: left;
-		// padding-right: 36px;
-	}
+img {
+	width: 100% !important;
+	height: auto !important;
+}
 
-	&.right_slot {
-		float: right;
-		// padding-left: 36px;
-	}
+&.left_slot {
+	float: left;
+// padding-right: 36px;
+}
+
+&.right_slot {
+	float: right;
+// padding-left: 36px;
+}
 }
 
 .mediaContainer {
@@ -78,6 +78,17 @@
 	margin: 0 auto 2.4rem auto;
 }
 .body_copy.media_description {
-		max-width: 900px;
+	max-width: 900px;
 	margin: 0 auto 2.4rem auto;
 } 
+
+.widget_slot {
+	z-index: 1;
+	position: relative;
+}
+
+.widget_carousel {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto
+}

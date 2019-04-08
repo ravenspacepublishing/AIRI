@@ -332,5 +332,21 @@
 }
 
 
+.page-index .body_copy .slot {
+	max-width: none;
+}
 
+.page-index header {
+	display: none;
+}
 
+.page-index span[property="sioc:content"] {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.protocol__text {
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
