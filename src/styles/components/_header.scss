@@ -217,10 +217,12 @@ $header-item-height: 4rem;
 		@extend .header__li;
 	}
 	ol > li .expand {
+		display: none;
 		@extend .header__expand;
 	}
 	ol > li > a:not(.expand) {
 		@extend .header__a;
+		right: 0;
 		// padding: 1rem 1rem 1rem 2rem;
 		&:before {
 			// content: '\25CF';
@@ -405,4 +407,26 @@ a.headerIcon{
 .navbar .dropdown-menu li a:hover {
 	background-color: #576988 !important;
 	color: #fff;
+}
+
+
+
+.tocMenu .expandedPage.is_current h2.title:after, 
+.tocMenu .expandedPage.is_current .title.h2:after {
+	content: 'Current page';
+	background: #34435a;
+	display: inline-block;
+	margin-left: 8px;
+	padding: 0px 4px;
+	font-size: 1.2rem;
+	font-style: italic;
+	line-height: 15px;
+}
+
+.relationships {
+	ul {
+		li:nth-child(2) {
+			display: none;
+		}
+	}
 }

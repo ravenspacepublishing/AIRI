@@ -483,14 +483,14 @@ span.navbar-text.navbar-left.pull-left.title_wrapper.visible-xs{
 // }
 
 
-.tocMenu .expandedPage.is_parent h2.title:after, .tocMenu .expandedPage.is_current h2.title:after{
-	content: 'Contains the current page';
-	display: block;
-	font-size: 1.2rem;
-	font-style: italic;
-	color: #717171;
-	line-height: 16px;
-}
+// .tocMenu .expandedPage.is_parent h2.title:after, .tocMenu .expandedPage.is_current h2.title:after{
+	// content: 'Contains the current page';
+	// display: block;
+	// font-size: 1.2rem;
+	// font-style: italic;
+	// color: #717171;
+	// line-height: 16px;
+// }
 .tocMenu .expandedPage.is_current h2.title:after{
 	content: 'Current page';
 }
