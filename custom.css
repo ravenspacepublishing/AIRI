@@ -91,3 +91,22 @@ a.cke_specialchar {
 .right-inner-addon .keyboard-icon.active {
 	visibility:visible;
 }
+
+.citations_metadata table {
+	font-size: 1.2rem;
+	border-left:none !important;
+	border-right:none !important;
+	margin-bottom:30px;
+}
+.citations_metadata td {
+	padding-left: 0 !important;
+	word-break: break-all;
+}
+.citations_metadata td:first-child {
+	width: 10rem;
+	font-weight: bold;
+}
+.citations_metadata td:last-child {
+	padding-right: 0 !important;
+	padding-left:.8rem !important;
+}
