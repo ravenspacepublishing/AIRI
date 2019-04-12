@@ -14,12 +14,16 @@ $(document).ready(function() {
 		$('#edit_form .form-horizontal:first, #metadata-pane').keyboard();  // Edit page
 	});
 	$('body').on('pageLoadComplete', function() {
-		$('#ScalarHeaderMenuSearchForm, .search').keyboard({blur_hide_icon:false});  // Header
+		$('#ScalarHeaderMenuSearchForm, .search').keyboard({blur_hide_icon:false});
 		setReplacementTexts();
-
 		var home = $('#mainMenuInside .home_link > a').eq(0).html('<span class="menuIcon" id="homeIcon"></span>Home: An Invitation to Listen')
-		// var home = 
-		// homeLink.html(homeLink.innerHTML.replace('Home', 'Home: An Invitation to Listen'))
+		// var home = homeLink.html(homeLink.innerHTML.replace('Home', 'Home: An Invitation to Listen'));
+	});
+	$(".home__hero__scroll").click(function(event) {
+		event.preventDefault();
+	    $([document.documentElement, document.body]).animate({
+	        scrollTop: $(".home__quote").offset().top
+	    }, 1000);
 	});
 });
 
@@ -102,11 +106,13 @@ setReplacementTexts = function() {
 	
 }
 
-scalarMediaHideSourceFileTab = false;
+scalarMediaHideSourceFileTab = true;
 
-scalarMediaDetailsSourceFileLink = false;
+scalarMediaDetailsHideSourceFileLink = true;
 
 scalarMediaDetailsAddDescription = false;
+
+scalarMediaDetailsHideCitationsSectionIfNoCitations = true;
 
 customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 	
@@ -202,21 +208,8 @@ window.customColophon = function() {
 	'              <br />ISBN 9780774861250<br /></p>'+
 	'        <p class="footer_publish"><a href="https://www.ubcpress.ca/">Published by UBC Press</a></p>'+
 	'  </div>';
-	
 	footer.append(footerContent);
+	
 };
 
-
-
-
-
-$(document).ready(function() {
-	$(".home__hero__scroll").click(function(event) {
-		event.preventDefault();
-	    $([document.documentElement, document.body]).animate({
-	        scrollTop: $(".home__quote").offset().top
-	    }, 1000);
-	});
-});
-
-};  //if undefined
+};  //if !undefined
