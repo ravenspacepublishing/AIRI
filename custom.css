@@ -110,3 +110,5 @@ a.cke_specialchar {
 	padding-right: 0 !important;
 	padding-left:.8rem !important;
 }
+#gallery .popover, .carousel > .popover { color: black; font-size: 1.2rem; text-shadow: none; color: #666; line-height: 140%; }
+.popover > h3 { margin: 0; padding: 8px 14px !important; }
