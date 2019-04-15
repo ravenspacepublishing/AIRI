@@ -15,9 +15,8 @@ $(document).ready(function() {
 	});
 	$('body').on('pageLoadComplete', function() {
 		$('#ScalarHeaderMenuSearchForm, .search').keyboard({blur_hide_icon:false});
+		// Rename some system texts
 		setReplacementTexts();
-		var home = $('#mainMenuInside .home_link > a').eq(0).html('<span class="menuIcon" id="homeIcon"></span>Home: An Invitation to Listen')
-		// var home = homeLink.html(homeLink.innerHTML.replace('Home', 'Home: An Invitation to Listen'));
 	});
 	$(".home__hero__scroll").click(function(event) {
 		event.preventDefault();
@@ -27,8 +26,7 @@ $(document).ready(function() {
 	});
 });
 
-// Wrapper that invokes LanguageKeyboard from buttons within text inputs
-$.fn.keyboard = function(options) {
+$.fn.keyboard = function(options) {  // Wrapper that invokes LanguageKeyboard from buttons within text inputs
 	
 	var defaults = {
 		version:'0.1',
@@ -76,6 +74,7 @@ setReplacementTexts = function() {
 	
 	if (!$('link#book_id').length) return;
 	var book_id = parseInt($('link#book_id').attr('href'));
+	$('#mainMenuInside .home_link > a').eq(0).html('<span class="menuIcon" id="homeIcon"></span>Home: An Invitation to Listen');
 	$('.has_tags').prev().text('See also:');
 	$('.tag_of').prev().text('Related pages:');
 	$('.path_of').prev().text('Path contents:');
@@ -159,19 +158,19 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 			$table.append( '<tr><td><span title="'+propOrder[j][0]+'">' + propOrder[j][1] + '</span></td><td>' + linkify(value) + '</td></tr>');
 		};
 	};
-	$table.append('<tr><td>RavenSpace URL</td><td><a href="'+node.url+'">'+node.url+'</a> (version '+node.current.number+')</td></tr>');
-	//$table.append('<tr><td>Source URL</td><td><a href="'+node.current.sourceFile+'" target="_blank">'+node.current.sourceFile+'</a> ('+node.current.mediaSource.contentType+'/'+node.current.mediaSource.name+')</td></tr>');
-	
-	/*
-	if ('undefined' != typeof(obj['art:sourceLocation']) && null != obj['art:sourceLocation']) {
+	if (null != obj['art:sourceLocation']) {
 		var values = obj['art:sourceLocation'];
 		for (var k = 0; k < values.length; k++) {
 			var value = (null == values[k]) ? '' : values[k];
 			if (!value.length) continue;
-			$table.append( '<tr><td>art:sourceLocation</td><td>' + linkify(value) + '</td></tr>');
+			if (-1 != value.indexOf('206.12.89.21')) continue;  // DSpace install
+			if (-1 != value.indexOf('206.12.89.14') || -1 != value.indexOf('206.12.100.68')) continue;  // Omeka-S install
+			var $sl_row = $( '<tr><td><span title="art:sourceLocation">Source location</span></td><td>' + linkify(value) + '</td></tr>').appendTo($table);
+			if ($table.find('[title="dcterms:identifier"]').length) $sl_row.insertBefore($table.find('[title="dcterms:identifier"]').closest('tr'));
 		};
-	};
-	*/
+	}
+	$table.append('<tr><td>RavenSpace URL</td><td><a href="'+node.url+'">'+node.url+'</a> (version '+node.current.number+')</td></tr>');
+	//$table.append('<tr><td>Source URL</td><td><a href="'+node.current.sourceFile+'" target="_blank">'+node.current.sourceFile+'</a> ('+node.current.mediaSource.contentType+'/'+node.current.mediaSource.name+')</td></tr>');
 	
 	if ('undefined' != typeof(node.current.properties['http://localcontexts.org/tk/hasLabel']) && node.current.properties['http://localcontexts.org/tk/hasLabel'].length) {
 		var $labelRow = $table.find('.tk-label-row').show();
