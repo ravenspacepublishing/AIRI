@@ -2545,8 +2545,7 @@ header .tklabels {
   background: #38475a;
   color: white;
   padding-top: 5rem;
-  padding-bottom: 1rem;
-  text-align: center; }
+  padding-bottom: 4rem; }
 
 #footer a {
   color: white;
@@ -2561,24 +2560,21 @@ header .tklabels {
   font-size: 1.6rem; }
 
 .footer__list {
-  margin-bottom: 4rem;
+  margin-bottom: 0;
   list-style: none; }
   .footer__list li {
     display: inline-block;
     border-right: 1px solid white;
-    padding: 0 10px; }
+    padding: 0 10px;
+    line-height: 2rem; }
     .footer__list li:last-child {
       border: none; }
-  .footer__list a {
-    font-size: 1.8rem;
-    line-height: 2rem;
-    margin-bottom: .5rem; }
 
 .footer__logo {
-  margin-top: 2rem;
+  margin-bottom: 1rem;
   display: inline-block; }
   .footer__logo img {
-    max-width: 273px; }
+    max-width: 200px; }
 
 .footer__heading {
   font-size: 2.4rem;
