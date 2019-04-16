@@ -1,0 +1,44 @@
+.popup {
+  position: relative;
+  background: white;
+
+  width: auto;
+  max-width: 1000px;
+  margin: 20px auto;
+
+  border: 1px solid #115770;
+  padding: 4rem 4rem;
+  border-radius: 5px;
+
+  &::after {
+    content: "";
+    background: url(../images/shells.jpg);
+    opacity: 0.125;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;   
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.popup__content {
+  position: relative;
+  z-index: 1;
+}
+
+.popup__btn--disagree {
+  background-color: #a94442 !important;
+  &:hover {
+    background-color: #b95957 !important;
+  }
+  &:active,
+  &:focus {
+    background-color: #79312f !important;
+  }
+}

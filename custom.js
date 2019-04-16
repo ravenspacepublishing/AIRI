@@ -208,3 +208,21 @@ window.customColophon = function() {
 };
 
 };  //if !undefined
+
+$(document).ready(function() {
+	if(window.location.href.indexOf("popup-test") > -1) {
+		$.magnificPopup.open({
+		  items: {
+		    src: '/system/application/hooks/wayhut/popup.html', 
+		    type: 'ajax'
+		  },
+		  modal: true,
+		});
+	}
+
+  $('body').on('click', '.popup-close', function () {
+		event.preventDefault();
+		$.magnificPopup.close();
+  });
+
+});

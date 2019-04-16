@@ -18,6 +18,7 @@ function add_wayhut() {
 	
 	$ci->template->add_css('system/application/hooks/wayhut/fonts.css');
 	$ci->template->add_js('system/application/hooks/wayhut/custom.js');
+	$ci->template->add_js('system/application/hooks/wayhut/jquery.magnific-popup.js');
 	
 	$ci->template->add_css('system/application/views/melons/cantaloupe/css/reset.css');
 	$ci->template->add_css('system/application/views/melons/cantaloupe/css/bootstrap.min.css');
