@@ -1,5 +1,7 @@
-@import "common/common-old";
-@import "common/custom-old";
+@import "external/magnific-popup";
+
+@import "utility/variables";
+@import "utility/functions";
 
 @import "common/global";
 @import "common/typography";
@@ -8,15 +10,13 @@
 @import "layouts/pages-header";
 @import "layouts/home";
 
-
+@import "components/visual-path";
 @import "components/gallery";
 @import "components/tklabels";
 @import "components/footer";
 @import "components/header";
-@import "components/header-old";
-@import "components/visual-path";
+@import "components/menu";
 @import "components/buttons";
 @import "components/slot";
 @import "components/media";
-@import "components/magnific-popup";
 @import "components/popup";

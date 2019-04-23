@@ -1,18 +1,28 @@
-html {
+#body#body {
 	font-size: 62.5%;
-
-}
-
-body {
-	font-family: 'Aboriginal Serif', serif;
+	font-family: 'Aboriginal Serif', serif !important;
 	visibility: hidden;
 	background: none !important;
+
+	.page {
+		@extend .reset-all;
+		display: block;
+		padding-top: 50px;
+	}
+
+	#incoming_comments {
+		display: flow-root;
+		padding-left: 0;
+	}
+
+	.heading_font {
+		font-family: inherit !important;
+	}
+	.heading_weight {
+		font-weight: initial;
+	}
+	.bg_screen {
+		display: none;
+	}
 }
 
-.page {
-	padding-top: 50px;
-}
-
-#incoming_comments {
-	display: flow-root;
-}

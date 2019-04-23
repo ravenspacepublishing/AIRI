@@ -1,359 +1,365 @@
-
-.home__hero {
-	position: relative;
-	display: block;
-	width: 100%;
-	height: calc(100vh - 50px);
-}
-
-.home__hero__video-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%; 
-  overflow: hidden;
-}
-.home__hero__video {
-  min-width: 100%; 
-  min-height: 100%; 
-  
-  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
-  width: auto;
-  height: auto;
-  
-  /* Center the video */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.home__hero__overlay {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.5) 100%);
-	color: white;
-}
-
-.home__hero__content {
-	text-align: center;
-	p {
-		text-shadow: 1px 1px #444;
-		margin-bottom: 0
+#article#article {
+	
+	span[property="sioc:content"] {
+	    padding-top: 0;
 	}
-}
 
-.home__hero__title {
-	margin-top: 0;
-	text-shadow: 1px 1px #444;
-	font-size: 8rem;
-	margin-bottom: 0
-}
-.home__hero__subtitle {
-	font-size: 3rem;
-	line-height: 1.2;
-}
+	.home__hero {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: calc(100vh - 50px);
+	}
 
-.home__hero__author {
-	font-size: 6rem;
-	line-height: 1;
-}
+	.home__hero__video-container {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%; 
+		overflow: hidden;
+	}
+	.home__hero__video {
+		min-width: 100%; 
+		min-height: 100%; 
+		
+		/* Setting width & height to auto prevents the browser from stretching or squishing the video */
+		width: auto;
+		height: auto;
+		
+		/* Center the video */
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
 
-.home__hero__scroll {
-	color: white;
-	display: block;
-	text-shadow: 1px 1px #444;
-	font-size: 2rem;
-	margin-top: 4rem;
-	font-weight: bold;
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	width: 130px;
-	height: 80px;
-	margin-left: auto;
-	margin-right: auto;
-	background-image:url(../images/icons/down_1.png);
-	&:hover,
-	&:focus {
-		text-decoration: none;
+	.home__hero__overlay {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.5) 100%);
 		color: white;
 	}
-}
 
-.home__hero__hr {
-	max-width: 300px;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-}
-
-.home__quote {
-	position: relative;
-	background-image:url(../images/quote.jpg);
-	display: block;
-	color: white;
-	height: 333px;
-	padding-top: 8rem;
-	padding-bottom: 160px;
-	margin-bottom: 8rem;
-}
-
-.home__quote__wrap {
-	display: block;
-	position: relative;
-	width: 639px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.home__quote__text {
-	display: block;
-	font-size: 3.8rem;
-	font-weight: 400;
-}
-
-.home__quote__open {
-	display: block;
-	font-size: 20rem;
-	position: absolute;
-	left: -125px;
-	top: -68px;
-}
-
-.home__quote__close {
-	display: block;
-	font-size: 20rem;
-	position: absolute;
-	right: -100px;
-	top: -27px;
-}
-
-.home__feature {
-	display: block;
-	padding: 14rem 0;
-	background-position: center right;
-	background-repeat: no-repeat;
-}
-
-.home__feature--1 {
-	background-color: #b9301e;
-	background-image:url(../images/meet-elsie.jpg);
-	background-size: cover;
-	margin-bottom: 10rem;
-}
-
-.home__feature--2 {
-	background-color: #d88252;
-	background-image:url(../images/teaching-3.jpg);
-	background-size: cover;
-	margin-bottom: 8rem;
-}
-
-.home__feature__content {
-	color: white;
-	display: block;
-	width: 1040px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 350px;
-
-	h2 {
-		margin-top: 0;
+	.home__hero__content {
+		text-align: center;
+		p {
+			text-shadow: 1px 1px #444;
+			margin-bottom: 0
+		}
 	}
-}
 
-.teachings {
-	display: flow-root;
-	margin-bottom: 8rem;
-}
-
-.teaching {
-	width: 50%;
-	float: left;
-	transition: 0.5s;
-
-	&:hover {
-		opacity: .75;
-	}
-}
-
-.teaching__img {
-	display: block;
-	max-width: 100%;
-}
-
-
-.protocol {
-	position: relative;
-	max-width: 1000px;
-	margin: 0 auto;
-	border: 1px solid #115770;
-	padding: 4rem 4rem;
-	border-radius: 5px;
-	margin-bottom: 8rem;
-	h2 {
+	.home__hero__title {
 		margin-top: 0;
+		text-shadow: 1px 1px #444;
+		font-size: 8rem;
+		margin-bottom: 0
+	}
+	.home__hero__subtitle {
+		font-size: 3rem;
+		line-height: 1.2;
+	}
+
+	.home__hero__author {
+		font-size: 6rem;
+		line-height: 1;
+	}
+
+	.home__hero__scroll {
+		color: white;
+		display: block;
+		text-shadow: 1px 1px #444;
+		font-size: 2rem;
+		margin-top: 4rem;
+		font-weight: bold;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		width: 130px;
+		height: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		background-image:url(../images/icons/down_1.png);
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: white;
+		}
+	}
+
+	.home__hero__hr {
+		max-width: 300px;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	.home__quote {
+		position: relative;
+		background-image:url(../images/quote.jpg);
+		display: block;
+		color: white;
+		height: 333px;
+		padding-top: 8rem;
+		padding-bottom: 160px;
+		margin-bottom: 8rem;
+	}
+
+	.home__quote__wrap {
+		display: block;
+		position: relative;
+		width: 639px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.home__quote__text {
+		display: block;
+		font-size: 3.8rem;
+		font-weight: 400;
+	}
+
+	.home__quote__open {
+		display: block;
+		font-size: 20rem;
+		position: absolute;
+		left: -125px;
+		top: -68px;
+	}
+
+	.home__quote__close {
+		display: block;
+		font-size: 20rem;
+		position: absolute;
+		right: -100px;
+		top: -27px;
+	}
+
+	.home__feature {
+		display: block;
+		padding: 14rem 0;
+		background-position: center right;
+		background-repeat: no-repeat;
+	}
+
+	.home__feature--1 {
+		background-color: #b9301e;
+		background-image:url(../images/meet-elsie.jpg);
+		background-size: cover;
+		margin-bottom: 10rem;
+	}
+
+	.home__feature--2 {
+		background-color: #d88252;
+		background-image:url(../images/teaching-3.jpg);
+		background-size: cover;
+		margin-bottom: 8rem;
+	}
+
+	.home__feature__content {
+		color: white;
+		display: block;
+		width: 1040px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 350px;
+
+		h2 {
+			margin-top: 0;
+		}
+	}
+
+	.teachings {
+		display: flow-root;
+		margin-bottom: 8rem;
+	}
+
+	.teaching {
+		width: 50%;
+		float: left;
+		transition: 0.5s;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+
+	.teaching__img {
+		display: block;
+		max-width: 100%;
+	}
+
+
+	.protocol {
+		position: relative;
+		max-width: 1000px;
+		margin: 0 auto;
+		border: 1px solid #115770;
+		padding: 4rem 4rem;
+		border-radius: 5px;
+		margin-bottom: 8rem;
+		h2 {
+			margin-top: 0;
+			text-align: center;
+		}
+
+		&::after {
+			content: "";
+			background: url(../images/shells.jpg);
+			opacity: 0.125;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;	 
+		}
+
+	}
+
+	.protocol__content {
+		display: flex;
+	}
+	.protocol__video {
+		width: 50%;
+
+	}
+	.protocol__video-wrap {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.protocol__text {
+		width: 50%;
+		padding-left: 40px;
+	}
+
+	.protocol__text__link {
+		text-align: center;
+		margin-top: 2rem;
+		margin-bottom: 0;
+		font-size: 1.6rem;
+	}
+
+	.protocol__btn {
+
+		text-align: center;
+		width: 100%;
+		&:hover {
+			text-decoration: none;
+			background: #114350;
+			color: white;
+		}
+		&:focus {
+			text-decoration: none;
+			color: white;
+			&::before { 
+				content: "✔ ";
+				color: white;
+			}	
+			background: #15791f;
+		}
+	}
+
+	.p--feature,
+	.h2--feature {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.h2--feature {
 		text-align: center;
 	}
 
-	&::after {
-		content: "";
-		background: url(../images/shells.jpg);
-		opacity: 0.125;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		position: absolute;
-		z-index: -1;   
+	.home__video {
+		text-align: center;
 	}
 
-}
-
-.protocol__content {
-	display: flex;
-}
-.protocol__video {
-	width: 50%;
-
-}
-.protocol__video-wrap {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-	iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+	.h2--toc {
+			text-align: center;
+			color: #969696;
 	}
-}
 
-.protocol__text {
-	width: 50%;
-	padding-left: 40px;
-}
-
-.protocol__text__link {
-	text-align: center;
-	margin-top: 2rem;
-	margin-bottom: 0;
-	font-size: 1.6rem;
-}
-
-.protocol__btn {
-
-	text-align: center;
-	width: 100%;
-	&:hover {
-		text-decoration: none;
-		background: #114350;
-		color: white;
+	.table-contents {
+			display: flex;
 	}
-	&:focus {
-		text-decoration: none;
-		color: white;
-		&::before { 
-			content: "✔ ";
+
+	.table-contents__side {
+			background-color: #38475a;
 			color: white;
-		}	
-		background: #15791f;
+			width: 50px;
+			flex-shrink: 0;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 	}
-}
+	.table-contents__side p {
+			transform: rotate(270deg);
+			width: 300px;
+			height: 50px;
+			line-height: 50px;
+			margin: 0;
+			text-align: center;
+			transform-origin: 80px 80px 0;
+	}
 
-.p--feature,
-.h2--feature {
-	max-width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-}
+	.teachings {
+			margin-bottom: 0 !important;
+	}
 
-.h2--feature {
-	text-align: center;
-}
+	.teaching:nth-child(5),
+	.teaching:nth-child(6),
+	.teaching:nth-child(7) {
+			width: 33.3333333%;
+	}
+	.teaching__img {
+			width: 100%;
+	}
 
-.home__video {
-	text-align: center;
-}
-
-.h2--toc {
-    text-align: center;
-    color: #969696;
-}
-
-.table-contents {
-    display: flex;
-}
-
-.table-contents__side {
-    background-color: #38475a;
-    color: white;
-    width: 50px;
-    flex-shrink: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.table-contents__side p {
-    transform: rotate(270deg);
-    width: 300px;
-    height: 50px;
-    line-height: 50px;
-    margin: 0;
-    text-align: center;
-    transform-origin: 80px 80px 0;
-}
-
-.teachings {
-    margin-bottom: 0 !important;
-}
-
-.teaching:nth-child(5),
-.teaching:nth-child(6),
-.teaching:nth-child(7) {
-    width: 33.3333333%;
-}
-.teaching__img {
-    width: 100%;
-}
-
-.home__hero__overlay {
-    background-position: bottom center;
-    background-image: url(../images/hero-overlay.png) !important;
-}
+	.home__hero__overlay {
+			background-position: bottom center;
+			background-image: url(../images/hero-overlay.png) !important;
+	}
 
 
-.page-index .body_copy .slot {
-	max-width: none;
-}
+	.page-index .body_copy .slot {
+		max-width: none;
+	}
 
-.page-index header {
-	display: none;
-}
+	.page-index header {
+		display: none;
+	}
 
-.page-index span[property="sioc:content"] {
-    padding-top: 0;
-    padding-bottom: 0;
-}
+	.page-index span[property="sioc:content"] {
+			padding-top: 0;
+			padding-bottom: 0;
+	}
 
-.protocol__text {
-	width: 100%;
-	padding-left: 20px;
-	padding-right: 20px;
-}
+	.protocol__text {
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 
-.home__about {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 10rem;
+	.home__about {
+		position: relative;
+		max-width: 1000px;
+		margin: 0 auto;
+		margin-bottom: 10rem;
+	}
 }

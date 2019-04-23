@@ -4,10 +4,6 @@
 	letter-spacing:-.25px;
 }
 
-.body_copy {
-	font-size:17px;
-}
-
 .navbar .title_wrapper {
 	font-size:14px;
 	letter-spacing:-.25px;
@@ -16,16 +12,11 @@
 	font-weight:normal;
 	font-size:14px;
 }
-.menuIcon {
-	height:27px;
-}
+
 #desktopTitleWrapper {
 	padding-top:3px !important;
 }
 
-article h1 {
-	font-size:5rem;
-}
 button, .btn, input, optgroup, select {
 	font-family:'Aboriginal Sans' !important;
 	font-size:14px !important;
