@@ -1,5 +1,5 @@
 #article#article {
-	
+
 	span[property="sioc:content"] {
 	    padding-top: 0;
 	}
@@ -341,13 +341,17 @@
 		max-width: none;
 	}
 
-	.page-index header {
+	.page-index & header {
 		display: none;
 	}
 
-	.page-index span[property="sioc:content"] {
+	.page-index & span[property="sioc:content"] {
 			padding-top: 0;
 			padding-bottom: 0;
+	}
+
+	.page-index & #footer.caption_font {
+		display: none;
 	}
 
 	.protocol__text {
