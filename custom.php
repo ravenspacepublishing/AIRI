@@ -13,8 +13,6 @@ function add_wayhut() {
 	}
 
 	if ('system' == $ci->router->fetch_class()) return;
-
-	if ('as-i-remember-it' != $ci->data['book']->slug) return;
 	
 	$ci->template->add_css('system/application/hooks/wayhut/fonts.css');
 	$ci->template->add_js('system/application/hooks/wayhut/custom.js');
