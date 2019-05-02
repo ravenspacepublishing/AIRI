@@ -1,5 +1,7 @@
 #article#article {
 
+
+
 	span[property="sioc:content"] {
 	    padding-top: 0;
 	}
@@ -339,6 +341,16 @@
 
 	.page-index .body_copy .slot {
 		max-width: none;
+	}
+
+	.page-index & h2 {
+		padding: 0;
+	}
+
+	.page-index & .body_copy .slot {
+		max-width: unset;
+    width: auto;
+    margin-left: -20px;
 	}
 
 	.page-index & header {

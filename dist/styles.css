@@ -1070,6 +1070,14 @@ img.mfp-img {
 #article#article .page-index .body_copy .slot {
   max-width: none; }
 
+.page-index #article#article h2, .page-index #article#article .h2 {
+  padding: 0; }
+
+.page-index #article#article .body_copy .slot {
+  max-width: unset;
+  width: auto;
+  margin-left: -20px; }
+
 .page-index #article#article header {
   display: none; }
 
