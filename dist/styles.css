@@ -1520,7 +1520,7 @@ img.mfp-img {
   padding-bottom: 0;
   padding-top: 0;
   background-color: #475873; }
-  #mainMenuSubmenus#mainMenuSubmenus .relationships ul li:nth-child(2) {
+  #mainMenuSubmenus#mainMenuSubmenus .relationships > ul > li:nth-child(2) {
     display: none; }
   #mainMenuSubmenus#mainMenuSubmenus .relationships strong {
     color: white;
@@ -1644,6 +1644,14 @@ div.jp-audio {
 
 .widget_carousel .widgetContainer {
   width: 100% !important; }
+
+.primary_role_media .slot {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none; }
+  .primary_role_media .slot .mediaelement {
+    max-width: 100%; }
 
 .popup {
   position: relative;

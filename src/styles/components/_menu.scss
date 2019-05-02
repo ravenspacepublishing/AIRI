@@ -285,8 +285,8 @@
 		padding-bottom: 0;
 		padding-top: 0;
 		background-color: #475873;
-		ul {
-			li:nth-child(2) {
+		> ul {
+			> li:nth-child(2) {
 				display: none;
 			}
 		}

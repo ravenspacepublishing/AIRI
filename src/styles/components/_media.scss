@@ -25,3 +25,13 @@ div.jp-audio {
 .widget_carousel .widgetContainer {
 	width: 100% !important;
 }
+
+.primary_role_media .slot {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	.mediaelement {
+		max-width: 100%;
+	}
+}
