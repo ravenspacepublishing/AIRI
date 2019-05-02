@@ -654,6 +654,8 @@ img.mfp-img {
     line-height: 2.4rem;
     margin-bottom: 1.2rem;
     margin-top: 0; }
+  #article#article .relationships #back-btn {
+    display: none; }
 
 #article#article .widgetContainer .mediaElementFooter p, #article#article .widgetContainer .mediaElementFooter .p {
   font-size: 1.4rem; }
@@ -1177,7 +1179,9 @@ img.mfp-img {
   position: absolute;
   z-index: 1;
   left: calc(50% - 500px);
-  top: 260px; }
+  top: 260px;
+  margin: 0;
+  float: none; }
 
 #body#body header .tklabels {
   margin-bottom: 30px; }

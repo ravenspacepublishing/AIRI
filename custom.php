@@ -32,5 +32,12 @@ function add_wayhut() {
 
 	$ci->template->add_css('system/application/hooks/wayhut/dist/styles.css');
 
+	$ci->template->add_js('system/application/hooks/wayhut/share-this/share-this.js');
+	$ci->template->add_css('system/application/hooks/wayhut/share-this/share-this.css');
+
+	$ci->template->add_js('system/application/hooks/wayhut/share-this/sharers/twitter.js');
+	$ci->template->add_js('system/application/hooks/wayhut/share-this/sharers/email.js');
+	$ci->template->add_js('system/application/hooks/wayhut/share-this/sharers/facebook.js');
+
 }
 ?>

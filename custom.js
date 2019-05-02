@@ -215,19 +215,54 @@ window.customColophon = function() {
 };  //if !undefined
 
 $(document).ready(function() {
-	if(window.location.href.indexOf("popup-test") > -1) {
-		$.magnificPopup.open({
-		  items: {
-		    src: '/system/application/hooks/wayhut/popup.html', 
-		    type: 'ajax'
-		  },
-		  modal: true,
-		});
+
+	function PopupLogic() {
+		popupConfirm = localStorage.getItem("popupConfirm");
+
+		if (popupConfirm) {
+
+		} else {
+
+			$.magnificPopup.open({
+				items: {
+					src: '/system/application/hooks/wayhut/popup.html', 
+					type: 'ajax'
+				},
+				modal: true,
+			});
+
+		}
 	}
 
-  $('body').on('click', '.popup-close', function () {
+	window.onload = function () {
+		setTimeout(function () {
+			PopupLogic();
+		}, 1000);
+	}
+
+
+	$('body').on('click', '.popup__btn--agree', function () {
 		event.preventDefault();
+		localStorage.setItem("popupConfirm", 1);
 		$.magnificPopup.close();
-  });
+	});
+
+	$('body').on('click', '.popup__btn--disagree', function () {
+		event.preventDefault();
+		localStorage.removeItem("popupConfirm");
+		window.location.href = "https://google.ca";
+	});
+
+	var shareThis = window.ShareThis;
+	const twitterSharer = window.ShareThisViaTwitter;
+	const facebookSharer = window.ShareThisViaFacebook;
+	const emailSharer = window.ShareThisViaEmail;
+
+	const selectionShare = shareThis({
+		selector: ".primary_role_composite",
+		sharers: [ twitterSharer, facebookSharer, emailSharer ]
+	});
+
+	selectionShare.init();
 
 });
