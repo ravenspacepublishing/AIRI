@@ -18,14 +18,7 @@ $(document).ready(function() {
 		// Rename some system texts
 		setReplacementTexts();
 	});
-	$(".home__hero__scroll").click(function(event) {
-		event.preventDefault();
-	    $([document.documentElement, document.body]).animate({
-	        scrollTop: $(".home__quote").offset().top
-	    }, 1000);
-	});
-	$('body').attr('id', 'body');
-	$('article').attr('id', 'article');
+
 });
 
 $.fn.keyboard = function(options) {  // Wrapper that invokes LanguageKeyboard from buttons within text inputs
@@ -195,74 +188,4 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 
 };
 
-window.customColophon = function() {
-
-	var footer = $('#footer');
-	footer.removeClass('caption_font')
-
-	var footerContent = 
-	'  <div class="footer__content">'+
-		'        <a class="footer__logo" href="https://ravenspacepublishing.org"><img class="teaching__img" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/ravenspace-logo.png" /></a>'+
-	'      <div class="footer__links"><ul class="footer__list"><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/respecting-traditional-knowledge">Respecting Traditional Knowledge</a></li><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/about">About This Book</a><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/">Table of Contents</a><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/terms-of-use">Terms of Use</a></li>'+
-	'      </ul>'+
-	'      <ul class="footer__list"><li>© UBC Press 2019</li><li>ISBN 9780774861250</li>'+
-	'      </ul></div>'+
-	'  </div>';
-	footer.append(footerContent);
-	
-};
-
 };  //if !undefined
-
-$(document).ready(function() {
-
-	function PopupLogic() {
-		popupConfirm = localStorage.getItem("popupConfirm");
-
-		if (popupConfirm) {
-
-		} else {
-
-			$.magnificPopup.open({
-				items: {
-					src: '/system/application/hooks/wayhut/popup.html', 
-					type: 'ajax'
-				},
-				modal: true,
-			});
-
-		}
-	}
-
-	window.onload = function () {
-		setTimeout(function () {
-			PopupLogic();
-		}, 1000);
-	}
-
-
-	$('body').on('click', '.popup__btn--agree', function () {
-		event.preventDefault();
-		localStorage.setItem("popupConfirm", 1);
-		$.magnificPopup.close();
-	});
-
-	$('body').on('click', '.popup__btn--disagree', function () {
-		event.preventDefault();
-		localStorage.removeItem("popupConfirm");
-		window.location.href = "https://google.ca";
-	});
-
-	var shareThis = window.ShareThis;
-	const twitterSharer = window.ShareThisViaTwitter;
-	const facebookSharer = window.ShareThisViaFacebook;
-	const emailSharer = window.ShareThisViaEmail;
-
-	const selectionShare = shareThis({
-		selector: ".primary_role_composite",
-		sharers: [ twitterSharer, facebookSharer, emailSharer ]
-	});
-
-	selectionShare.init();
-
-});

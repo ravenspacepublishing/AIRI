@@ -16,6 +16,11 @@ function add_wayhut() {
 	
 	$ci->template->add_css('system/application/hooks/wayhut/fonts.css');
 	$ci->template->add_js('system/application/hooks/wayhut/custom.js');
+
+	if ('as-i-remember-it' == $ci->data['book']->slug) {
+		$ci->template->add_js('system/application/hooks/wayhut/custom-as-i-remember-it.js');
+	};
+
 	$ci->template->add_js('system/application/hooks/wayhut/jquery.magnific-popup.js');
 	
 	$ci->template->add_css('system/application/views/melons/cantaloupe/css/reset.css');
