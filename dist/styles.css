@@ -1198,6 +1198,10 @@ img.mfp-img {
   #body#body #tk-add {
     display: inline-block; } }
 
+#body#body .wrapped_slot [typeof="tk:TKLabel"] > img {
+  height: 2.4rem !important;
+  width: auto !important; }
+
 #footer#footer {
   clear: both;
   margin-top: 10rem;

@@ -59,4 +59,8 @@
 		}
 	}
 
+	.wrapped_slot [typeof="tk:TKLabel"] > img {
+    height: 2.4rem !important;
+    width: auto !important;
+	}
 }

@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	$('body').on('pageLoadComplete', function() {
+		$('#mainMenuInside .home_link > a').eq(0).html('<span class="menuIcon" id="homeIcon"></span>Home: An Invitation to Listen');
+	});
+
 	$(".home__hero__scroll").click(function(event) {
 		event.preventDefault();
 	    $([document.documentElement, document.body]).animate({
@@ -32,7 +36,6 @@ $(document).ready(function() {
 			PopupLogic();
 		}, 1000);
 	}
-
 
 	$('body').on('click', '.popup__btn--agree', function () {
 		event.preventDefault();

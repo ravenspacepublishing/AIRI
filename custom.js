@@ -69,7 +69,6 @@ setReplacementTexts = function() {
 	
 	if (!$('link#book_id').length) return;
 	var book_id = parseInt($('link#book_id').attr('href'));
-	$('#mainMenuInside .home_link > a').eq(0).html('<span class="menuIcon" id="homeIcon"></span>Home: An Invitation to Listen');
 	$('#mainMenuInside .header > h2').eq(0).html('Contents');
 	$('.has_tags').prev().text('See also:');
 	$('.tag_of').prev().text('Related pages:');
