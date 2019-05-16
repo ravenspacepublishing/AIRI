@@ -72,7 +72,7 @@ setReplacementTexts = function() {
 	$('#mainMenuInside .header > h2').eq(0).html('Contents');
 	$('.has_tags').prev().text('See also:');
 	$('.tag_of').prev().text('Related pages:');
-	$('.path_of').prev().text('Path contents:');
+	$('.path_of').prev().text('Choose a page:');
 	$('.nav_btn:contains("Visit a random tagged page")').hide();
 	if ($('.continue_btn').length && $('.relationships').length > 1) {
 		if (!$('.continue_btn').closest('.relationships').is('.relationships:first')) {
