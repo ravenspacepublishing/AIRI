@@ -70,7 +70,7 @@ setReplacementTexts = function() {
 	if (!$('link#book_id').length) return;
 	var book_id = parseInt($('link#book_id').attr('href'));
 	$('#mainMenuInside .header > h2').eq(0).html('Contents');
-	$('.has_tags').prev().text('See also:');
+	$('.has_tags').prev().text('Explore:');
 	$('.tag_of').prev().text('Related pages:');
 	$('.path_of').prev().text('Choose a page:');
 	$('.nav_btn:contains("Visit a random tagged page")').hide();
@@ -159,7 +159,7 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 			var value = (null == values[k]) ? '' : values[k];
 			if (!value.length) continue;
 			if (-1 != value.indexOf('206.12.89.21')) continue;  // DSpace install
-			if (-1 != value.indexOf('206.12.89.14') || -1 != value.indexOf('206.12.100.68')) continue;  // Omeka-S install
+			if (-1 != value.indexOf('206.12.89.14') || -1 != value.indexOf('206.12.100.68') || -1 != value.indexOf('206.12.103.164')) continue;  // Omeka-S install
 			var $sl_row = $( '<tr><td><span title="art:sourceLocation">Source location</span></td><td>' + linkify(value) + '</td></tr>').appendTo($table);
 			if ($table.find('[title="dcterms:identifier"]').length) $sl_row.insertBefore($table.find('[title="dcterms:identifier"]').closest('tr'));
 		};
