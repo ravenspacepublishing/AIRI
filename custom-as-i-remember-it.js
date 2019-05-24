@@ -71,9 +71,9 @@ window.customColophon = function() {
 	var footerContent = 
 	'  <div class="footer__content">'+
 		'        <a class="footer__logo" href="https://ravenspacepublishing.org"><img class="teaching__img" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/ravenspace-logo.png" /></a>'+
-	'      <div class="footer__links"><ul class="footer__list"><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/respecting-traditional-knowledge">Respecting Traditional Knowledge</a></li><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/about">About This Book</a><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/">Table of Contents</a><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/terms-of-use">Terms of Use</a></li>'+
+	'      <div class="footer__links"><ul class="footer__list"><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/respecting-traditional-knowledge">Respecting Traditional Knowledge</a></li><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/about">About This Book</a><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it#home-toc">Table of Contents</a><li><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/terms-of-use">Terms of Use</a></li>'+
 	'      </ul>'+
-	'      <ul class="footer__list"><li>© UBC Press 2019</li><li>ISBN 9780774861250</li>'+
+	'      <ul class="footer__list"><li>© UBC Press 2019</li><li>ISBN 978-0-7748-6125-0</li>'+
 	'      </ul></div>'+
 	'  </div>';
 	footer.append(footerContent);

@@ -58,14 +58,6 @@
 		}
 	}
 
-	.widgetContainer .mediaElementFooter p {
-		font-size: 1.4rem;
-	}
-
-	.widget_slot .widgetContainer {
-		margin-bottom: 3rem;
-	}
-
 	#incoming_comments {
 		max-width: 900px;
 		margin-left: auto;
@@ -104,4 +96,18 @@
 		color: #232323;
 	}
 
+	// .google-info-window h2 {
+	// 	font-size: 1.6rem;
+	// 	padding: 0;
+	// 	margin: 0 0 1rem;
+	// 	line-height: 100%;
+	// }
+
+	ol.has_tags {
+		padding-left: 0;
+	}
+
+	#incoming_comments {
+		display:none !important;
+	}
 }

@@ -545,35 +545,48 @@ img.mfp-img {
   #body#body .bg_screen {
     display: none; }
 
-#article#article p, #article#article .p {
+#article .body_copy p, #article .body_copy .p {
   font-size: 2rem;
   line-height: 1.5;
   margin-top: 0;
   margin-bottom: 3rem;
   padding: 0; }
 
-#article#article h1, #article#article h2, #article#article .h2, #article#article h3, #article#article .h3, #article#article h4, #article#article .h4, #article#article h5, #article#article .h5 {
+#article .body_copy h1, #article .body_copy h2, #article .body_copy .h2, #article .body_copy h3, #article .body_copy .h3, #article .body_copy h4, #article .body_copy .h4, #article .body_copy h5, #article .body_copy .h5 {
   line-height: 1;
   margin-top: 6rem;
   margin-bottom: 3rem; }
 
-#article#article h1 {
+#article .body_copy h1 {
   font-size: 6.8rem; }
 
-#article#article h2, #article#article .h2 {
+#article .body_copy h2, #article .body_copy .h2 {
   font-size: 4.5rem; }
 
-#article#article h3, #article#article .h3 {
+#article .body_copy h3, #article .body_copy .h3 {
   font-size: 2.8rem; }
 
-#article#article h4, #article#article .h4 {
+#article .body_copy h4, #article .body_copy .h4 {
   font-size: 2rem; }
 
-#article#article h5, #article#article .h5 {
+#article .body_copy h5, #article .body_copy .h5 {
   font-size: 1.6rem; }
 
-#article#article .h1, #article#article .h2, #article#article .h3, #article#article .h4, #article#article .h5, #article#article .p {
+#article .body_copy .h1, #article .body_copy .h2, #article .body_copy .h3, #article .body_copy .h4, #article .body_copy .h5, #article .body_copy .p {
   display: block; }
+
+#article .body_copy ul {
+  margin: 0 0 3rem 0;
+  list-style-position: outside;
+  padding-left: 20px; }
+
+#article .body_copy li {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.5; }
+
+#article#article p, #article#article .body_copy .p {
+  padding: 0; }
 
 #article#article .firstcharacter {
   float: left;
@@ -591,6 +604,8 @@ img.mfp-img {
   padding-left: 3.6rem;
   padding-right: 3.6rem;
   font-style: italic; }
+  #article#article .body_copy blockquote em {
+    font-style: normal; }
   #article#article .body_copy blockquote.pull-right {
     padding: 1rem 0 1rem 3.6rem;
     margin-left: 36px;
@@ -657,12 +672,6 @@ img.mfp-img {
   #article#article .relationships #back-btn {
     display: none; }
 
-#article#article .widgetContainer .mediaElementFooter p, #article#article .widgetContainer .mediaElementFooter .p {
-  font-size: 1.4rem; }
-
-#article#article .widget_slot .widgetContainer {
-  margin-bottom: 3rem; }
-
 #article#article #incoming_comments {
   max-width: 900px;
   margin-left: auto;
@@ -695,12 +704,19 @@ img.mfp-img {
   top: 2px;
   color: #232323; }
 
+#article#article ol.has_tags {
+  padding-left: 0; }
+
+#article#article #incoming_comments {
+  display: none !important; }
+
 #article#article header {
   position: relative;
   padding-top: 10rem;
   max-width: 900px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-bottom: 5rem; }
   #article#article header h1 {
     margin-top: 2rem;
     margin-bottom: 0;
@@ -828,7 +844,7 @@ img.mfp-img {
 
 #article#article .home__hero__content {
   text-align: center; }
-  #article#article .home__hero__content p, #article#article .home__hero__content .p {
+  #article#article .home__hero__content p, #article#article .home__hero__content .body_copy .p, #article#article .body_copy .home__hero__content .p {
     text-shadow: 1px 1px #444;
     margin-bottom: 0; }
 
@@ -930,7 +946,7 @@ img.mfp-img {
   margin-left: auto;
   margin-right: auto;
   padding-left: 350px; }
-  #article#article .home__feature__content h2, #article#article .home__feature__content .h2 {
+  #article#article .home__feature__content h2, #article#article .home__feature__content .body_copy .h2, #article#article .body_copy .home__feature__content .h2 {
     margin-top: 0; }
 
 #article#article .teachings {
@@ -956,7 +972,7 @@ img.mfp-img {
   padding: 4rem 4rem;
   border-radius: 5px;
   margin-bottom: 8rem; }
-  #article#article .protocol h2, #article#article .protocol .h2 {
+  #article#article .protocol h2, #article#article .protocol .body_copy .h2, #article#article .body_copy .protocol .h2 {
     margin-top: 0;
     text-align: center; }
   #article#article .protocol::after {
@@ -1043,7 +1059,7 @@ img.mfp-img {
   flex-direction: column;
   justify-content: center; }
 
-#article#article .table-contents__side p, #article#article .table-contents__side .p {
+#article#article .table-contents__side p, #article#article .table-contents__side .body_copy .p, #article#article .body_copy .table-contents__side .p {
   transform: rotate(270deg);
   width: 300px;
   height: 50px;
@@ -1070,7 +1086,7 @@ img.mfp-img {
 #article#article .page-index .body_copy .slot {
   max-width: none; }
 
-.page-index #article#article h2, .page-index #article#article .h2 {
+.page-index #article#article h2, .page-index #article#article .body_copy .h2 {
   padding: 0; }
 
 .page-index #article#article .body_copy .slot {
@@ -1098,6 +1114,9 @@ img.mfp-img {
   max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 10rem; }
+
+.page-index #article#article #footer {
+  margin-top: 0; }
 
 #article#article .sp-block {
   clear: both;
@@ -1134,7 +1153,9 @@ img.mfp-img {
     margin: 0;
     background: none;
     text-align: center;
-    padding: 2rem; }
+    padding: 2rem;
+    color: white;
+    cursor: pointer; }
   #article#article .sp-block .sp-block__content {
     display: none;
     background: none !important;
@@ -1393,10 +1414,10 @@ img.mfp-img {
   #mainMenuInside#mainMenuInside ol a:not(.expand):before,
   #mainMenuSubmenus#mainMenuSubmenus ol a:not(.expand):before {
     content: none; }
-  #mainMenuInside#mainMenuInside h2, #mainMenuInside#mainMenuInside #article#article .h2, #article#article #mainMenuInside#mainMenuInside .h2,
+  #mainMenuInside#mainMenuInside h2, #mainMenuInside#mainMenuInside #article .body_copy .h2, #article .body_copy #mainMenuInside#mainMenuInside .h2,
   #mainMenuSubmenus#mainMenuSubmenus h2,
-  #mainMenuSubmenus#mainMenuSubmenus #article#article .h2,
-  #article#article #mainMenuSubmenus#mainMenuSubmenus .h2 {
+  #mainMenuSubmenus#mainMenuSubmenus #article .body_copy .h2,
+  #article .body_copy #mainMenuSubmenus#mainMenuSubmenus .h2 {
     margin-left: 30px;
     padding: 0;
     font-size: 2rem; }
@@ -1638,24 +1659,9 @@ img.mfp-img {
   margin-left: auto;
   margin-right: auto; }
 
-.jp-audio {
-  width: 100% !important; }
-
-.jp-progress {
-  width: calc(100% - 156px) !important; }
-
-div.jp-interface {
-  background-color: white; }
-
-div.jp-audio {
-  border: 2px solid #ccc; }
-
 .mediaObject img {
   margin: 0 auto;
   display: block; }
-
-.widget_carousel .widgetContainer {
-  width: 100% !important; }
 
 .primary_role_media .slot {
   max-width: 900px;
@@ -1664,6 +1670,33 @@ div.jp-audio {
   float: none; }
   .primary_role_media .slot .mediaelement {
     max-width: 100%; }
+
+#article#article .cardContainer h1,
+#article#article .cardContainer h2,
+#article#article .cardContainer .body_copy .h2,
+#article#article .body_copy .cardContainer .h2,
+#article#article .cardContainer h3,
+#article#article .cardContainer .body_copy .h3,
+#article#article .body_copy .cardContainer .h3,
+#article#article .cardContainer h4,
+#article#article .cardContainer .body_copy .h4,
+#article#article .body_copy .cardContainer .h4,
+#article#article .cardContainer h5,
+#article#article .cardContainer .body_copy .h5,
+#article#article .body_copy .cardContainer .h5 {
+  margin: 0 0 1rem 0;
+  padding: 0; }
+
+#article#article .widget_carousel .widgetContainer {
+  width: 100%; }
+
+#article#article .widgetContainer .mediaElementFooter p, #article#article .widgetContainer .mediaElementFooter .body_copy .p, #article#article .body_copy .widgetContainer .mediaElementFooter .p {
+  font-size: 1.4rem; }
+
+#article#article .widget_slot .widgetContainer {
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto; }
 
 .popup {
   position: relative;
@@ -1684,7 +1717,7 @@ div.jp-audio {
     right: 0;
     position: absolute;
     z-index: 0; }
-  .popup h2, .popup #article#article .h2, #article#article .popup .h2 {
+  .popup h2, .popup #article .body_copy .h2, #article .body_copy .popup .h2 {
     margin-top: 0; }
 
 .popup__content {

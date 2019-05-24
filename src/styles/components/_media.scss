@@ -1,29 +1,8 @@
-.jp-audio {
-	width: 100% !important;
-}
-
-.jp-progress {
-	width: calc(100% - 156px) !important;
-}
-
-div.jp-interface {
-	background-color: white;
-}
-
-div.jp-audio {
-	border: 2px solid #ccc;
-}
-
-
 .mediaObject {
 	img {
 		margin: 0 auto;
 		display: block;
 	}
-}
-
-.widget_carousel .widgetContainer {
-	width: 100% !important;
 }
 
 .primary_role_media .slot {
@@ -35,3 +14,29 @@ div.jp-audio {
 		max-width: 100%;
 	}
 }
+
+#article#article {
+	.cardContainer h1,
+	.cardContainer h2,
+	.cardContainer h3,
+	.cardContainer h4,
+	.cardContainer h5 {
+		margin: 0 0 1rem 0;
+		padding: 0;
+	}
+
+	.widget_carousel .widgetContainer {
+		width: 100%;
+	}
+
+	.widgetContainer .mediaElementFooter p {
+		font-size: 1.4rem;
+	}
+
+	.widget_slot .widgetContainer {
+		margin-bottom: 3rem;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+}
+
