@@ -84,6 +84,10 @@ setReplacementTexts = function() {
 			$('.path_of').closest('.relationships').insertBefore('.relationships:first');
 		};
 	};
+	var $end_of_path_btn = $('.relationships .nav_btn:contains("End of path"):contains(";")');
+	if ($end_of_path_btn.length) {
+		$end_of_path_btn.html($end_of_path_btn.html().replace('End of path', 'End of'));
+	}
 	var $is_note_in = $('h1:contains("This page is a note in:")');
 	if ($is_note_in.length) {
 		var is_plural = ($is_note_in.next().children('li').length > 1) ? true : false;

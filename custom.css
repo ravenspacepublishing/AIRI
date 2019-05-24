@@ -110,5 +110,8 @@ a.cke_specialchar {
 .page-curriculum-explorer .dropdown-menu > .active > a, 
 .page-curriculum-explorer .dropdown-menu > .active > a:focus, 
 .page-curriculum-explorer .dropdown-menu > .active > a:hover {background-color:#9badca;}
+.page-curriculum-explorer .dropdown-menu > .disabled > a, 
+.page-curriculum-explorer .dropdown-menu > .disabled > a:focus, 
+.page-curriculum-explorer .dropdown-menu > .disabled > a:hover {color:#aaaaaa; -webkit-text-fill-color:#aaaaaa;}
 .page-curriculum-explorer .paragraph_wrapper ul > li, 
 .page-curriculum-explorer .paragraph_wrapper ol > li {margin-left:0px;}
