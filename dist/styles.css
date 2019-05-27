@@ -626,8 +626,8 @@ img.mfp-img {
 #article#article .featured,
 #article#article .feature {
   margin-bottom: 5rem;
-  margin-left: -5rem;
-  margin-right: -5rem;
+  margin-left: -7rem;
+  margin-right: -7rem;
   font-size: 3rem; }
 
 #article#article span[property="sioc:content"] {
@@ -686,7 +686,7 @@ img.mfp-img {
 #article#article .path_of {
   list-style: none;
   margin-bottom: 3rem;
-  padding: 0; }
+  padding: 0 0 0 20px; }
 
 #article#article .path_of li {
   padding: 3px 0;
@@ -1592,7 +1592,9 @@ img.mfp-img {
 
 #body#body .widgetContainer {
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative;
+  z-index: 1; }
 
 #body#body .pillarbox {
   max-width: 1040px;
@@ -1610,6 +1612,12 @@ img.mfp-img {
     line-height: 1;
     margin-top: 0;
     margin-bottom: 2.4rem; }
+
+#body#body .mediaelement {
+  max-width: 100%; }
+
+#body#body .mediaObject {
+  max-width: 100%; }
 
 /* So the top-most media element aligns with the top of its paragraph 
 .slot {

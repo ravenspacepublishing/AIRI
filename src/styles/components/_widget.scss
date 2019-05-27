@@ -4,6 +4,8 @@
 	.widgetContainer {
 		margin-left: auto;
 		margin-right: auto;
+		position: relative;
+		z-index: 1;
 	}
 
 	.pillarbox {
@@ -25,6 +27,13 @@
 			margin-top: 0;
 			margin-bottom: 2.4rem;
 		}
+	}
+
+	.mediaelement {
+		max-width: 100%;
+	}
+	.mediaObject {
+		max-width: 100%;
 	}
 }
 
