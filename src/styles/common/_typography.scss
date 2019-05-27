@@ -59,7 +59,11 @@
 	    list-style-position: outside;
 	    padding-left: 20px;
 		}
-
+		ol {
+			margin: 0 0 3rem 0;
+	    list-style-position: outside;
+	    padding-left: 20px;
+		}
 		li {
 			margin: 0;
 			font-size: 2rem;
@@ -84,6 +88,10 @@
 	}
 
 	.body_copy blockquote {
+
+    z-index: 1;
+    position: relative;
+
 		font-size: 2rem;
 		line-height: 1.5;
 		margin-top: 0;
