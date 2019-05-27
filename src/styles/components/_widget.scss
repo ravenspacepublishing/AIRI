@@ -1,4 +1,36 @@
-/* So the top-most media element aligns with the top of its paragraph */
+//Set Specificity to 200
+#body#body {
+
+	.widgetContainer {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.pillarbox {
+		max-width: 1040px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.pillarbox + .mediainfo {
+		max-width: 1040px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.card {
+		margin-left: 4.8rem;
+		
+		h1, h2, h3, h4, h5 {
+			line-height: 1;
+			margin-top: 0;
+			margin-bottom: 2.4rem;
+		}
+	}
+}
+
+
+
+/* So the top-most media element aligns with the top of its paragraph 
 .slot {
 	background-image: url(../images/loading_msg.png);
 	background-position: center center;
@@ -31,34 +63,30 @@
 
 
 .wrapped_slot {
-// position: absolute;
-// width: 300px;
-// top: 0;
-z-index: 1;
-position: relative;
+	z-index: 1;
+	position: relative;
 
-img {
-	width: 100% !important;
-	height: auto !important;
-}
+	img {
+		width: 100% !important;
+		height: auto !important;
+	}
 
-&.left_slot {
-	float: left;
-// padding-right: 36px;
-}
+	&.left_slot {
+		float: left;
+	}
 
-&.right_slot {
-	float: right;
-// padding-left: 36px;
-}
+	&.right_slot {
+		float: right;
+	}
 }
 
 .mediaContainer {
 	background-image: none;
 }
 
-.wrapped_slot>.mediaelement, .wrapped_slot>.widgetContainer{
-	margin: .5rem 0 2.4rem 0;
+.wrapped_slot>.mediaelement, 
+.wrapped_slot>.widgetContainer {
+	margin: .5rem 0 2.4rem 4.8rem;
 }
 .wrapped_slot.right_slot>.mediaelement{
 	margin-left: 4.8rem;
@@ -92,3 +120,4 @@ img {
 	margin-left: auto;
 	margin-right: auto
 }
+*/

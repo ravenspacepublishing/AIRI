@@ -20,12 +20,6 @@
 		padding-left: 0;
 		padding-right: 0;
 
-		.slot {
-			max-width: 900px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
 		p.p--feature {
 			max-width: 100%;
 			font-size: 3rem;
@@ -96,12 +90,12 @@
 		color: #232323;
 	}
 
-	// .google-info-window h2 {
-	// 	font-size: 1.6rem;
-	// 	padding: 0;
-	// 	margin: 0 0 1rem;
-	// 	line-height: 100%;
-	// }
+	.google-info-window h2 {
+		font-size: 1.6rem;
+		padding: 0;
+		margin: 0 0 1rem;
+		line-height: 100%;
+	}
 
 	ol.has_tags {
 		padding-left: 0;

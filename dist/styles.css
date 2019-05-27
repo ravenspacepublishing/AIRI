@@ -545,47 +545,47 @@ img.mfp-img {
   #body#body .bg_screen {
     display: none; }
 
-#article .body_copy p, #article .body_copy .p {
+#article p, #article .p {
   font-size: 2rem;
   line-height: 1.5;
   margin-top: 0;
   margin-bottom: 3rem;
   padding: 0; }
 
-#article .body_copy h1, #article .body_copy h2, #article .body_copy .h2, #article .body_copy h3, #article .body_copy .h3, #article .body_copy h4, #article .body_copy .h4, #article .body_copy h5, #article .body_copy .h5 {
+#article h1, #article h2, #article .h2, #article h3, #article .h3, #article h4, #article .h4, #article h5, #article .h5 {
   line-height: 1;
   margin-top: 6rem;
   margin-bottom: 3rem; }
 
-#article .body_copy h1 {
+#article h1 {
   font-size: 6.8rem; }
 
-#article .body_copy h2, #article .body_copy .h2 {
+#article h2, #article .h2 {
   font-size: 4.5rem; }
 
-#article .body_copy h3, #article .body_copy .h3 {
+#article h3, #article .h3 {
   font-size: 2.8rem; }
 
-#article .body_copy h4, #article .body_copy .h4 {
+#article h4, #article .h4 {
   font-size: 2rem; }
 
-#article .body_copy h5, #article .body_copy .h5 {
+#article h5, #article .h5 {
   font-size: 1.6rem; }
 
-#article .body_copy .h1, #article .body_copy .h2, #article .body_copy .h3, #article .body_copy .h4, #article .body_copy .h5, #article .body_copy .p {
+#article .h1, #article .h2, #article .h3, #article .h4, #article .h5, #article .p {
   display: block; }
 
-#article .body_copy ul {
+#article ul {
   margin: 0 0 3rem 0;
   list-style-position: outside;
   padding-left: 20px; }
 
-#article .body_copy li {
+#article li {
   margin: 0;
   font-size: 2rem;
   line-height: 1.5; }
 
-#article#article p, #article#article .body_copy .p {
+#article#article p, #article#article .p {
   padding: 0; }
 
 #article#article .firstcharacter {
@@ -646,10 +646,6 @@ img.mfp-img {
   max-width: unset;
   padding-left: 0;
   padding-right: 0; }
-  #article#article .body_copy .slot {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto; }
   #article#article .body_copy p.p--feature, #article#article .body_copy .p--feature.p {
     max-width: 100%;
     font-size: 3rem;
@@ -703,6 +699,12 @@ img.mfp-img {
   left: -18px;
   top: 2px;
   color: #232323; }
+
+#article#article .google-info-window h2, #article#article .google-info-window .h2 {
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0 0 1rem;
+  line-height: 100%; }
 
 #article#article ol.has_tags {
   padding-left: 0; }
@@ -844,7 +846,7 @@ img.mfp-img {
 
 #article#article .home__hero__content {
   text-align: center; }
-  #article#article .home__hero__content p, #article#article .home__hero__content .body_copy .p, #article#article .body_copy .home__hero__content .p {
+  #article#article .home__hero__content p, #article#article .home__hero__content .p {
     text-shadow: 1px 1px #444;
     margin-bottom: 0; }
 
@@ -946,7 +948,7 @@ img.mfp-img {
   margin-left: auto;
   margin-right: auto;
   padding-left: 350px; }
-  #article#article .home__feature__content h2, #article#article .home__feature__content .body_copy .h2, #article#article .body_copy .home__feature__content .h2 {
+  #article#article .home__feature__content h2, #article#article .home__feature__content .h2 {
     margin-top: 0; }
 
 #article#article .teachings {
@@ -972,7 +974,7 @@ img.mfp-img {
   padding: 4rem 4rem;
   border-radius: 5px;
   margin-bottom: 8rem; }
-  #article#article .protocol h2, #article#article .protocol .body_copy .h2, #article#article .body_copy .protocol .h2 {
+  #article#article .protocol h2, #article#article .protocol .h2 {
     margin-top: 0;
     text-align: center; }
   #article#article .protocol::after {
@@ -1059,7 +1061,7 @@ img.mfp-img {
   flex-direction: column;
   justify-content: center; }
 
-#article#article .table-contents__side p, #article#article .table-contents__side .body_copy .p, #article#article .body_copy .table-contents__side .p {
+#article#article .table-contents__side p, #article#article .table-contents__side .p {
   transform: rotate(270deg);
   width: 300px;
   height: 50px;
@@ -1086,7 +1088,7 @@ img.mfp-img {
 #article#article .page-index .body_copy .slot {
   max-width: none; }
 
-.page-index #article#article h2, .page-index #article#article .body_copy .h2 {
+.page-index #article#article h2, .page-index #article#article .h2 {
   padding: 0; }
 
 .page-index #article#article .body_copy .slot {
@@ -1414,10 +1416,10 @@ img.mfp-img {
   #mainMenuInside#mainMenuInside ol a:not(.expand):before,
   #mainMenuSubmenus#mainMenuSubmenus ol a:not(.expand):before {
     content: none; }
-  #mainMenuInside#mainMenuInside h2, #mainMenuInside#mainMenuInside #article .body_copy .h2, #article .body_copy #mainMenuInside#mainMenuInside .h2,
+  #mainMenuInside#mainMenuInside h2, #mainMenuInside#mainMenuInside #article .h2, #article #mainMenuInside#mainMenuInside .h2,
   #mainMenuSubmenus#mainMenuSubmenus h2,
-  #mainMenuSubmenus#mainMenuSubmenus #article .body_copy .h2,
-  #article .body_copy #mainMenuSubmenus#mainMenuSubmenus .h2 {
+  #mainMenuSubmenus#mainMenuSubmenus #article .h2,
+  #article #mainMenuSubmenus#mainMenuSubmenus .h2 {
     margin-left: 30px;
     padding: 0;
     font-size: 2rem; }
@@ -1588,116 +1590,118 @@ img.mfp-img {
   .button--secondary:active, #back-btn:active, .button--secondary:focus, #back-btn:focus {
     background-color: #777777 !important; }
 
-/* So the top-most media element aligns with the top of its paragraph */
+#body#body .widgetContainer {
+  margin-left: auto;
+  margin-right: auto; }
+
+#body#body .pillarbox {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#body#body .pillarbox + .mediainfo {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#body#body .card {
+  margin-left: 4.8rem; }
+  #body#body .card h1, #body#body .card h2, #body#body .card #article .h2, #article #body#body .card .h2, #body#body .card h3, #body#body .card #article .h3, #article #body#body .card .h3, #body#body .card h4, #body#body .card #article .h4, #article #body#body .card .h4, #body#body .card h5, #body#body .card #article .h5, #article #body#body .card .h5 {
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 2.4rem; }
+
+/* So the top-most media element aligns with the top of its paragraph 
 .slot {
-  background-image: url(assets/loading_msg.6274d7b416e36d791a94c284d677fb3c.png);
-  background-position: center center;
-  background-repeat: no-repeat; }
+	background-image: url(../images/loading_msg.png);
+	background-position: center center;
+	background-repeat: no-repeat;
 
-.slot.top {
-  clear: both; }
+}
 
-.slot.right img,
-.slot.left img {
-  width: 100% !important;
-  height: auto !important; }
+.slot.top{
+	clear: both;
+}
 
-.slot.right {
-  margin: 0;
-  float: right;
-  clear: right;
-  padding-left: 36px; }
-
+.slot.right,
 .slot.left {
-  float: left;
-  clear: left;
-  padding-right: 36px; }
+	img {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+.slot.right{
+	margin: 0;
+	float: right;
+	clear: right;
+	padding-left: 36px;
+}
+.slot.left{
+	float: left;
+	clear: left;
+	padding-right: 36px;
+}
+
 
 .wrapped_slot {
-  z-index: 1;
-  position: relative; }
-  .wrapped_slot img {
-    width: 100% !important;
-    height: auto !important; }
-  .wrapped_slot.left_slot {
-    float: left; }
-  .wrapped_slot.right_slot {
-    float: right; }
+	z-index: 1;
+	position: relative;
+
+	img {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	&.left_slot {
+		float: left;
+	}
+
+	&.right_slot {
+		float: right;
+	}
+}
 
 .mediaContainer {
-  background-image: none; }
+	background-image: none;
+}
 
-.wrapped_slot > .mediaelement, .wrapped_slot > .widgetContainer {
-  margin: .5rem 0 2.4rem 0; }
-
-.wrapped_slot.right_slot > .mediaelement {
-  margin-left: 4.8rem; }
-
-.wrapped_slot.left_slot > .mediaelement {
-  margin-right: 4.8rem; }
-
-.wrapped_slot.no_margin > .mediaelement, .mediainfo.no_margin > .widgetContainer {
-  margin: 2.4rem 0; }
-
-.wrapped_slot.full_width > .mediaelement, .wrapped_slot.full_widget > .widgetContainer {
-  margin-top: 1rem; }
+.wrapped_slot>.mediaelement, 
+.wrapped_slot>.widgetContainer {
+	margin: .5rem 0 2.4rem 4.8rem;
+}
+.wrapped_slot.right_slot>.mediaelement{
+	margin-left: 4.8rem;
+}
+.wrapped_slot.left_slot>.mediaelement{
+	margin-right: 4.8rem;
+}
+.wrapped_slot.no_margin>.mediaelement, .mediainfo.no_margin>.widgetContainer{
+	margin: 2.4rem 0;
+}
+.wrapped_slot.full_width>.mediaelement, .wrapped_slot.full_widget>.widgetContainer{
+	margin-top: 1rem;
+}
 
 .body_copy.mediainfo {
-  max-width: 900px;
-  margin: 0 auto 2.4rem auto; }
-
+	max-width: 900px;
+	margin: 0 auto 2.4rem auto;
+}
 .body_copy.media_description {
-  max-width: 900px;
-  margin: 0 auto 2.4rem auto; }
+	max-width: 900px;
+	margin: 0 auto 2.4rem auto;
+} 
 
 .widget_slot {
-  z-index: 1;
-  position: relative; }
+	z-index: 1;
+	position: relative;
+}
 
 .widget_carousel {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.mediaObject img {
-  margin: 0 auto;
-  display: block; }
-
-.primary_role_media .slot {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  float: none; }
-  .primary_role_media .slot .mediaelement {
-    max-width: 100%; }
-
-#article#article .cardContainer h1,
-#article#article .cardContainer h2,
-#article#article .cardContainer .body_copy .h2,
-#article#article .body_copy .cardContainer .h2,
-#article#article .cardContainer h3,
-#article#article .cardContainer .body_copy .h3,
-#article#article .body_copy .cardContainer .h3,
-#article#article .cardContainer h4,
-#article#article .cardContainer .body_copy .h4,
-#article#article .body_copy .cardContainer .h4,
-#article#article .cardContainer h5,
-#article#article .cardContainer .body_copy .h5,
-#article#article .body_copy .cardContainer .h5 {
-  margin: 0 0 1rem 0;
-  padding: 0; }
-
-#article#article .widget_carousel .widgetContainer {
-  width: 100%; }
-
-#article#article .widgetContainer .mediaElementFooter p, #article#article .widgetContainer .mediaElementFooter .body_copy .p, #article#article .body_copy .widgetContainer .mediaElementFooter .p {
-  font-size: 1.4rem; }
-
-#article#article .widget_slot .widgetContainer {
-  margin-bottom: 3rem;
-  margin-left: auto;
-  margin-right: auto; }
-
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto
+}
+*/
 .popup {
   position: relative;
   background: white;
@@ -1717,7 +1721,7 @@ img.mfp-img {
     right: 0;
     position: absolute;
     z-index: 0; }
-  .popup h2, .popup #article .body_copy .h2, #article .body_copy .popup .h2 {
+  .popup h2, .popup #article .h2, #article .popup .h2 {
     margin-top: 0; }
 
 .popup__content {

@@ -1,6 +1,5 @@
 //Set Specificity to 200
 #article {
-	.body_copy {
 
 		p {
 			font-size: 2rem;
@@ -66,14 +65,14 @@
 			font-size: 2rem;
 			line-height: 1.5;
 		}
-	}
+	
 }
 
 #article#article {
 
-		p {
-			padding: 0;
-		}
+	p {
+		padding: 0;
+	}
 
 	.firstcharacter {
 		float: left;
