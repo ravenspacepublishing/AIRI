@@ -1234,7 +1234,8 @@ img.mfp-img {
   font-size: 1.4rem; }
   #footer#footer a {
     color: white;
-    text-decoration: underline; }
+    text-decoration: underline;
+    font-size: 1.4rem; }
   #footer#footer .footer__content {
     display: flex;
     justify-content: space-between;
@@ -1249,6 +1250,7 @@ img.mfp-img {
     margin-bottom: 0;
     list-style: none; }
     #footer#footer .footer__list li {
+      font-size: 1.4rem;
       display: inline-block;
       border-right: 1px solid white;
       padding: 0 10px;
