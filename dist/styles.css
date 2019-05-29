@@ -1641,7 +1641,8 @@ img.mfp-img {
   margin-left: auto;
   margin-right: auto; }
 
-#body#body .texteo_icon_audio + .pillarbox {
+#body#body .texteo_icon_audio + .pillarbox,
+#body#body .texteo_icon_video + .pillarbox {
   background-color: unset; }
 
 #body#body .card {
@@ -1660,6 +1661,12 @@ img.mfp-img {
 #body#body .description-sm {
   font-size: 1.4rem;
   line-height: 1.7rem; }
+
+#body#body .mediaObject video {
+  max-width: 100%; }
+
+#body#body .wrapped_slot.right_slot > .mediaelement {
+  margin-left: 0; }
 
 .popup {
   position: relative;
