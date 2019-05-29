@@ -1,9 +1,10 @@
 #article#article {
 
-
-
-	span[property="sioc:content"] {
-	    padding-top: 0;
+	.page-index & span[property="sioc:content"] {
+			margin: unset;
+			max-width: unset;
+			padding-top: 0;
+			padding-bottom: 0;
 	}
 
 	.home__hero {
@@ -357,10 +358,7 @@
 		display: none;
 	}
 
-	.page-index & span[property="sioc:content"] {
-			padding-top: 0;
-			padding-bottom: 0;
-	}
+
 
 	.page-index & #footer.caption_font {
 		display: none;

@@ -10,6 +10,10 @@
 		z-index: 1;
 	}
 
+	.slot.right {
+		margin-right: 0;
+	}
+
 	.widgetContainer {
 		margin-left: auto;
 		margin-right: auto;
@@ -17,16 +21,16 @@
 		z-index: 1;
 	}
 
-	.pillarbox {
-		max-width: 1040px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.pillarbox + .mediainfo {
-		max-width: 1040px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+	// .pillarbox {
+	// 	max-width: 1040px;
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// }
+	// .pillarbox + .mediainfo {
+	// 	max-width: 1040px;
+	// 	margin-left: auto;
+	// 	margin-right: auto;
+	// }
 	.texteo_icon_audio + .pillarbox,
 	.texteo_icon_video + .pillarbox {
 		background-color: unset;
