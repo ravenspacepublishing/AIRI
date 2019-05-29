@@ -1615,7 +1615,8 @@ img.mfp-img {
 
 #body#body .slot {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  clear: both; }
 
 #body#body .slot.right {
   margin-right: 0; }
