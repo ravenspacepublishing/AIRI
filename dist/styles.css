@@ -1621,6 +1621,9 @@ img.mfp-img {
 #body#body .slot.right {
   margin-right: 0; }
 
+#body#body .full_widget {
+  margin: 0 -70px 0 -70px; }
+
 #body#body .widgetContainer {
   margin-left: auto;
   margin-right: auto;
