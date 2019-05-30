@@ -7,6 +7,12 @@
 		padding-bottom: 6rem;
 		margin: 0 auto;
 		max-width: 900px;
+
+		@media only screen and (max-width: 1040px) {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+
 	}
 
 	.body_copy {
@@ -16,6 +22,8 @@
 		max-width: unset;
 		padding-left: 0;
 		padding-right: 0;
+
+
 
 		p.p--feature {
 			max-width: 100%;
@@ -33,7 +41,9 @@
 
 	.relationships {
 		padding-top: 2.4rem;
-		max-width: 900px;
+		max-width: 940px;
+		padding-left: 2rem;
+		padding-right: 2rem;
 		margin: 0 auto;
 		clear:both;
 

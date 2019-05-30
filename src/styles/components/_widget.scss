@@ -9,6 +9,10 @@
 		position: relative;
 		z-index: 1;
 		clear: both;
+
+		@media only screen and (max-width: 1040px) {
+			max-width: 100%;
+		}
 	}
 
 	.slot.right {
@@ -16,11 +20,23 @@
 	}
 
 	.full_widget {
-		margin: 0 -70px 0 -70px;
+
+		@media only screen and (min-width: 1040px) {
+			margin-left: -70px;
+			margin-right: -70px;
+		}
+
 	}
 
 	&.primary_role_media .slot {
-		margin: 0 -70px 0 -70px;
+		margin-left: -20px;
+		margin-right: -20px;
+
+		@media only screen and (min-width: 1040px) {
+			margin-left: -70px;
+			margin-right: -70px;
+		}
+
 	}
 
 	.widgetContainer {
@@ -28,6 +44,10 @@
 		margin-right: auto;
 		position: relative;
 		z-index: 1;
+
+		@media only screen and (max-width: 1040px) {
+			max-width: 100%;
+		}
 	}
 
 	.texteo_icon_audio + .pillarbox,

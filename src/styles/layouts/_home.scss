@@ -5,6 +5,11 @@
 			max-width: unset;
 			padding-top: 0;
 			padding-bottom: 0;
+
+			@media only screen and (max-width: 1040px) {
+				padding-left: 0;
+				padding-right: 0;
+			}
 	}
 
 	.home__hero {
@@ -12,6 +17,7 @@
 		display: block;
 		width: 100%;
 		height: calc(100vh - 50px);
+
 	}
 
 	.home__hero__video-container {
@@ -107,17 +113,28 @@
 		display: block;
 		color: white;
 		height: 333px;
-		padding-top: 8rem;
+		padding-top: 4rem;
 		padding-bottom: 160px;
 		margin-bottom: 8rem;
+
+		@media only screen and (min-width: 1040px) {
+			padding-top: 8rem;
+		}
 	}
 
 	.home__quote__wrap {
 		display: block;
 		position: relative;
-		width: 639px;
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		@media only screen and (min-width: 1040px) {
+			width: 639px;
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 
 	.home__quote__text {
@@ -147,6 +164,9 @@
 		padding: 14rem 0;
 		background-position: center right;
 		background-repeat: no-repeat;
+		@media only screen and (max-width: 1040px) {
+			padding: 9rem 0 6rem 0;
+		}
 	}
 
 	.home__feature--1 {
@@ -174,11 +194,25 @@
 		h2 {
 			margin-top: 0;
 		}
+
+		@media only screen and (max-width: 1040px) {
+			padding-left: 20px;
+			padding-right: 20px;
+			width: 100%;
+		}
 	}
 
 	.teachings {
 		display: flow-root;
 		margin-bottom: 8rem;
+		width: 100%;
+		flex-shrink: 0;
+		margin-bottom: 0 !important;
+		flex-grow: 1;
+
+		@media only screen and (max-width: 540px) {
+			margin: 0 -170px 0 -170px;
+		}
 	}
 
 	.teaching {
@@ -195,7 +229,17 @@
 		display: block;
 		max-width: 100%;
 	}
+	.teachings--secondary {
+		display: flex;
+	}
+	.teaching--secondary {
+			width: 33.3333333%;
+			flex-shrink: 1;
+	}
 
+	.teaching__img {
+			width: 100%;
+	}
 
 	.protocol {
 		position: relative;
@@ -298,7 +342,8 @@
 	}
 
 	.table-contents {
-			display: flex;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.table-contents__side {
@@ -321,24 +366,10 @@
 			transform-origin: 80px 80px 0;
 	}
 
-	.teachings {
-			margin-bottom: 0 !important;
-	}
-
-	.teaching:nth-child(5),
-	.teaching:nth-child(6),
-	.teaching:nth-child(7) {
-			width: 33.3333333%;
-	}
-	.teaching__img {
-			width: 100%;
-	}
-
 	.home__hero__overlay {
 			background-position: bottom center;
 			background-image: url(../images/hero-overlay.png) !important;
 	}
-
 
 	.page-index .body_copy .slot {
 		max-width: none;
@@ -351,7 +382,7 @@
 	.page-index & .body_copy .slot {
 		max-width: unset;
     width: auto;
-    margin-left: -20px;
+    // margin-left: -20px;
 	}
 
 	.page-index & header {
@@ -372,9 +403,11 @@
 
 	.home__about {
 		position: relative;
-		max-width: 1000px;
+		max-width: 940px;
 		margin: 0 auto;
 		margin-bottom: 10rem;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 
 	.page-index & #footer {

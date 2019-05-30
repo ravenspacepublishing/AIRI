@@ -110,34 +110,51 @@
 		}
 
 		&.pull-right {
-			padding: 1rem 0 1rem 3.6rem;
-			margin-left: 36px;
-			width: 264px;
-
 
 			text-align: left; 
 			border-right: none; 
 			border-left: 5px solid #eee; 
+
+			@media only screen and (min-width: 540px) {
+				padding: 1rem 0 1rem 3.6rem;
+				margin-left: 36px;
+				width: 264px;
+			}
+			
 		}
 	}
 
 	.pull {
-		width: 300px;
+		@media only screen and (min-width: 540px) {
+			width: 300px;
+		}
 	}
 
 	.pull-left {
-		float: left;
+		@media only screen and (min-width: 540px) {
+			float: left;
+		}
 	}
 
 	.pull-right {
-		float: right;
+		@media only screen and (min-width: 540px) {
+			float: right;
+		}
 	}
 
 	.featured,
 	.feature {
 		margin-bottom: 5rem;
-		margin-left: -7rem;
-		margin-right: -7rem;
+
 		font-size: 3rem;
+
+		@media only screen and (min-width: 1040px) {
+			margin-left: -7rem;
+			margin-right: -7rem;
+		}
+
+		// .jp-audio {
+		// 	max-width: 100%;
+		// }
 	}
 }

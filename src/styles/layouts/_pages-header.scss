@@ -42,14 +42,18 @@
 		background-position: center;
 		position: relative;
 		margin-bottom: 5rem;
-
+		min-height: 30rem;
+		@media only screen and (min-width: 1040px) {
+			min-height: 50rem;
+		}
+		
 		.title_card {
 			@extend .reset-all;
 
 			position: inherit;
 			margin: 0 auto;
-			padding: 0 0 6rem 0;
-			min-height: 50rem;
+			padding: 0 2rem 6rem 2rem;
+			min-height: 30rem;
 			color: white;
 			text-shadow: 1px 1px #444;
 			opacity: 1.0;
@@ -59,29 +63,45 @@
 			flex-direction: column;
 			justify-content: flex-end;
 
+			@media only screen and (min-width: 1040px) {
+				min-height: 50rem;
+			}
+
 			h1 {
-				width: $header-width;
+				width: 100%;
 				margin: 2rem auto 0 auto;
 				padding: 0;
+
+				@media only screen and (min-width: 1040px) {
+					width: $header-width;
+				}
 			}
 
 			.path-breadcrumb {
+				width: 100%;
 				color: white;
-				width: $header-width;
 				margin: 0 auto 0 auto;
 				text-transform: none;
 				padding: 0;
+
+				@media only screen and (min-width: 1040px) {
+					width: $header-width;
+				}
 				a {
 					color: white;
 				}
 			}
 			.description { 
+				width: 100%;
 				color: white;
-				width: $header-width;
 				margin: 0 auto;
 				font-size: 20px;
 				font-style: italic;
 				padding: 0;
+
+				@media only screen and (min-width: 1040px) {
+					width: $header-width;
+				}
 			}
 		}
 
