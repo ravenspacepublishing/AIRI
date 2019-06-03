@@ -927,15 +927,17 @@ img.mfp-img {
 #article#article .home__quote {
   position: relative;
   background-image: url(assets/quote.26937cbd3b350f5aa81ab40545d7ee95.jpg);
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: white;
   height: 333px;
-  padding-top: 4rem;
-  padding-bottom: 160px;
+  padding-bottom: 8rem;
   margin-bottom: 8rem; }
-  @media only screen and (min-width: 1040px) {
+  @media only screen and (max-width: 1040px) {
     #article#article .home__quote {
-      padding-top: 8rem; } }
+      font-size: 3.5rem;
+      font-style: italic; } }
 
 #article#article .home__quote__wrap {
   display: block;

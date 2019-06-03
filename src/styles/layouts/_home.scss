@@ -110,15 +110,20 @@
 	.home__quote {
 		position: relative;
 		background-image:url(../images/quote.jpg);
-		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		color: white;
 		height: 333px;
-		padding-top: 4rem;
-		padding-bottom: 160px;
+		// padding-top: 4rem;
+		padding-bottom: 8rem;
 		margin-bottom: 8rem;
 
-		@media only screen and (min-width: 1040px) {
-			padding-top: 8rem;
+
+		@media only screen and (max-width: 1040px) {
+			font-size: 3.5rem;
+			font-style: italic;
+			// padding-top: 8rem;
 		}
 	}
 
