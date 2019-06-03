@@ -118,13 +118,6 @@
 		// padding-top: 4rem;
 		padding-bottom: 8rem;
 		margin-bottom: 8rem;
-
-
-		@media only screen and (max-width: 1040px) {
-			font-size: 3.5rem;
-			font-style: italic;
-			// padding-top: 8rem;
-		}
 	}
 
 	.home__quote__wrap {
@@ -146,6 +139,12 @@
 		display: block;
 		font-size: 3.8rem;
 		font-weight: 400;
+		@media only screen and (max-width: 1040px) {
+			font-style: italic;
+		}
+		@media only screen and (max-width: 540px) {
+			font-size: 3.5rem;
+		}
 	}
 
 	.home__quote__open {

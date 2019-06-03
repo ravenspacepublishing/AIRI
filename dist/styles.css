@@ -934,10 +934,6 @@ img.mfp-img {
   height: 333px;
   padding-bottom: 8rem;
   margin-bottom: 8rem; }
-  @media only screen and (max-width: 1040px) {
-    #article#article .home__quote {
-      font-size: 3.5rem;
-      font-style: italic; } }
 
 #article#article .home__quote__wrap {
   display: block;
@@ -956,6 +952,12 @@ img.mfp-img {
   display: block;
   font-size: 3.8rem;
   font-weight: 400; }
+  @media only screen and (max-width: 1040px) {
+    #article#article .home__quote__text {
+      font-style: italic; } }
+  @media only screen and (max-width: 540px) {
+    #article#article .home__quote__text {
+      font-size: 3.5rem; } }
 
 #article#article .home__quote__open {
   display: block;
