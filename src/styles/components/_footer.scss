@@ -15,12 +15,17 @@
 	}
 
 	.footer__content {
-		display: flex;
-		justify-content: space-between;
+
 		margin: 0 auto;
 		max-width: 940px;
 		padding-left: 20px;
 		padding-right: 20px;
+
+		@media only screen and (min-width: 767px) {
+			display: flex;
+			justify-content: space-between;
+		}
+
 	}
 
 	.footer__credit {
@@ -29,12 +34,17 @@
 	}
 
 	.footer__links {
-		text-align: right;
+		@media only screen and (min-width: 767px) {
+			text-align: right;
+		}
 	}
 
 	.footer__list {
+		padding: 0;
 		margin-bottom: 0;
 		list-style: none;
+
+
 
 		li {
 			font-size: 1.4rem;
@@ -49,6 +59,11 @@
 
 		&:first-child {
 			margin-bottom: 1rem;
+			@media only screen and (max-width: 767px) {
+				margin-top: 1rem;
+				margin-bottom: 2rem;
+			}
+			
 		}
 
 	}

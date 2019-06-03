@@ -1,0 +1,37 @@
+#mobileMainMenuSubmenus#mobileMainMenuSubmenus {
+
+	top: 0;
+
+	.expandedPage {
+		background-color: #39475a;
+		bottom: 0;
+	}
+
+	.links {
+		list-style: none;
+	}
+
+	.visit {
+    display: inline-block;
+    padding: .5rem;
+    background-color: #303030;
+    margin-right: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-left: 10px;
+	}
+
+	a {
+		color: white;
+	}
+
+	li.visited > a {
+		color: #a4b0c1;
+	}
+
+	footer {
+		bottom: 0;
+	}
+
+}
