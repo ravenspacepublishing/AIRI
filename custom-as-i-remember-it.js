@@ -46,7 +46,7 @@ $(document).ready(function() {
 	$('body').on('click', '.popup__btn--disagree', function () {
 		event.preventDefault();
 		localStorage.removeItem("popupConfirm");
-		window.location.href = "https://google.ca";
+		window.location.href = "http://ravenspacepublishing.org/publications/pub1/";
 	});
 
 	var shareThis = window.ShareThis;

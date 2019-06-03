@@ -31,7 +31,13 @@
 	position: relative;
 	z-index: 1;
 }
-
+.popup__btn--agree {
+	@media only screen and (max-width: 767px) {
+		width: 100%;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+}
 .popup__btn--disagree {
 	background-color: #a94442 !important;
 	&:hover {
@@ -40,5 +46,10 @@
 	&:active,
 	&:focus {
 		background-color: #79312f !important;
+	}
+
+	@media only screen and (max-width: 767px) {
+		width: 100%;
+		text-align: center;
 	}
 }

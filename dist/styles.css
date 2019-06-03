@@ -1027,8 +1027,9 @@ img.mfp-img {
   display: block;
   max-width: 100%; }
 
-#article#article .teachings--secondary {
-  display: flex; }
+@media only screen and (min-width: 540px) {
+  #article#article .teachings--secondary {
+    display: flex; } }
 
 #article#article .teaching--secondary {
   width: 33.3333333%;
@@ -1850,10 +1851,20 @@ img.mfp-img {
   position: relative;
   z-index: 1; }
 
+@media only screen and (max-width: 767px) {
+  .popup__btn--agree {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center; } }
+
 .popup__btn--disagree {
   background-color: #a94442 !important; }
   .popup__btn--disagree:hover {
     background-color: #b95957 !important; }
   .popup__btn--disagree:active, .popup__btn--disagree:focus {
     background-color: #79312f !important; }
+  @media only screen and (max-width: 767px) {
+    .popup__btn--disagree {
+      width: 100%;
+      text-align: center; } }
 
