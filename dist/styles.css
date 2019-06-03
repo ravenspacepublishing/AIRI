@@ -816,13 +816,13 @@ img.mfp-img {
       background-color: #b73323; }
   .page-colonialism #article#article .image_header,
   .parent-colonialism #article#article .image_header {
-    background-image: url(assets/colonialism.24085df6a9d7dbcd3439479da8bbac38.jpg) !important; }
+    background-image: url(assets/colonialism.b05c82becb67d91fccce1108f62b1508.jpg) !important; }
     .page-colonialism #article#article .image_header .path-breadcrumb a,
     .parent-colonialism #article#article .image_header .path-breadcrumb a {
       background-color: #0d5065; }
   .page-community #article#article .image_header,
   .parent-community #article#article .image_header {
-    background-image: url(assets/community.4a360ac059b5b9cb4ef0a6a57f171721.jpg) !important; }
+    background-image: url(assets/community.726cc0e1897cac0775e8c9499ae88505.jpg) !important; }
     .page-community #article#article .image_header .path-breadcrumb a,
     .parent-community #article#article .image_header .path-breadcrumb a {
       background-color: #157473; }
@@ -1033,6 +1033,8 @@ img.mfp-img {
 #article#article .teaching--secondary {
   width: 33.3333333%;
   flex-shrink: 1; }
+  #article#article .teaching--secondary:hover {
+    opacity: .75; }
 
 #article#article .teaching__img {
   width: 100%; }
@@ -1429,6 +1431,8 @@ img.mfp-img {
   #scalarheader#scalarheader .dropdown-menu li a:hover {
     background-color: #576988 !important;
     color: #fff; }
+  #scalarheader#scalarheader #scalar_menu {
+    display: none; }
 
 .header__li, #mainMenuInside#mainMenuInside ol li,
 #mainMenuSubmenus#mainMenuSubmenus ol li, #mainMenuInside#mainMenuInside .top, #mainMenuInside#mainMenuInside .bottom {
@@ -1730,7 +1734,8 @@ img.mfp-img {
   line-height: 1.7rem; }
 
 #body#body .mediaObject video {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 #body#body .wrapped_slot.right_slot > .mediaelement {
   margin-left: 4.8rem; }

@@ -233,8 +233,11 @@
 		display: flex;
 	}
 	.teaching--secondary {
-			width: 33.3333333%;
-			flex-shrink: 1;
+		width: 33.3333333%;
+		flex-shrink: 1;
+		&:hover {
+			opacity: .75;
+		}
 	}
 
 	.teaching__img {
