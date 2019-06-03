@@ -963,6 +963,9 @@ img.mfp-img {
   position: absolute;
   left: -125px;
   top: -68px; }
+  @media only screen and (max-width: 1040px) {
+    #article#article .home__quote__open {
+      display: none; } }
 
 #article#article .home__quote__close {
   display: block;
@@ -970,6 +973,9 @@ img.mfp-img {
   position: absolute;
   right: -100px;
   top: -27px; }
+  @media only screen and (max-width: 1040px) {
+    #article#article .home__quote__close {
+      display: none; } }
 
 #article#article .home__feature {
   display: block;
@@ -1126,7 +1132,8 @@ img.mfp-img {
 
 #article#article .table-contents {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  overflow: hidden; }
 
 #article#article .table-contents__side {
   background-color: #38475a;

@@ -154,6 +154,9 @@
 		position: absolute;
 		left: -125px;
 		top: -68px;
+		@media only screen and (max-width: 1040px) {
+			display: none;
+		}
 	}
 
 	.home__quote__close {
@@ -162,6 +165,9 @@
 		position: absolute;
 		right: -100px;
 		top: -27px;
+		@media only screen and (max-width: 1040px) {
+			display: none;
+		}
 	}
 
 	.home__feature {
@@ -354,6 +360,7 @@
 	.table-contents {
 		display: flex;
 		flex-wrap: wrap;
+		overflow: hidden;
 	}
 
 	.table-contents__side {
