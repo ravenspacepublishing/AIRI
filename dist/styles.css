@@ -551,26 +551,49 @@ img.mfp-img {
   margin-top: 0;
   margin-bottom: 3rem;
   padding: 0; }
+  @media only screen and (max-width: 767px) {
+    #article p, #article .p {
+      font-size: 1.8rem;
+      margin-bottom: 2.7rem; } }
 
 #article h1, #article h2, #article .h2, #article h3, #article .h3, #article h4, #article .h4, #article h5, #article .h5 {
   line-height: 1;
   margin-top: 6rem;
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 767px) {
+    #article h1, #article h2, #article .h2, #article h3, #article .h3, #article h4, #article .h4, #article h5, #article .h5 {
+      margin-top: 5.4rem;
+      margin-bottom: 2.7rem; } }
 
 #article h1 {
   font-size: 6.8rem; }
+  @media only screen and (max-width: 767px) {
+    #article h1 {
+      font-size: 5.4rem; } }
 
 #article h2, #article .h2 {
   font-size: 4.5rem; }
+  @media only screen and (max-width: 767px) {
+    #article h2, #article .h2 {
+      font-size: 3.8rem; } }
 
 #article h3, #article .h3 {
   font-size: 2.8rem; }
+  @media only screen and (max-width: 767px) {
+    #article h3, #article .h3 {
+      font-size: 2.2rem; } }
 
 #article h4, #article .h4 {
   font-size: 2rem; }
+  @media only screen and (max-width: 767px) {
+    #article h4, #article .h4 {
+      font-size: 1.8rem; } }
 
 #article h5, #article .h5 {
   font-size: 1.6rem; }
+  @media only screen and (max-width: 767px) {
+    #article h5, #article .h5 {
+      font-size: 1.4rem; } }
 
 #article .h1, #article .h2, #article .h3, #article .h4, #article .h5, #article .p {
   display: block; }
@@ -579,16 +602,25 @@ img.mfp-img {
   margin: 0 0 3rem 0;
   list-style-position: outside;
   padding-left: 20px; }
+  @media only screen and (max-width: 767px) {
+    #article ul {
+      margin-bottom: 2.7rem; } }
 
 #article ol {
   margin: 0 0 3rem 0;
   list-style-position: outside;
   padding-left: 20px; }
+  @media only screen and (max-width: 767px) {
+    #article ol {
+      margin-bottom: 2.7rem; } }
 
 #article li {
   margin: 0;
   font-size: 2rem;
   line-height: 1.5; }
+  @media only screen and (max-width: 767px) {
+    #article li {
+      font-size: 1.8rem; } }
 
 #article#article p, #article#article .p {
   padding: 0; }
@@ -661,8 +693,8 @@ img.mfp-img {
   margin-left: auto;
   margin-right: auto;
   max-width: unset;
-  padding-left: 0;
-  padding-right: 0; }
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
   #article#article .body_copy p.p--feature, #article#article .body_copy .p--feature.p {
     max-width: 100%;
     font-size: 3rem;
@@ -714,6 +746,9 @@ img.mfp-img {
   top: 2px;
   color: #232323; }
 
+#article#article .has_tags li {
+  font-size: 1.6rem; }
+
 #article#article .google-info-window h2, #article#article .google-info-window .h2 {
   font-size: 1.6rem;
   padding: 0;
@@ -729,19 +764,31 @@ img.mfp-img {
 #article#article header {
   position: relative;
   padding-top: 10rem;
-  max-width: 900px;
+  max-width: 940px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5rem; }
+  @media only screen and (max-width: 767px) {
+    #article#article header {
+      padding-top: 6rem;
+      margin-bottom: 4rem; } }
   #article#article header h1 {
     margin-top: 2rem;
     margin-bottom: 0;
     padding: 0; }
+    @media only screen and (max-width: 767px) {
+      #article#article header h1 {
+        font-size: 4.8rem; } }
   #article#article header h1 ~ [property="dcterms:description"] {
     display: block !important;
     color: #888888;
-    font-size: 20px;
+    font-size: 2rem;
     font-style: italic; }
+    @media only screen and (max-width: 767px) {
+      #article#article header h1 ~ [property="dcterms:description"] {
+        font-size: 1.6rem; } }
 
 #article#article .path-breadcrumb {
   text-transform: none;
@@ -800,12 +847,15 @@ img.mfp-img {
       width: 100%;
       color: white;
       margin: 0 auto;
-      font-size: 20px;
+      font-size: 2rem;
       font-style: italic;
       padding: 0; }
       @media only screen and (min-width: 1040px) {
         #article#article .image_header .title_card .description {
           width: 1040px; } }
+      @media only screen and (max-width: 767px) {
+        #article#article .image_header .title_card .description {
+          font-size: 1.8rem; } }
   #article#article .image_header + header {
     display: none; }
   .page-territory #article#article .image_header,
@@ -1319,7 +1369,6 @@ img.mfp-img {
 
 #footer#footer {
   clear: both;
-  margin-top: 10rem;
   background: #38475a;
   color: white;
   padding: 5rem 0 4rem 0;
@@ -1790,6 +1839,10 @@ img.mfp-img {
     #body#body.primary_role_media .slot {
       margin-left: -70px;
       margin-right: -70px; } }
+
+#body#body.primary_role_media .media_details .slot {
+  margin-left: 0;
+  margin-right: 0; }
 
 #body#body .widgetContainer {
   margin-left: auto;
