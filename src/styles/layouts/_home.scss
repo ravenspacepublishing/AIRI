@@ -69,16 +69,25 @@
 		margin-top: 0;
 		text-shadow: 1px 1px #444;
 		font-size: 8rem;
-		margin-bottom: 0
+		margin-bottom: 0;
+		@media screen and (max-width: 767px) {
+			font-size: 6rem;
+		}
 	}
 	.home__hero__subtitle {
 		font-size: 3rem;
 		line-height: 1.2;
+		@media screen and (max-width: 767px) {
+			font-size: 2rem;
+		}
 	}
 
 	.home__hero__author {
 		font-size: 6rem;
 		line-height: 1;
+		@media screen and (max-width: 767px) {
+			font-size: 4rem;
+		}
 	}
 
 	.home__hero__scroll {
@@ -383,10 +392,7 @@
 			transform-origin: 80px 80px 0;
 	}
 
-	.home__hero__overlay {
-			background-position: bottom center;
-			background-image: url(../images/hero-overlay.png) !important;
-	}
+
 
 	.page-index .body_copy .slot {
 		max-width: none;
