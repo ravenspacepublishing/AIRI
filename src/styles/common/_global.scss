@@ -1,11 +1,20 @@
 #body#body {
+	.page {
+    max-width: unset;
+    margin: unset;
+    padding: unset;
+    line-height: unset;
+	}
+}
+
+#body#body {
 	font-size: 62.5%;
 	font-family: 'Aboriginal Serif', serif !important;
 	visibility: hidden;
 	background: none !important;
 
 	.page {
-		@extend .reset-all;
+		// @extend .reset-all;
 		display: block;
 		padding-top: 50px;
 	}

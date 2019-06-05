@@ -44,6 +44,7 @@
 		padding: 2rem;
 
 		color: white;
+		-webkit-text-fill-color: white;
 		cursor: pointer;
 
 	}
@@ -52,5 +53,6 @@
 		display: none;
 		background: none !important;
 		color: #ffffff00 !important;
+		-webkit-text-fill-color: #ffffff00;
 	}
 }

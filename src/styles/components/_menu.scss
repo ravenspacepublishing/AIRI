@@ -18,6 +18,7 @@
 .header__a {
 	display: block;
 	color: white;
+	-webkit-text-fill-color: white;
 	position: absolute;
 	width: auto;
 	left: 0;
@@ -61,7 +62,6 @@
 
 	ol, ul, li, a {
 		@extend .reset-all;
-		// all: initial;
 		display: block;
 		box-sizing: border-box;
 	}
@@ -72,6 +72,8 @@
 
 	li.visited > a {
 		color: #a4b0c1;
+		-webkit-text-fill-color: #a4b0c1;
+
 	}
 
 	ol {
@@ -257,6 +259,7 @@
 		content: 'Current page';
 		background: #34435a;
 		color: white;
+		-webkit-text-fill-color: white;
 		display: inline-block;
 		margin-left: 8px;
 		padding: 0px 4px;
@@ -267,6 +270,7 @@
 
 	.description {
 		color: white;
+		-webkit-text-fill-color: white;
 	}
 	.visit {
 		display: inline-block;
@@ -292,6 +296,7 @@
 		}
 		strong {
 			color: white;
+			-webkit-text-fill-color: white;
 			padding-left: 2rem;
 			font-size: 1.2rem;
 			padding-top: 2rem;

@@ -61,8 +61,8 @@
 		}
 		
 		.title_card {
-			@extend .reset-all;
-
+			// @extend .reset-all;
+			width: 100%;
 			position: inherit;
 			margin: 0 auto;
 			padding: 0 2rem 6rem 2rem;
