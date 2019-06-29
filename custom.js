@@ -13,12 +13,23 @@ $(document).ready(function() {
 	$.getScript(approot+'hooks/wayhut/keyboard/js/keyboard.js', function() {
 		$('#edit_form .form-horizontal:first, #metadata-pane').keyboard();  // Edit page
 	});
+	// TK Labels
+	tklabels_more_about_page = $('link#parent').attr('href')+'respecting-traditional-knowledge';  // Global
+	var tk_label_swap_link = function() {
+		$('.tk-help').each(function() {
+			$(this).find('a:last').attr('href', tklabels_more_about_page).removeAttr('target');
+		});
+	};
 	$('body').on('pageLoadComplete', function() {
 		$('#ScalarHeaderMenuSearchForm, .search').keyboard({blur_hide_icon:false});
 		// Rename some system texts
 		setReplacementTexts();
+		// Page TK Labels popover
+		$('article [typeof="tk:TKLabel"]').find('img').on('shown.bs.popover', tk_label_swap_link);
+	}).on('scalarMediaReady', function(ev, el) {
+		// Media element TK Labels popover
+		$('article').find('.tk-labels-media').find('img').off('shown.bs.popover', tk_label_swap_link).on('shown.bs.popover', tk_label_swap_link);
 	});
-
 });
 
 $.fn.keyboard = function(options) {  // Wrapper that invokes LanguageKeyboard from buttons within text inputs
@@ -184,7 +195,7 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
                 trigger: "click", 
                 html: true, 
                 template: popoverTemplate,
-                content: '<img src="'+url+'" /><p class="supertitle">Traditional Knowledge</p><h3 class="heading_weight">'+labelNode.title+'</h3><p>'+labelDescription+'</p><p><a href="http://localcontexts.org/tk-labels/" target="_blank">More about Traditional Knowledge labels</a></p>'
+                content: '<img src="'+url+'" /><p class="supertitle">Traditional Knowledge</p><h3 class="heading_weight">'+labelNode.title+'</h3><p>'+labelDescription+'</p><p><a href="'+tklabels_more_about_page+'">More about Traditional Knowledge labels</a></p>'
             });
 		}
 	};
