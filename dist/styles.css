@@ -550,6 +550,12 @@ img.mfp-img {
   #body#body .bg_screen {
     display: none; }
 
+.page-curriculum-explorer #article#article span[property="sioc:content"] {
+  padding-bottom: 0; }
+
+.path-nav {
+  z-index: 1; }
+
 #article p, #article .p {
   font-size: 2rem;
   line-height: 1.5;
@@ -1102,9 +1108,11 @@ img.mfp-img {
   display: block;
   max-width: 100%; }
 
-@media only screen and (min-width: 540px) {
-  #article#article .teachings--secondary {
-    display: flex; } }
+#article#article .teachings--secondary {
+  width: 100%; }
+  @media only screen and (min-width: 540px) {
+    #article#article .teachings--secondary {
+      display: flex; } }
 
 #article#article .teaching--secondary {
   width: 33.3333333%;
@@ -1625,7 +1633,8 @@ img.mfp-img {
   #mainMenuSubmenus#mainMenuSubmenus li,
   #mainMenuSubmenus#mainMenuSubmenus a {
     display: block;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    font-family: 'Aboriginal Serif', serif !important; }
   #mainMenuInside#mainMenuInside a,
   #mainMenuSubmenus#mainMenuSubmenus a {
     cursor: pointer; }
@@ -1894,7 +1903,9 @@ img.mfp-img {
   max-width: 100%; }
 
 #body#body .mediaObject {
-  max-width: 100%; }
+  max-width: 100%;
+  padding-top: 0;
+  padding-bottom: 0; }
 
 #body#body .description-sm {
   font-size: 1.4rem;
@@ -1957,4 +1968,7 @@ img.mfp-img {
     .popup__btn--disagree {
       width: 100%;
       text-align: center; } }
+
+.citations_metadata td {
+  word-break: normal !important; }
 
