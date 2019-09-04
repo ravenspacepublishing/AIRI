@@ -14,7 +14,7 @@ $(document).ready(function() {
 	$('article').attr('id', 'article');
 
 	function PopupLogic() {
-		popupConfirm = localStorage.getItem("popupConfirm");
+		popupConfirm = sessionStorage.getItem("popupConfirm");
 
 		if (popupConfirm) {
 
@@ -39,13 +39,13 @@ $(document).ready(function() {
 
 	$('body').on('click', '.popup__btn--agree', function (event) {
 		if (event.originalEvent.defaultPrevented) return;
-		localStorage.setItem("popupConfirm", 1);
+		sessionStorage.setItem("popupConfirm", 1);
 		$.magnificPopup.close();
 	});
 
 	$('body').on('click', '.popup__btn--disagree', function () {
 		event.preventDefault();
-		localStorage.removeItem("popupConfirm");
+		sessionStorage.removeItem("popupConfirm");
 		window.location.href = "http://ravenspacepublishing.org/publications/as-i-remember-it/";
 	});
 
