@@ -173,7 +173,7 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 		for (var k = 0; k < values.length; k++) {
 			var value = (null == values[k]) ? '' : values[k];
 			if (!value.length) continue;
-			if (-1 != value.indexOf('206.12.89.21')) continue;  // DSpace install
+			if (-1 != value.indexOf('/jspui/') || -1 != value.indexOf('206.12.89.21')) continue;  // DSpace install
 			if (-1 != value.indexOf('206.12.89.14') || -1 != value.indexOf('206.12.100.68') || -1 != value.indexOf('206.12.103.164')) continue;  // Omeka-S install
 			var $sl_row = $( '<tr><td><span title="art:sourceLocation">Source location</span></td><td>' + linkify(value) + '</td></tr>').appendTo($table);
 			if ($table.find('[title="dcterms:identifier"]').length) $sl_row.insertBefore($table.find('[title="dcterms:identifier"]').closest('tr'));
