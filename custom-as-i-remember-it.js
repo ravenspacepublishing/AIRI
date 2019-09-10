@@ -38,12 +38,12 @@ $(document).ready(function() {
 	}
 
 	$('body').on('click', '.popup__btn--agree', function (event) {
-		if (event.originalEvent.defaultPrevented) return;
+		event.preventDefault();
 		sessionStorage.setItem("popupConfirm", 1);
 		$.magnificPopup.close();
 	});
 
-	$('body').on('click', '.popup__btn--disagree', function () {
+	$('body').on('click', '.popup__btn--disagree', function (event) {
 		event.preventDefault();
 		sessionStorage.removeItem("popupConfirm");
 		window.location.href = "http://ravenspacepublishing.org/publications/as-i-remember-it/";
