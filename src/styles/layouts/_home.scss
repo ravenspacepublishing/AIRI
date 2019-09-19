@@ -1,8 +1,8 @@
 #article#article {
 
 	.page-index & span[property="sioc:content"] {
-			margin: unset;
-			max-width: unset;
+			margin: initial;
+			max-width: initial;
 			padding-top: 0;
 			padding-bottom: 0;
 
@@ -404,7 +404,7 @@
 	}
 
 	.page-index & .body_copy .slot {
-		max-width: unset;
+		max-width: initial;
     width: auto;
     // margin-left: -20px;
 	}
