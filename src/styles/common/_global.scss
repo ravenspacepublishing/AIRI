@@ -42,3 +42,12 @@
 .path-nav {
 	z-index: 1;
 }
+
+#body#body .mediaContainer iframe {
+	max-width: 100%;
+}
+
+#body#body .wrapped_slot.full_width, 
+#body#body .mediainfo.full_width {
+	margin: 0 !important;
+}

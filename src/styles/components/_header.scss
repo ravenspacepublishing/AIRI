@@ -2,9 +2,11 @@
 #body#body {
 
 	#scalarheader {
-	background-color: #39475a;
-	border-color: #333;
-
+		background-color: #39475a;
+		border-color: #333;
+		transform : none;
+		-webkit-transform : none;
+		-moz-transform : none;
 	}
 
 	//Mobile styles
