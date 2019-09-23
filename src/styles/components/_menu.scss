@@ -6,7 +6,7 @@
 	// all: initial;
 	display: block;
 	height: $header-item-height !important;
-	box-sizing: initial;
+	box-sizing: content-box;
 	border-bottom: 1px solid $header-highlight--dark;
 	&:first-child {
 		border-top: 1px solid $header-highlight--dark;

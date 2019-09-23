@@ -45,16 +45,17 @@
 	.image_header .tklabels {
 		position: absolute;
 		z-index: 1;
-    top: 312px;
+    top: 260px;
 		margin: 0;
 		float: none;
 		padding-left: 20px;
 
-		@media only screen and (min-width: 520px) {
+		@media only screen and (min-width: 1040px) {
 			left: calc(50% - 520px);
 			padding-left: 0px;
-			top: 260px;
+			top: 312px;
 		}
+
 	}
 	header .tklabels {
 		margin-bottom: 30px;

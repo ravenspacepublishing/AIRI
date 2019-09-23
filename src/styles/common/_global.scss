@@ -1,9 +1,9 @@
 #body#body {
 	.page {
-    max-width: initial;
-    margin: initial;
-    padding: initial;
-    line-height: initial;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
 	}
 }
 
@@ -28,7 +28,7 @@
 		font-family: inherit !important;
 	}
 	.heading_weight {
-		font-weight: initial;
+		font-weight: normal;
 	}
 	.bg_screen {
 		display: none;
