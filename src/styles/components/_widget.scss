@@ -61,12 +61,14 @@
 	}
 
 	.card {
-		margin-left: 4.8rem;
 		
 		h1, h2, h3, h4, h5 {
 			line-height: 1;
 			margin-top: 0;
 			margin-bottom: 2.4rem;
+		}
+		@media only screen and (min-width: 550px) {
+			margin-left: 4.8rem;
 		}
 	}
 
