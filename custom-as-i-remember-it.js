@@ -4,7 +4,7 @@ $(document).ready(function() {
 		$('#mainMenuInside .home_link > a').eq(0).html('<span class="menuIcon" id="homeIcon"></span>Home: An Invitation to Listen');
 	});
 
-	$(".home__hero__scroll").click(function(event) {
+	$('body').on('click', '.home__hero__scroll', function (event) {
 		event.preventDefault();
 	    $([document.documentElement, document.body]).animate({
 	        scrollTop: $(".home__quote").offset().top
