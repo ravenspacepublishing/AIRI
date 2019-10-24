@@ -47,7 +47,7 @@ $.fn.keyboard = function(options) {  // Wrapper that invokes LanguageKeyboard fr
 		if (!$input.parent().hasClass('right-inner-addon')) {
 			$input.wrap('<div class="right-inner-addon"></div>');
 			$input.parent().append('<a class="keyboard-icon" href="javascript:void(null);"></a>');
-			$input.parent().find('.keyboard-icon').click(function(evt) {
+			$input.parent().find('.keyboard-icon').on('click', function(evt) {
 				evt.stopPropagation();
 				var $input = $(evt.target).parent().find(opts.elements);
 				var $keyboard = $('#language-keyboard');
@@ -104,7 +104,7 @@ setReplacementTexts = function() {
 		var is_plural = ($is_note_in.next().children('li').length > 1) ? true : false;
 		$is_note_in.text('This page is a note. View the source page'+((is_plural)?'s':'')+':');
 	};
-	$('#indexLink a').click(function() {
+	$('#indexLink a').on('click', function() {
 		$('.modal').each(function() {
 			var $this = $(this);
 			var $title = $this.find('.modal-title');
