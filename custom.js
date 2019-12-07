@@ -190,7 +190,8 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 			var labelNode = scalarapi.model.nodesByURL[labels[j].value];
     		url = labelNode.properties['http://simile.mit.edu/2003/10/ontologies/artstor#url'][0].value;
     		labelDescription = labelNode.properties['http://purl.org/dc/terms/description'][0].value;
-    		$label = $('<span resource="'+labels[j].value+'" typeof="tk:TKLabel" style="display:inline-block;"><img rel="art:url" src="'+url+'" data-toggle="popover" data-placement="top" /></span>').appendTo($labelRow.find('td:last'));
+    		var placement = "bottom";
+    		$label = $('<span resource="'+labels[j].value+'" typeof="tk:TKLabel" style="display:inline-block;"><img rel="art:url" src="'+url+'" data-toggle="popover" data-placement="'+placement+'" /></span>').appendTo($labelRow.find('td:last'));
             $label.children('img').popover({ 
                 trigger: "click", 
                 html: true, 
