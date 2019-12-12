@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 			$.magnificPopup.open({
 				items: {
-					src: '/system/application/hooks/wayhut/popup.html', 
+					src: 'http://publications.ravenspacepublishing.org/system/application/hooks/wayhut/popup.html', 
 					type: 'ajax'
 				},
 				modal: true,
