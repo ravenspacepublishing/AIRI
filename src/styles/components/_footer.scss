@@ -5,7 +5,7 @@
 	// margin-top: 10rem;
 	background: #38475a;
 	color: white;
-	padding: 5rem 0 4rem 0;
+	padding: 4rem 0 4rem 0;
 	font-size: 1.4rem;
 
 	a {
@@ -28,9 +28,20 @@
 
 	}
 
-	.footer__credit {
-		margin-bottom: 1.5rem;
-		font-size: 1.6rem;
+	.footer__item {
+		margin-bottom: 20px;
+		
+		@media only screen and (min-width: 767px) {
+			margin-bottom: 0;
+		}
+	}
+
+	.footer__item .footer__item--4 {
+		margin-bottom: 0;
+		
+		@media only screen and (min-width: 767px) {
+			margin-bottom: 0;
+		}
 	}
 
 	.footer__links {
@@ -41,31 +52,53 @@
 
 	.footer__list {
 		padding: 0;
-		margin-bottom: 0;
 		list-style: none;
+		margin-bottom: 0;
+	}
 
-
-
-		li {
-			font-size: 1.4rem;
-			display: inline-block;
-			border-right: 1px solid white;
-			padding: 0 10px;
-			line-height: 1;
-			&:last-child {
-				border: none;
-			}
+	.footer__list-item {
+		font-size: 1.6rem;
+		line-height: 1.5;
+		&:last-child {
+			border: none;
+		}
+		&:before {
+			content: "■";
+			color: #798aa0;
+			padding-right: 10px;
 		}
 
-		&:first-child {
-			margin-bottom: 1rem;
-			@media only screen and (max-width: 767px) {
-				margin-top: 1rem;
-				margin-bottom: 2rem;
-			}
-			
-		}
+	}
 
+	.footer__list-item--territory {
+		&:before {
+			color: #b73323;
+		}
+	}
+	.footer__list-item--colonialism {
+		&:before {
+			color: #0d5065;
+		}
+	}
+	.footer__list-item--community {
+		&:before {
+			color: #157473;
+		}
+	}
+	.footer__list-item--wellness {
+		&:before {
+			color: #d68353;
+		}
+	}
+
+	.footer__info-list-item {
+		font-size: 1.6rem;
+		line-height: 1.5;
+		font-weight: bold;
+	}
+
+	.footer__info-list-item--1 {
+		margin-top: 10px;
 	}
 
 	.footer__logo {
@@ -73,22 +106,6 @@
 		img {
 			max-width: 200px;
 		}
-	}
-
-	.footer__heading {
-		font-size: 2.4rem;
-		font-weight: bold;
-		margin-bottom: 1.5rem;
-	}
-
-	.footer__dedication {
-		font-size: 1.8rem;
-		font-style: italic;
-		margin-bottom: 4rem;
-	}
-
-	.footer_publish {
-		font-size: 1.6rem;
 	}
 
 }

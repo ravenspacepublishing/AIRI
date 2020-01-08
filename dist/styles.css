@@ -1412,7 +1412,7 @@ img.mfp-img {
   clear: both;
   background: #38475a;
   color: white;
-  padding: 5rem 0 4rem 0;
+  padding: 4rem 0 4rem 0;
   font-size: 1.4rem; }
   #footer#footer a {
     color: white;
@@ -1427,44 +1427,50 @@ img.mfp-img {
       #footer#footer .footer__content {
         display: flex;
         justify-content: space-between; } }
-  #footer#footer .footer__credit {
-    margin-bottom: 1.5rem;
-    font-size: 1.6rem; }
+  #footer#footer .footer__item {
+    margin-bottom: 20px; }
+    @media only screen and (min-width: 767px) {
+      #footer#footer .footer__item {
+        margin-bottom: 0; } }
+  #footer#footer .footer__item .footer__item--4 {
+    margin-bottom: 0; }
+    @media only screen and (min-width: 767px) {
+      #footer#footer .footer__item .footer__item--4 {
+        margin-bottom: 0; } }
   @media only screen and (min-width: 767px) {
     #footer#footer .footer__links {
       text-align: right; } }
   #footer#footer .footer__list {
     padding: 0;
-    margin-bottom: 0;
-    list-style: none; }
-    #footer#footer .footer__list li {
-      font-size: 1.4rem;
-      display: inline-block;
-      border-right: 1px solid white;
-      padding: 0 10px;
-      line-height: 1; }
-      #footer#footer .footer__list li:last-child {
-        border: none; }
-    #footer#footer .footer__list:first-child {
-      margin-bottom: 1rem; }
-      @media only screen and (max-width: 767px) {
-        #footer#footer .footer__list:first-child {
-          margin-top: 1rem;
-          margin-bottom: 2rem; } }
+    list-style: none;
+    margin-bottom: 0; }
+  #footer#footer .footer__list-item {
+    font-size: 1.6rem;
+    line-height: 1.5; }
+    #footer#footer .footer__list-item:last-child {
+      border: none; }
+    #footer#footer .footer__list-item:before {
+      content: "\25A0";
+      color: #798aa0;
+      padding-right: 10px; }
+  #footer#footer .footer__list-item--territory:before {
+    color: #b73323; }
+  #footer#footer .footer__list-item--colonialism:before {
+    color: #0d5065; }
+  #footer#footer .footer__list-item--community:before {
+    color: #157473; }
+  #footer#footer .footer__list-item--wellness:before {
+    color: #d68353; }
+  #footer#footer .footer__info-list-item {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: bold; }
+  #footer#footer .footer__info-list-item--1 {
+    margin-top: 10px; }
   #footer#footer .footer__logo {
     display: inline-block; }
     #footer#footer .footer__logo img {
       max-width: 200px; }
-  #footer#footer .footer__heading {
-    font-size: 2.4rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem; }
-  #footer#footer .footer__dedication {
-    font-size: 1.8rem;
-    font-style: italic;
-    margin-bottom: 4rem; }
-  #footer#footer .footer_publish {
-    font-size: 1.6rem; }
 
 #body#body #scalarheader {
   background-color: #39475a;
