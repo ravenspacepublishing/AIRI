@@ -75,7 +75,7 @@ window.customColophon = function() {
 
 			<div class="footer__item footer__item--1">
 				<a class="footer__logo" href="https://ravenspacepublishing.org/">
-				<img class="teaching__img" src="./Territory_files/ravenspace-logo.png"></a>  
+				<img class="teaching__img" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/ravenspace-logo.png"></a>  
 			</div>
 
 			<div class="footer__item footer__item--2">
