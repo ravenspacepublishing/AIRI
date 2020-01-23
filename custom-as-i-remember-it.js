@@ -99,8 +99,8 @@ window.customColophon = function() {
 			<div class="footer__item footer__item--4">
 				<ul class="footer__list">
 
-					<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/respecting-traditional-knowledge">Respecting traditional Knowledge</a></li>   
-					<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/terms-of-use">Terms of Use</a></li>    
+					<li class="" style="font-size: 1.6rem; line-height: 1.5;"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/respecting-traditional-knowledge">Respecting Traditional Knowledge</a></li>   
+					<li class="" style="font-size: 1.6rem; line-height: 1.5;"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/terms-of-use">Terms of Use</a></li>    
 					<li class="footer__info-list-item footer__info-list-item--1">© UBC Press 2019</li>
 					<li class="footer__info-list-item">ISBN 978-0-7748-6125-0</li>     
 				</ul>  
