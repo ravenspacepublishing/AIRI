@@ -9,8 +9,6 @@ Scalar documentation: https://scalar.usc.edu/works/guide2/index
 
 Hooks documentation: https://scalar.usc.edu/works/guide2/hooks?path=advanced-topics
 
----
-
 # Setup
 
 Install Scalar (see here for instructions: https://github.com/anvc/scalar/blob/master/INSTALL.txt)
@@ -20,8 +18,6 @@ In the hooks folder run:
 - npm install - to install dependencies
 - npm dev - to watch and build during development
 - npm build - build for production
-
----
 
 # Structure
 
