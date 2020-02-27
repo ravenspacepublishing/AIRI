@@ -1,4 +1,4 @@
-#Overview
+# Overview
 
 This project is the custom work done for the book "As I Remember It: Teachings (Ɂəms tɑɁɑw) from the Life of a Sliammon Elder"
 URL: http://publications.ravenspacepublishing.org/as-i-remember-it/index
@@ -11,7 +11,7 @@ Hooks documentation: https://scalar.usc.edu/works/guide2/hooks?path=advanced-top
 
 ---
 
-#Setup
+# Setup
 
 Install Scalar (see here for instructions: https://github.com/anvc/scalar/blob/master/INSTALL.txt)
 Git clone this repository into a Scalar hooks folder (system/application/hooks/[HOOK FOLDER])
@@ -23,13 +23,13 @@ In the hooks folder run:
 
 ---
 
-#Structure
+# Structure
 
 Overall, the project is broken up into a series of SASS modules that control styling for different areas of the site. Future customization can be achieved by keeping the modules that you wish to keep the styling from and disabling the modules that you do not wish to keep the styling from, or want to replace with new styling modules. 
 
 The majority of this project is written as SASS code, and compiled by webpack into CSS. There are a number of other files included in the project, important files are outlined below.
 
-##SASS
+## SASS
 
 The SASS code is broken up in to modules. The goal of this structure is to allow parts of the code to be re-used for future books by choosing which modules to keep and which ones to rewrite. 
 
@@ -62,7 +62,7 @@ utility
     - functions
     - variables
 
-##Other Important Files
+## Other Important Files
 
 custom-as-i-remember-it.js
 - Javascript customizations specific to "As I Remember It"
