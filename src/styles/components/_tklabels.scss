@@ -45,7 +45,7 @@
 	.image_header .tklabels {
 		position: absolute;
 		z-index: 1;
-    top: 260px;
+    top: 450px;
 		margin: 0;
 		float: none;
 		padding-left: 20px;
@@ -54,6 +54,10 @@
 			left: calc(50% - 520px);
 			padding-left: 0px;
 			top: 312px;
+		}
+
+		@media only screen and (max-width: 520px) {
+      top: 250px;
 		}
 
 	}

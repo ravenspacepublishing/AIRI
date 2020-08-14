@@ -2,34 +2,38 @@ if ('undefined'!=typeof($)) {
 
 $(document).ready(function() {
 	var approot = $('link#approot').attr('href');
-	// Add stylesheet to bottom of stack so that it takes precedence
-	$('head').append('<link type="text/css" rel="stylesheet" href="'+approot+'hooks/wayhut/custom.css" />');
-	// Custom CKEditor settings
-	if (window.CKEDITOR) { 
-		CKEDITOR.config.customConfig = approot+'hooks/wayhut/ckeditor_custom.js';
-	};
-	// Keyboard
-	$('head').append('<link type="text/css" rel="stylesheet" href="'+approot+'hooks/wayhut/keyboard/css/keyboard.css" />');
-	$.getScript(approot+'hooks/wayhut/keyboard/js/keyboard.js', function() {
-		$('#edit_form .form-horizontal:first, #metadata-pane').keyboard();  // Edit page
-	});
-	// TK Labels
-	tklabels_more_about_page = $('link#parent').attr('href')+'respecting-traditional-knowledge';  // Global
-	var tk_label_swap_link = function() {
-		$('.tk-help').each(function() {
-			$(this).find('a:last').attr('href', tklabels_more_about_page).removeAttr('target');
+	var temp = $('link#parent').attr('href').split('/');
+	var slug = temp[temp.length - 2];
+	if (slug == 'as-i-remember-it') {
+		// Add stylesheet to bottom of stack so that it takes precedence
+		$('head').append('<link type="text/css" rel="stylesheet" href="'+approot+'hooks/wayhut/custom.css" />');		
+		// Custom CKEditor settings
+		if (window.CKEDITOR) { 
+			CKEDITOR.config.customConfig = approot+'hooks/wayhut/ckeditor_custom.js';
+		};
+		// Keyboard
+		$('head').append('<link type="text/css" rel="stylesheet" href="'+approot+'hooks/wayhut/keyboard/css/keyboard.css" />');
+		$.getScript(approot+'hooks/wayhut/keyboard/js/keyboard.js', function() {
+			$('#edit_form .form-horizontal:first, #metadata-pane').keyboard();  // Edit page
 		});
-	};
-	$('body').on('pageLoadComplete', function() {
-		$('#ScalarHeaderMenuSearchForm, .search').keyboard({blur_hide_icon:false});
-		// Rename some system texts
-		setReplacementTexts();
-		// Page TK Labels popover
-		$('article [typeof="tk:TKLabel"]').find('img').on('shown.bs.popover', tk_label_swap_link);
-	}).on('scalarMediaReady', function(ev, el) {
-		// Media element TK Labels popover
-		$('article').find('.tk-labels-media').find('img').off('shown.bs.popover', tk_label_swap_link).on('shown.bs.popover', tk_label_swap_link);
-	});
+		// TK Labels
+		tklabels_more_about_page = $('link#parent').attr('href')+'respecting-traditional-knowledge';  // Global
+		var tk_label_swap_link = function() {
+			$('.tk-help').each(function() {
+				$(this).find('a:last').attr('href', tklabels_more_about_page).removeAttr('target');
+			});
+		};
+		$('body').on('pageLoadComplete', function() {
+			$('#ScalarHeaderMenuSearchForm, .search').keyboard({blur_hide_icon:false});
+			// Rename some system texts
+			setReplacementTexts();
+			// Page TK Labels popover
+			$('article [typeof="tk:TKLabel"]').find('img').on('shown.bs.popover', tk_label_swap_link);
+		}).on('scalarMediaReady', function(ev, el) {
+			// Media element TK Labels popover
+			$('article').find('.tk-labels-media').find('img').off('shown.bs.popover', tk_label_swap_link).on('shown.bs.popover', tk_label_swap_link);
+		});		
+	}
 });
 
 $.fn.keyboard = function(options) {  // Wrapper that invokes LanguageKeyboard from buttons within text inputs
@@ -188,17 +192,21 @@ customAddMetadataTableForNodeToElement = function(node, element, linkify) {
 		var labels = node.current.properties['http://localcontexts.org/tk/hasLabel'];
 		for (var j = 0; j < labels.length; j++) {
 			var labelNode = scalarapi.model.nodesByURL[labels[j].value];
-    		url = labelNode.properties['http://simile.mit.edu/2003/10/ontologies/artstor#url'][0].value;
-    		labelDescription = labelNode.properties['http://purl.org/dc/terms/description'][0].value;
-    		var placement = "bottom";
-    		$label = $('<span resource="'+labels[j].value+'" typeof="tk:TKLabel" style="display:inline-block;"><img rel="art:url" src="'+url+'" data-toggle="popover" data-placement="'+placement+'" /></span>').appendTo($labelRow.find('td:last'));
-            $label.children('img').popover({ 
-                trigger: "click", 
-                html: true, 
-                template: popoverTemplate,
-                content: '<img src="'+url+'" /><p class="supertitle">Traditional Knowledge</p><h3 class="heading_weight">'+labelNode.title+'</h3><p>'+labelDescription+'</p><p><a href="'+tklabels_more_about_page+'">More about Traditional Knowledge labels</a></p>'
-            });
+  		url = labelNode.properties['http://simile.mit.edu/2003/10/ontologies/artstor#url'][0].value;
+  		labelDescription = labelNode.properties['http://purl.org/dc/terms/description'][0].value;
+  		var placement = "bottom";
+  		$label = $('<span resource="'+labels[j].value+'" typeof="tk:TKLabel" style="display:inline-block;"><img tabindex="0" rel="art:url" src="'+url+'" data-toggle="popover" data-placement="'+placement+'" /></span>').appendTo($labelRow.find('td:last'));
+      $label.children('img').popover({ 
+          trigger: "manual focus", 
+          html: true, 
+          template: popoverTemplate,
+          content: '<img src="'+url+'" /><p class="supertitle">Traditional Knowledge</p><h3 class="heading_weight">'+labelNode.title+'</h3><p>'+labelDescription+'</p><p><a href="'+tklabels_more_about_page+'">More about Traditional Knowledge labels</a></p>'
+      });
 		}
+		$labelRow.find('td:last').find('img').click(function(e) {
+			$(this).popover('toggle');
+			e.stopPropagation();
+		})
 	};
 
 };
