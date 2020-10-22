@@ -1,7 +1,7 @@
 //Set Specificity to 200
 #article#article {
 
-	span[property="sioc:content"] {
+	> span[property="sioc:content"] {
 		display: block;
 		padding-top: 0;
 		padding-bottom: 6rem;
@@ -107,7 +107,7 @@
 		margin: 0 0 1rem;
 		line-height: 100%;
 	}
-	
+
 	.google-info-window img {
 		margin: 0 !important;
 		width: 200px;
