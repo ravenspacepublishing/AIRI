@@ -86,7 +86,7 @@ window.customColophon = function() {
 					'<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/language">The Sliammon Language</a></li>' +
 					'<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/our-process">Our Process</a></li>' +
 					'<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/resources">Features and Resources</a></li>' +
-					'<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/terms-of-use">About This Book</a></li>' +	
+					'<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/about">About This Book</a></li>' +	
 				'</ul>' +  
 			'</div>' +
 			'<div class="footer__item footer__item--4">' +
