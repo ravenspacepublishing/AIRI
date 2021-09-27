@@ -72,38 +72,74 @@ window.customColophon = function () {
   footer.removeClass("caption_font");
 
   var footerContent =
-    '<div class="footer__content">' +
-    '<div class="footer__item footer__item--1">' +
-    '<a class="footer__logo" href="https://ravenspacepublishing.org/">' +
-    '<img class="teaching__img" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/ravenspace-logo.png"></a>' +
-    "</div>" +
-    '<div class="footer__item footer__item--2">' +
-    '<ul class="footer__list">' +
-    '<li class="footer__list-item footer__list-item--territory"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/territory">Territory</a></li>' +
-    '<li class="footer__list-item footer__list-item--colonialism"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/colonialism">Colonialism</a></li>' +
-    '<li class="footer__list-item footer__list-item--community"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/community">Community</a></li>' +
-    '<li class="footer__list-item footer__list-item--wellness"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/wellness">Wellness</a></li>' +
-    "</ul>" +
-    "</div>" +
-    '<div class="footer__item footer__item--3">' +
-    '<ul class="footer__list">' +
-    '<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/language">The Sliammon Language</a></li>' +
-    '<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/our-process">Our Process</a></li>' +
-    '<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/resources">Features and Resources</a></li>' +
-    '<li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/about">About This Book</a></li>' +
-    "</ul>" +
-    "</div>" +
-    '<div class="footer__item footer__item--4">' +
-    '<ul class="footer__list">' +
-    '<li class="" style="font-size: 1.6rem; line-height: 1.5;">' +
-    '<a href="http://publications.ravenspacepublishing.org/as-i-remember-it/respecting-traditional-knowledge">Respecting Traditional Knowledge</a>' +
-    "</li>" +
-    '<li class="" style="font-size: 1.6rem; line-height: 1.5;"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/terms-of-use">Terms of Use</a></li>' +
-    '<li class="footer__info-list-item footer__info-list-item--1">© UBC Press 2019</li>' +
-    '<li class="footer__info-list-item">ISBN 978-0-7748-6125-0</li>' +
-    "</ul>" +
-    "</div>" +
-    "</div>";
+    ```
+      <div class="footer__upper">
+
+        <div class="footer__content footer__content--upper-1">
+          <ul class="footer__blocks">
+
+            <li class="footer__block footer__block--territory">
+              <a class="footer__block-link footer__block-link--territory" href="http://publications.ravenspacepublishing.org/as-i-remember-it/territory">
+                <span>Territory</span>
+                <img class="" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/footer-territory.png">
+              </a>
+            </li>
+
+            <li class="footer__block footer__block--colonialism">
+              <a class="footer__block-link footer__block-link--colonialism" href="http://publications.ravenspacepublishing.org/as-i-remember-it/colonialism">
+                <img class="" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/footer-colonialism.png">
+                <span>Colonialism</span>
+              </a>
+            </li>
+
+            <li class="footer__block footer__block--community">
+              <a class="footer__block-link footer__block-link--community" href="http://publications.ravenspacepublishing.org/as-i-remember-it/community">
+                <span>Community</span>
+                <img class="" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/footer-community.png">
+              </a>
+            </li>
+
+            <li class="footer__block footer__block--wellness">
+              <a class="footer__block-link footer__block-link--wellness" href="http://publications.ravenspacepublishing.org/as-i-remember-it/wellness">
+                <img class="" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/footer-wellness.png">
+                <span>Wellness</span>
+              </a>
+            </li>
+          
+          </ul>
+        </div>
+
+        <div class="footer__content footer__content--upper-2">
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/language">The Sliammon Language</a></li>
+            <li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/our-process">Our Process</a></li>
+          </ul>  
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/resources">Features and Resources</a></li>
+            <li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/about">About This Book</a></li>
+          </ul>  
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/respecting-traditional-knowledge">Respecting Traditional Knowledge</a></li>
+            <li class="footer__list-item"><a href="http://publications.ravenspacepublishing.org/as-i-remember-it/terms-of-use">Terms of Use</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__lower">
+
+        <div class="footer__content footer__content--lower">
+          <a class="footer__logo" href="https://ravenspacepublishing.org/">
+            <img class="teaching__img" src="http://publications.ravenspacepublishing.org/as-i-remember-it/media/ravenspace-logo.png">
+          </a>
+          <ul class="footer__info-list">
+            <li class="footer__info-list-item footer__info-list-item--1">© UBC Press 2019</li>
+            <li class="footer__info-list-item">ISBN 978-0-7748-6125-0</li>
+          </ul>
+        </div>
+
+      </div>
+    ```
 
   footer.append(footerContent);
 };
