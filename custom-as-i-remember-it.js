@@ -71,8 +71,7 @@ window.customColophon = function () {
   var footer = $("#footer#footer");
   footer.removeClass("caption_font");
 
-  var footerContent =
-    ```
+  var footerContent = `
       <div class="footer__upper">
 
         <div class="footer__content footer__content--upper-1">
@@ -139,7 +138,7 @@ window.customColophon = function () {
         </div>
 
       </div>
-    ```
+    `;
 
   footer.append(footerContent);
 };
