@@ -16,8 +16,8 @@ Git clone this repository into a Scalar hooks folder (system/application/hooks/[
 
 In the hooks folder run:
 - npm install - to install dependencies
-- npm dev - to watch and build during development
-- npm build - build for production
+- npm run dev - to watch and build during development
+- npm run build - build for production
 
 # Structure
 
